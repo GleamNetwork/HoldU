@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-09",
+  "kind": "user-provided concept artwork",
+  "processing": "byte-for-byte copy; repository filenames renamed only",
+  "files": [
+    {
+      "file": "tongpin-watch-emotional-companion.png",
+      "source_filename": "ChatGPT Image 2026年9月9日 17_19_59.png",
+      "title": "同频智能手表：情绪陪伴版",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1965779,
+      "sha256": "19a5c602f10221d07ead55efccc9e6beba072ab7d42764e11d9639f1e4effaa8"
+    },
+    {
+      "file": "tongpin-watch-sports-health.png",
+      "source_filename": "ChatGPT Image 2026年9月9日 17_36_09.png",
+      "title": "同频智能手表：运动健康版",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2148987,
+      "sha256": "cb06829b4b9f9a3c07eb6142a9f33ac9b3d4c84f5ede093bee3a93289f648149"
+    }
+  ]
+}

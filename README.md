@@ -20,6 +20,7 @@
 | 筛选对照表 | [Excel：Sheet1 数据流 / Sheet2 条件](docs/rules/data-flow-and-triggers-2026-09-09.xlsx) |
 | 临床依据和产品草案的区别 | [参考来源](docs/rules/evidence-sources.md) |
 | 小频、暖色、未成年体验与跟练 | [小频设计](docs/design/xiaopin.md) |
+| 手表情绪陪伴版与运动健康版概念原图 | [手表设计](assets/watch/README.md) |
 | 双击打开原型 / 手表接入现状 | [原型指南](docs/prototypes/README.md) |
 | 国家、国际、上海政策和 GitHub 项目 | [研究索引](research/README.md) |
 | 旧版 PRD、Word 和历史 HTML | [历史档案](archive/README.md) |
