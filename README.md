@@ -13,6 +13,9 @@
 | 想了解什么 | 从这里开始 |
 | --- | --- |
 | 完整产品需求、三端分工、排班与交接 | [PRD V0.4](docs/product/PRD-v0.4.md) |
+| AI Agent 可直接执行的需求编号、优先级与验收 | [AI 友好型 PRD](docs/product/AI-friendly-PRD-v1.0.md) |
+| 后端架构、数据模型、AI 编排与安全边界 | [后端技术方案](docs/engineering/backend-architecture-v1.2.md) |
+| 前后端接口、Swagger 与本地/远程调试 | [接口文档](docs/engineering/API-contract-v1.3.md) |
 | 用户/志愿者年龄、兴趣、MBTI 与服务匹配 | [双端 Profile](docs/product/profiles-and-matching.md) |
 | 每项数据怎么来、怎么用、谁能看 | [45 项数据字典](docs/rules/data-dictionary-v0.4.md) |
 | 单项或组合达到什么条件才触发 | [47 条规则与逐条依据](docs/rules/trigger-rules-v0.4.md) |
@@ -23,6 +26,7 @@
 | 手表情绪陪伴版与运动健康版概念原图 | [手表设计](assets/watch/README.md) |
 | 双击打开原型 / 手表接入现状 | [原型指南](docs/prototypes/README.md) |
 | 国家、国际、上海政策和 GitHub 项目 | [研究索引](research/README.md) |
+| 后端服务、安装、测试与子模块说明 | [backend-service](backend-service/README.md) |
 | 旧版 PRD、Word 和历史 HTML | [历史档案](archive/README.md) |
 | 本轮差异 | [变更记录](docs/CHANGELOG.md) |
 

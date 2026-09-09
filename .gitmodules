@@ -1,0 +1,4 @@
+[submodule "backend-service"]
+	path = backend-service
+	url = https://github.com/GleamNetwork/backend-service.git
+	branch = main
