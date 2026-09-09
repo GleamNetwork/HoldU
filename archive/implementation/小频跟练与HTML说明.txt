@@ -1,0 +1,38 @@
+# 毛茸茸的小频 · 跟练与独立 HTML
+
+## 这一版的变化
+
+用新的毛茸茸小频替换陪伴首页、头像及选择页形象，并增加安静坐姿用于舒缓练习。原始生成图保存在项目外的「宠物设计稿」，经用户授权只在本地抠图。页面不使用混色、滤镜或径向遮罩伪装透明，暖色只用于小频背后的房间和参考圆环。
+
+陪伴首页和「我的」自助入口打开同一个跟练窗口。三种练习分别为轻柔自然呼吸、五感落地、放松下颌肩手；后两种由用户手动进入下一步，每一步都可跳过。呼吸默认不指定配速，可选约 4 秒吸、4 秒呼的参考动画，无憋气阶段。约 64 秒的演示长度不是指南规定的疗程，也不承诺症状会在这一时间内消失。
+
+## 安全与隐私
+
+- 不自动根据心率、步数或情绪选择启动练习。先由本人确认当前安全、无所列急症且自愿尝试。
+- 新出现或明显加重的胸痛、呼吸困难、晕厥或无法确认安全时，优先获得医疗或真人帮助，不把症状直接判断为焦虑或惊恐。已有紧急状态时关闭跟练入口内容，展示求助渠道。
+- 随时暂停、停止；切换到后台会暂停，关闭窗口会清理计时，切换练习需重新确认。动画可关闭，也尊重系统减少动态效果设置。
+- 完成或停止后不能沿用旧的确认立即再练；必须显式重新核对并重新勾选。选择「更不舒服」后，本轮保留求助提示，不能通过改选练后结果将它清除。
+- 不要求闭眼、用力深呼吸、憋气或强行拉伸。不适时停止；反复困扰或自助无效时寻求专业评估。
+- 未成年版沿用年龄与隐私分支，提示找安全可信的成人或专业支持，不使用成人问卷。这里没有真实值守或实际转诊能力。
+- 练后感受仅保留在当前练习窗口，不自动写入、分享陪伴日记。原有日记仍需本人编辑确认后单独授权分享。
+
+## 独立 HTML
+
+`npm run build:html` 将同一页面及其交互编译为单文件，图片、样式和脚本全部内置。交付文件为桌面工作区「同频B2_HTML原型/同频_毛茸茸小频_互动原型.html」，可双击在现代浏览器中打开；不需要 Node.js 或联网加载资源。刷新或关闭后清空演示状态。
+
+HTML 禁止联网请求，不发出真实 BLE 配对请求，保留手表模拟器；真实蓝牙演示请从原在线 HTTPS Demo 进入，并确认设备和浏览器支持标准心率服务。HTML 中的外部资料链接由用户主动点击时打开网络页面。请勿输入真实健康信息。
+
+执行 `npm run build:html` 后再执行 `npm run build`，在线版才会包含最新的「下载独立 HTML 原型」文件。静态导出的 `dist/client/index.html` 仍需 HTTP 服务，不等同于专门生成的独立 HTML。
+
+## 练习依据
+
+核对日期：2026-09-07。以下资料支持轻柔自愿的自助原则，不代表本原型获得临床验证。
+
+- [NHS：Breathing exercises for stress](https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/)：舒服的姿势，呼吸不过度用力，按个人舒适程度尝试。
+- [NHS inform：Grounding exercises](https://www.nhsinform.scot/healthy-living/mental-wellbeing/breathing-and-relaxation-exercises/grounding-exercises/)：通过周围感官线索将注意力带回当下；原型允许跳过任何不适合的步骤。
+- [Frimley Health NHS：Managing stress and anxiety](https://www.fhft.nhs.uk/patients-and-visitors/patient-information-library/managing-stress-and-anxiety)：压力焦虑的自助放松方法；原型不强迫肌肉紧绷或拉伸。
+- [NHS：Anxiety, fear and panic](https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/anxiety-fear-panic/)：不能仅凭症状自行诊断，难以应对或自助无效时寻求支持。
+
+## 验证范围
+
+包含状态机测试、类型检查、脚本语法校验、PNG 透明通道检查及构建检查。素材在粉色与鹅黄色背景上单独合成检查；这不是浏览器页面截图检查。尚未完成浏览器点击、辅助技术、实体设备及临床验证。

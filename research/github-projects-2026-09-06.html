@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B2 情绪急救与数字陪伴｜GitHub 开源项目清单</title>
+  <style>
+    :root{--ink:#152126;--muted:#5d6b72;--paper:#f6f4ee;--card:#fff;--teal:#126e70;--teal2:#dff1ed;--red:#a43b3b;--amber:#9a6500;--line:#d9dfdd;--shadow:0 10px 30px rgba(24,49,52,.08)}
+    *{box-sizing:border-box} body{margin:0;color:var(--ink);background:linear-gradient(135deg,#edf7f5 0,#f6f4ee 38%,#f4efe8 100%);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+    header{padding:54px 7vw 42px;background:#123f43;color:#fff;position:relative;overflow:hidden} header:after{content:"";position:absolute;width:360px;height:360px;border:70px solid rgba(255,255,255,.06);border-radius:50%;right:-90px;top:-180px}
+    header h1{font-size:clamp(30px,5vw,54px);line-height:1.15;margin:0 0 14px;max-width:1000px} header p{max-width:900px;color:#d9efeb;margin:0;font-size:17px}.stamp{display:inline-block;margin-top:22px;padding:7px 12px;border:1px solid #6fa8a5;border-radius:999px;font-size:13px}
+    main{max-width:1240px;margin:auto;padding:34px 24px 80px}.notice{background:#fff7df;border-left:5px solid #d59419;padding:16px 18px;border-radius:10px;margin-bottom:26px;box-shadow:var(--shadow)}
+    h2{font-size:26px;margin:38px 0 16px}.top-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.top-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}.top-card .n{font-size:12px;letter-spacing:.08em;color:var(--teal);font-weight:700}.top-card h3{margin:5px 0 6px}.top-card p{color:var(--muted);font-size:14px;margin:0 0 13px}
+    a{color:var(--teal);text-decoration:none;font-weight:650}a:hover{text-decoration:underline}.arch{background:#102e31;color:#e6f4f1;border-radius:18px;padding:22px;overflow:auto}.arch code{white-space:pre;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .tools{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.tools button{border:1px solid #a9bfbc;background:#fff;border-radius:999px;padding:8px 13px;cursor:pointer;color:#234}.tools button.active{background:var(--teal);color:white;border-color:var(--teal)}
+    .table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}table{border-collapse:collapse;width:100%;min-width:1020px}th,td{padding:14px 13px;border-bottom:1px solid #e8eceb;text-align:left;vertical-align:top}th{background:#e8f3f1;color:#244b4d;position:sticky;top:0;font-size:13px}td{font-size:14px}.repo{font-weight:750}.meta{color:var(--muted);font-size:12px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:var(--teal2);color:#155b5d;font-size:12px;margin:2px}.tag.warn{background:#fff0cf;color:#825600}.tag.risk{background:#f7dfdf;color:#862e2e}.rating{white-space:nowrap;font-weight:750}.rating.a{color:#0c6c53}.rating.b{color:#8a6200}.rating.c{color:#963b3b}
+    .section-note{color:var(--muted);margin:-8px 0 15px}.checklist{columns:2;column-gap:35px}.checklist li{break-inside:avoid;margin-bottom:10px}.footer{margin-top:38px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:18px}
+    @media(max-width:720px){header{padding:38px 22px}.checklist{columns:1}main{padding:22px 14px 60px}}
+    @media print{.tools{display:none}body{background:white}.table-wrap,.top-card,.notice{box-shadow:none}header{padding:28px;background:white;color:#111;border-bottom:3px solid #126e70}header p{color:#444}.stamp{border-color:#999}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>B2 情绪急救与数字陪伴<br>GitHub 开源项目清单</h1>
+  <p>按危机识别、安全评测、资源转介、志愿者派单、RAG 与 Agent 工作流筛选。重点不是“找一个项目直接上线”，而是识别可以安全拼装的模块。</p>
+  <span class="stamp">GitHub 元数据快照：2026-09-06 · 星标和活跃度会变化</span>
+</header>
+<main>
+  <div class="notice"><strong>安全提示：</strong>没有任何一个仓库可直接证明能安全处理真实危机用户。所有风险标签只能作为人工复核和资源转介信号，不应自动诊断、自主报警或决定“强制干预”。涉及数据集时还需复核来源、同意、去标识化和中文/上海场景外推有效性。</div>
+
+  <h2>最推荐先看的 6 个</h2>
+  <div class="top-grid">
+    <article class="top-card"><div class="n">01 · 安全评测主框架</div><h3>VERA-MH</h3><p>临床开发的角色与评分量表，覆盖风险发现、确认、转人工、支持性沟通和安全边界，可接入自有 Agent/API。</p><a href="https://github.com/SpringCare/VERA-MH">打开仓库 →</a></article>
+    <article class="top-card"><div class="n">02 · 临床标注检测基准</div><h3>CRADLE Bench</h3><p>覆盖主动/被动自杀意念、自伤、家暴、性暴力、儿童伤害等多类危机，并包含时间维度。</p><a href="https://github.com/emorynlp/CradleBench">打开仓库 →</a></article>
+    <article class="top-card"><div class="n">03 · 运行时护栏参考</div><h3>SafeChat</h3><p>离线危机信号、地区化求助资源和安全测试。适合借鉴“本地检测 + 不存原文 + 资源路由”，但项目很新。</p><a href="https://github.com/rob-e-graham/safechat">打开仓库 →</a></article>
+    <article class="top-card"><div class="n">04 · 资源 RAG</div><h3>open-helplines</h3><p>带数据时效检查、JSON Schema 和 MCP 服务的国际热线注册表。可借鉴数据治理，上海数据必须另行核验。</p><a href="https://github.com/Kouki-odaka/open-helplines">打开仓库 →</a></article>
+    <article class="top-card"><div class="n">05 · 人工确认状态机</div><h3>LangGraph</h3><p>适合实现“检测—人工确认—接单—升级—交接—随访”的可恢复状态机和 human-in-the-loop。</p><a href="https://github.com/langchain-ai/langgraph">打开仓库 →</a></article>
+    <article class="top-card"><div class="n">06 · 志愿者运营底座</div><h3>OpenVolunteerPlatform</h3><p>具备角色权限、排班、实时状态、报告等能力，适合改造成资质、班次、冷却期和督导管理。</p><a href="https://github.com/aerogear/OpenVolunteerPlatform">打开仓库 →</a></article>
+  </div>
+
+  <h2>建议的组合架构</h2>
+  <div class="arch"><code>端侧关注信号
+  ├─ SafeChat / 自研中文规则与分类器（只产生“需关注信号”）
+  ├─ LangGraph（强制进入人工确认节点）
+  ├─ OpenVolunteerPlatform / Resgrid（资质、排班、派单、冷却、交接）
+  ├─ Haystack + 版本化上海资源库（12356=962525、12355、区级资源）
+  ├─ NeMo Guardrails / Guardrails AI（输入输出边界、结构校验、降级）
+  └─ VERA-MH + CRADLE + Promptfoo（上线前与持续回归评测）</code></div>
+
+  <h2>完整项目清单</h2>
+  <p class="section-note">“推荐度”针对本次黑客松的可复用价值，不代表临床有效性或代码质量认证。</p>
+  <div class="tools">
+    <button class="active" data-filter="all">全部</button><button data-filter="评测">安全评测</button><button data-filter="检测">危机检测</button><button data-filter="资源">资源/派单</button><button data-filter="框架">Agent/RAG框架</button><button data-filter="中文">中文参考</button><button data-filter="实验">实验性</button>
+  </div>
+  <div class="table-wrap">
+    <table id="repoTable">
+      <thead><tr><th>项目</th><th>类别</th><th>可复用内容</th><th>状态快照</th><th>许可证</th><th>推荐度</th><th>主要风险/限制</th></tr></thead>
+      <tbody>
+        <tr data-cat="评测"><td><a class="repo" href="https://github.com/SpringCare/VERA-MH">SpringCare/VERA-MH</a></td><td><span class="tag">评测</span></td><td>100个临床设计 persona、长对话模拟、检测/确认/转人工/支持沟通/边界评分；可接自有API。</td><td>★52 · Python<br><span class="meta">更新 2026-08-27</span></td><td>API未识别<br><span class="meta">使用前核对仓库条款</span></td><td class="rating a">A｜优先</td><td>自动评委不能替代临床专家；全量跑测成本较高。</td></tr>
+        <tr data-cat="评测 检测"><td><a class="repo" href="https://github.com/emorynlp/CradleBench">emorynlp/CradleBench</a></td><td><span class="tag">评测</span><span class="tag">检测</span></td><td>600条临床标注测试集、420条开发集，多危机类别与时间标签，适合测漏报和类别混淆。</td><td>★0 · EACL 2026<br><span class="meta">更新 2026-05-04</span></td><td>未识别</td><td class="rating a">A｜优先</td><td>英文Reddit分布；许可证和数据使用条件需逐项确认。</td></tr>
+        <tr data-cat="评测"><td><a class="repo" href="https://github.com/ellisalicante/LLMs-Mental-Health-Crisis">ellisalicante/LLMs-Mental-Health-Crisis</a></td><td><span class="tag">评测</span></td><td>危机对话、模型回答、人类适宜性评分和评测代码，适合复现“识别后如何回应”。</td><td>★7 · Python<br><span class="meta">更新 2026-04-21</span></td><td>未识别</td><td class="rating a">A｜优先</td><td>与真实上海服务流程仍有距离；先核对可再分发范围。</td></tr>
+        <tr data-cat="评测 检测"><td><a class="repo" href="https://github.com/sonia-health/llm-mental-health-risk-detection">sonia-health/llm-mental-health-risk-detection</a></td><td><span class="tag">检测</span><span class="tag">评测</span></td><td>比较不同提示词和敏感度阈值下的危机检测性能，适合做阈值—误报—漏报实验。</td><td>★1 · Python<br><span class="meta">更新 2025-12-06</span></td><td>MIT</td><td class="rating a">A｜优先</td><td>标注数据不公开；“高敏感度”不等于能独立判断或自动处置。</td></tr>
+        <tr data-cat="评测"><td><a class="repo" href="https://github.com/coalition-for-health-ai/responsible-ai-content">coalition-for-health-ai/responsible-ai-content</a></td><td><span class="tag">评测</span></td><td>精神健康AI测试与评估框架、证据映射和治理建议，适合搭答辩指标体系。</td><td>★28 · Notebook<br><span class="meta">更新 2026-09-02</span></td><td>CC-BY-4.0</td><td class="rating a">A｜优先</td><td>主要是规范内容，不是可直接部署的运行时代码。</td></tr>
+        <tr data-cat="检测 资源"><td><a class="repo" href="https://github.com/rob-e-graham/safechat">rob-e-graham/safechat</a></td><td><span class="tag">检测</span><span class="tag">资源</span></td><td>危机信号家族、离线运行、地区求助热线、输入输出监测和218项测试。</td><td>★0 · JavaScript<br><span class="meta">更新 2026-09-01</span></td><td>API未识别</td><td class="rating a">A｜借架构</td><td><span class="tag warn">项目很新</span>未见临床验证；中国/上海号码和话术必须重建。</td></tr>
+        <tr data-cat="资源"><td><a class="repo" href="https://github.com/Kouki-odaka/open-helplines">Kouki-odaka/open-helplines</a></td><td><span class="tag">资源</span><span class="tag">RAG</span></td><td>热线数据Schema、核验日期、过期警告、无日志查询和MCP接口。</td><td>★0 · TypeScript<br><span class="meta">更新 2026-08-30</span></td><td>数据CC0 / 代码Apache-2.0<br><span class="meta">据README</span></td><td class="rating a">A｜借数据治理</td><td>不能假定已覆盖或正确描述12356/962525、12355和区级资源。</td></tr>
+        <tr data-cat="资源"><td><a class="repo" href="https://github.com/aerogear/OpenVolunteerPlatform">aerogear/OpenVolunteerPlatform</a></td><td><span class="tag">资源</span><span class="tag">派单</span></td><td>志愿者角色、权限、排班、实时状态、统计和管理后台。</td><td>★68 · TypeScript<br><span class="meta">更新 2025-12-02</span></td><td>MIT</td><td class="rating a">A｜可改造</td><td>原项目不是心理危机系统；需新增资质、督导、接单上限和安全事件流程。</td></tr>
+        <tr data-cat="资源"><td><a class="repo" href="https://github.com/Resgrid/Core">Resgrid/Core</a></td><td><span class="tag">资源</span><span class="tag">派单</span></td><td>事件单、人员/班次、状态、调度、地图、日志和API，可参考危机升级控制台。</td><td>★225 · JavaScript<br><span class="meta">更新 2026-09-06</span></td><td>Apache-2.0</td><td class="rating b">B｜重型参考</td><td>面向应急响应，系统较重；不得把心理求助者当作普通救援工单处理。</td></tr>
+        <tr data-cat="资源"><td><a class="repo" href="https://github.com/weareinreach/InReach">weareinreach/InReach</a></td><td><span class="tag">资源</span><span class="tag">匹配</span></td><td>经志愿者核验的资源目录、多条件匹配、弱势群体友好服务和多端应用。</td><td>★47 · 活跃<br><span class="meta">更新 2026-09-05</span></td><td>GPL-3.0</td><td class="rating b">B｜交互参考</td><td>服务地区和人群不同；GPL会影响衍生代码发布方式。</td></tr>
+        <tr data-cat="框架"><td><a class="repo" href="https://github.com/langchain-ai/langgraph">langchain-ai/langgraph</a></td><td><span class="tag">框架</span><span class="tag">Agent</span></td><td>持久状态、暂停/恢复、人工确认、分支和失败回退，适合危机工作流编排。</td><td>★41.1k · Python<br><span class="meta">更新 2026-09-06</span></td><td>MIT</td><td class="rating a">A｜底座</td><td>框架不会自动带来医疗安全；流程节点和权限仍需自行设计。</td></tr>
+        <tr data-cat="框架"><td><a class="repo" href="https://github.com/NVIDIA-NeMo/Guardrails">NVIDIA-NeMo/Guardrails</a></td><td><span class="tag">框架</span><span class="tag">护栏</span></td><td>可编程对话轨道、输入输出检查、事实性/内容安全和评测工具。</td><td>★7.1k · Python<br><span class="meta">更新 2026-09-04</span></td><td>API未识别</td><td class="rating a">A｜底座</td><td>通用安全分类不能替代心理危机专用规则；误拦截时必须有安全降级回复。</td></tr>
+        <tr data-cat="框架"><td><a class="repo" href="https://github.com/deepset-ai/haystack">deepset-ai/haystack</a></td><td><span class="tag">框架</span><span class="tag">RAG</span></td><td>显式检索、路由和流水线，适合版本化政策、热线、区级资源和沟通脚本RAG。</td><td>★26.4k · Python<br><span class="meta">更新 2026-09-04</span></td><td>Apache-2.0</td><td class="rating a">A｜底座</td><td>必须保留来源、生效日期和地区；检索不到时不能编造资源。</td></tr>
+        <tr data-cat="框架 评测"><td><a class="repo" href="https://github.com/promptfoo/promptfoo">promptfoo/promptfoo</a></td><td><span class="tag">评测</span><span class="tag">红队</span></td><td>提示词、Agent和RAG回归测试，适合把上海话、隐语、拒绝求助、长对话漂移做成CI。</td><td>★24.9k · TypeScript<br><span class="meta">更新 2026-09-06</span></td><td>MIT</td><td class="rating a">A｜底座</td><td>测试用例需临床/热线专家审核；普通安全模板覆盖不了全部危机场景。</td></tr>
+        <tr data-cat="框架"><td><a class="repo" href="https://github.com/guardrails-ai/guardrails">guardrails-ai/guardrails</a></td><td><span class="tag">框架</span><span class="tag">校验</span></td><td>结构化输出、验证器和失败重试，可用于强制输出风险依据、动作权限和来源字段。</td><td>★7.4k · Python<br><span class="meta">更新 2026-09-04</span></td><td>Apache-2.0</td><td class="rating b">B｜组件</td><td>格式正确不代表医学判断正确；避免无休止重试导致延迟。</td></tr>
+        <tr data-cat="中文 检测"><td><a class="repo" href="https://github.com/BigBinnie/D4_baseline">BigBinnie/D4_baseline</a></td><td><span class="tag">中文</span><span class="tag">数据/基线</span></td><td>EMNLP 2022中文抑郁诊断导向对话基线，含严重程度与自杀风险相关任务。</td><td>★33 · Python<br><span class="meta">更新 2022-10-28</span></td><td>MIT</td><td class="rating b">B｜研究参考</td><td><span class="tag risk">诊断导向</span>数据许可、场景分布与真实危机外推需谨慎；不应用作自动诊断。</td></tr>
+        <tr data-cat="中文"><td><a class="repo" href="https://github.com/X-D-Lab/MindChat">X-D-Lab/MindChat</a></td><td><span class="tag">中文</span><span class="tag">模型</span></td><td>中文心理对话模型、端侧/私有化部署和评测模型，可用于交互及本地运行参考。</td><td>★717 · Python<br><span class="meta">更新 2024-09-13</span></td><td>GPL-3.0</td><td class="rating b">B｜模型参考</td><td>仓库自述包含诊断/治疗定位，与B2和监管边界冲突；只能拆取技术思路并重做安全层。</td></tr>
+        <tr data-cat="检测 评测"><td><a class="repo" href="https://github.com/khanhvynguyen/Suicide_Detection_LLMs">khanhvynguyen/Suicide_Detection_LLMs</a></td><td><span class="tag">检测</span><span class="tag">研究</span></td><td>IEEE BigData 2024社交媒体自杀风险分级、少样本提示和LoRA/集成方法。</td><td>★13 · Notebook<br><span class="meta">更新 2024-12-11</span></td><td>未识别</td><td class="rating b">B｜算法参考</td><td>数据需另行申请；算力要求高；社交帖子分类不等同于热线实时判断。</td></tr>
+        <tr data-cat="实验 框架"><td><a class="repo" href="https://github.com/HanaFEKI/Chatchouta-Mental-Health-Chatbot">HanaFEKI/Chatchouta-Mental-Health-Chatbot</a></td><td><span class="tag warn">实验</span><span class="tag">RAG</span></td><td>FAISS、交叉编码重排、会话记忆、多模型路由、危机过滤器、FastAPI/Streamlit等完整骨架。</td><td>★0 · Python<br><span class="meta">更新 2026-08-17</span></td><td>未识别</td><td class="rating c">C｜只看结构</td><td>“production-ready”是作者自述，缺乏外部验证与明确许可证；不要直接复用。</td></tr>
+        <tr data-cat="实验 中文"><td><a class="repo" href="https://github.com/zx070326-hash/TherapyMind">zx070326-hash/TherapyMind</a></td><td><span class="tag warn">实验</span><span class="tag">中文</span></td><td>模块化提示架构、中文文化因素、危机协议、急性情绪保护和灰区模拟。</td><td>★0 · Python<br><span class="meta">更新 2026-05-09</span></td><td>API未识别</td><td class="rating c">C｜提示词参考</td><td>热线号码、治疗流派和危机逻辑均需重新核验；没有临床有效性证明。</td></tr>
+        <tr data-cat="实验 评测"><td><a class="repo" href="https://github.com/TashMarcellis/hold-toward-life">TashMarcellis/hold-toward-life</a></td><td><span class="tag warn">实验</span><span class="tag">评测</span></td><td>危机对话协议、9个场景、轨迹监控和locale-aware资源，关注“不要附和绝望，也不要热线后立刻结束”。</td><td>★1 · Python<br><span class="meta">更新 2026-06-16</span></td><td>README称CC0</td><td class="rating c">C｜理念参考</td><td>非常新且缺少临床验证；案例叙事和自动评分结论须独立核查。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>黑客松 72 小时复用建议</h2>
+  <ol class="checklist">
+    <li><strong>先做流程，不先训练大模型：</strong>用 LangGraph 画出必须人工确认的危机状态机。</li>
+    <li><strong>建立上海资源小库：</strong>只录入已核验的12356/962525、12355及演示用区级资源，带来源和核验日期。</li>
+    <li><strong>检测做双通道：</strong>本地规则/小模型高召回预警 + LLM理由说明；两者都只输出“需人工关注”。</li>
+    <li><strong>评测做三套：</strong>VERA-MH看长对话安全，CRADLE看多类危机检测，自建中文集看上海话、隐语和转介流程。</li>
+    <li><strong>派单只做沙盒：</strong>借OpenVolunteerPlatform数据模型，模拟资质、班次、负荷、冷却和督导，不连接真实用户。</li>
+    <li><strong>输出可审计：</strong>展示触发信号、置信/不确定性、人工决定、引用来源、转介时间和失败回退。</li>
+  </ol>
+
+  <div class="footer">数据来源：各项目 GitHub 仓库 README 与 GitHub REST API。星标、许可证识别和最后推送时间均为快照；“API未识别/未识别”表示必须人工查看 LICENSE 或项目条款。此清单用于技术调研，不构成医疗、法律或开源许可证意见。</div>
+</main>
+<script>
+  const buttons=[...document.querySelectorAll('[data-filter]')];
+  const rows=[...document.querySelectorAll('#repoTable tbody tr')];
+  buttons.forEach(btn=>btn.addEventListener('click',()=>{
+    buttons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    const f=btn.dataset.filter;rows.forEach(r=>r.style.display=(f==='all'||r.dataset.cat.includes(f))?'':'none');
+  }));
+</script>
+</body>
+</html>

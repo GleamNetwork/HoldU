@@ -1,0 +1,1292 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>同频 B2 · 指标与分诊流程直观版</title><style>:root{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:#49393f;background:#fffaf4;line-height:1.6;--pink:#ad4c68;--rose:#fbe8ed;--yellow:#fff0bb;--ink:#49393f;--line:#eadde0;--muted:#76676d;--green:#276551}*{box-sizing:border-box}body{margin:0}a{color:#92415f;text-underline-offset:3px}button,select{font:inherit;color:inherit}button,select{border:1px solid #d9c5cc;background:#fff;border-radius:10px;padding:10px 14px;min-height:44px}button{cursor:pointer}button:hover{background:#f9e9ee}:focus-visible{outline:3px solid #8962a6;outline-offset:3px}h1,h2,h3,h4,p{margin-top:0}h1{font-size:32px;line-height:1.3;margin:8px 0 12px;letter-spacing:.01em}h2{font-size:23px;line-height:1.35;margin:4px 0 8px}h3{font-size:17px;margin-bottom:10px}h4{font-size:14px;margin:16px 0 7px}small,.small{font-size:12px;color:var(--muted)}header,.shell,footer{max-width:1380px;margin:auto;padding:0 32px}header{padding-top:28px}.brand{display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--pink)}.brand b{font-size:18px}.brand span{font-size:12px}.hero{display:flex;align-items:center;justify-content:space-between;gap:20px}.hero p{color:var(--muted);font-size:14px;margin-bottom:18px}.hero-mark{display:grid;place-items:center;width:88px;height:88px;border:1px solid #efd5dc;border-radius:50%;background:radial-gradient(circle,#fff8dc 0,#ffe8ed 70%);flex:none;color:#a45570;font-size:30px}.toolbar{display:flex;align-items:end;justify-content:space-between;gap:20px;background:#fff0bd;border:1px solid #ecdcaa;border-radius:16px;padding:14px 18px}.case-picker{display:flex;flex-direction:column;gap:6px;flex:1;max-width:630px;font-size:13px}.case-picker select{width:100%;min-width:0;background:#fffdf5;border-color:#d4c196}.tools{display:flex;gap:8px;flex-wrap:wrap}nav{display:flex;gap:22px;flex-wrap:wrap;padding:14px 2px 18px;font-size:13px}nav a{text-decoration:none;color:#6c4c58}section[id],details[id],li[id]{scroll-margin-top:18px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:16px}.section-heading>span{font-size:12px;color:var(--muted)}.eyebrow{font-size:12px;letter-spacing:.08em;color:#9f4965}.case-tag{white-space:nowrap;background:#fff1be;padding:4px 10px;border-radius:8px;font-size:12px}.case-story{font-size:13px;color:#71636a;max-width:1090px;margin:0 0 18px}.journey{border:1px solid #e8d6dd;border-radius:20px;background:#fff;margin-bottom:36px;padding:22px;box-shadow:0 5px 25px #80556808}.journey-grid{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.2fr) minmax(0,.88fr);gap:26px}.lane{min-width:0;position:relative;border-radius:13px;padding:16px;background:#fbf8f8}.lane:not(:last-child):after{content:'→';position:absolute;right:-25px;top:44%;width:23px;color:#aa657b;font-size:22px;text-align:center}.lane-title{display:flex;gap:9px;align-items:center;margin-bottom:14px;border-bottom:1px solid #ebdfe3;padding-bottom:10px}.lane-title>span{display:grid;place-items:center;border-radius:50%;width:26px;height:26px;background:#f0d9e1;color:#854057;flex:none;font-size:13px}.lane-title h3{margin:0}.facts{display:grid;gap:10px}.fact{padding:0 0 9px;border-bottom:1px solid #e9e1e4;min-width:0}.fact>*{display:block}.fact strong{font-weight:600;font-size:15px;margin:2px 0}.fact>span{font-size:11px;color:#807279;line-height:1.6}.score-box{margin-top:16px}.score-box>span{display:block;font-size:12px;color:#85626d}.score-box>strong{font-size:27px;font-weight:600;display:block;line-height:1.35;margin:5px 0}.score-box>small{display:block;line-height:1.5;margin:7px 0}.score-track{position:relative;margin:14px 0 4px;height:8px;border-radius:5px;background:#eadde4}.score-track>div{height:8px;border-radius:5px;background:#ac5577}.threshold-mark{height:18px;width:2px;background:#70535e;position:absolute;top:-5px}.score-labels{display:flex;justify-content:space-between;font-size:10px;color:#725865;gap:4px}.conditions{background:#fffaf0}.logic{background:#f5eaca;border-radius:8px;padding:9px 10px;font-size:12px;color:#715823;margin-bottom:12px;font-weight:600}.check{display:flex;gap:9px;padding:10px 0;border-bottom:1px solid #e9e1cf}.check:last-child{border:0}.check-icon{border-radius:50%;width:21px;height:21px;flex:none;background:#dfede6;color:#336850;text-align:center;line-height:21px;font-size:13px;margin-top:4px}.check strong{font-size:16px;line-height:1.4;display:block;font-weight:600;margin:3px 0}.check small{font-size:12px}.check p{font-size:11px;line-height:1.6;margin:0;color:#786d59}.check.unknown .check-icon{background:#f3dfa1;color:#765416}.check.blocked .check-icon,.check.no .check-icon{background:#e8e4e5;color:#736872}.check.bypass .check-icon{background:#f7d6de;color:#a63556}.check.info .check-icon{background:#e7e3f0;color:#655383}.check-note{border-left:3px solid #d4b268;padding-left:9px;margin:12px 0;font-size:12px;color:#77603d}.or{color:#8a5b21;font-size:10px;background:#f4e3ae;padding:2px 4px;border-radius:3px}.rule-link{font-size:10px;overflow-wrap:anywhere;margin:10px 0}.route-emblem{padding:16px;border-radius:12px;background:#f4e5ec}.route-emblem>span{font-size:30px;font-weight:700;color:#974c6a;display:block}.route-emblem h3{font-size:19px;margin:2px 0 10px}.route-emblem p{font-size:13px;margin:0;color:#684f5a}.route-emblem.R0{background:#fae0e3}.route-emblem.R0>span{color:#a4354f}.route-emblem.R1{background:#ffecd3}.route-emblem.R1>span{color:#92541d}.route-emblem.CHECK{background:#ece8f1}.route-emblem.CHECK>span{color:#735b8a}.route-emblem.R3{background:#e7f0e8}.route-emblem.R3>span{color:#407259}.responsibility p{font-size:12px;color:#6f6068}.service-status{background:#fff;padding:12px;border-radius:9px;border:1px dashed #d8c8d0}.service-status>*{display:block}.service-status strong{font-size:12px;margin-top:4px;font-weight:500}.safety-note{font-size:11px;color:#9e3854;margin:12px 0 0}.handoff{margin-top:23px;padding-top:18px;border-top:1px solid var(--line)}.handoff-lane{display:flex;margin:14px 0 8px;gap:22px}.handoff-step{flex:1;min-width:0;position:relative;padding:12px 12px 12px 43px;border-radius:10px;background:#f8f3f4;border:1px solid #ece1e5}.handoff-step:not(:last-child):after{content:'→';position:absolute;right:-20px;top:38%;font-size:18px;color:#b08998}.handoff-step>small,.handoff-step>strong{display:block}.handoff-step>strong{font-size:13px}.handoff-step>p{font-size:11px;line-height:1.5;margin:4px 0 0;color:#76646b}.step-dot{position:absolute;left:12px;top:20px;border-radius:50%;height:22px;width:22px;text-align:center;font-size:11px;line-height:22px;background:#e9d7de}.handoff-step[data-state=pending]{background:#fff4ce;border-color:#ead595}.handoff-step[data-state=active]{background:#f8e7ee;border-color:#dec0cc}.handoff-step[data-state=done]{background:#edf4ee}.handoff-step[data-state=future]{border-style:dashed}.backup{font-size:12px;padding:9px 12px;margin-top:10px;border-radius:6px;background:#fff7df;color:#795d34}.backup.urgent{background:#fbe7eb;color:#90344d}.section-intro{font-size:13px;color:var(--muted);margin:4px 0 20px}.module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.module-card{background:#fff;border:1px solid #e5d9de;border-radius:15px;overflow:hidden;min-width:0}.module-card.related{border-color:#ce9eb0;box-shadow:0 0 0 2px #f6e5eb}.module-card>summary{list-style:none;padding:18px;cursor:pointer}.module-card>summary::-webkit-details-marker{display:none}.module-heading{display:flex;gap:12px;align-items:center}.module-no{font-size:12px;flex:none;background:#f7e9ee;border-radius:9px;display:grid;place-items:center;width:34px;height:34px;color:#94536a}.module-heading b{display:block;font-size:18px}.module-heading small{display:block;margin-top:2px}.expand-mark{margin-left:auto;color:#a67487;font-size:21px}.module-card[open] .expand-mark{transform:rotate(45deg)}.metric-list{display:block;margin-top:16px}.metric{display:block;border-top:1px solid #eee5e9;padding:12px 0}.metric:last-child{padding-bottom:0}.metric-top{display:flex;justify-content:space-between;gap:10px;font-size:12px}.metric-top em{font-size:10px;font-style:normal;color:#876771;background:#f8ecf0;padding:1px 5px;border-radius:4px;white-space:nowrap}.metric>strong{display:block;font-size:21px;font-weight:600;margin:3px 0;color:#954360}.metric>span:last-child{display:block;font-size:12px;color:#70616a}.metric.disabled>strong{color:#786b72}.metric.disabled .metric-top em{background:#ede9e8;color:#6e6865}.metric.symptom .metric-top em{background:#fff0d1;color:#83633b}.metric.observation .metric-top em{background:#f0eeec;color:#766f69}.metric.observation>strong{color:#74626d;font-size:19px}.module-foot{display:flex;justify-content:space-between;margin-top:16px;font-size:11px;color:#ae7189}.detail-content{padding:16px 18px;border-top:1px solid #eee2e7;font-size:13px;line-height:1.8;overflow-wrap:anywhere}.detail-content>p:last-child{margin-bottom:0}.flow-mini ol{list-style:none;padding:0;margin:0;counter-reset:step}.flow-mini li{counter-increment:step;position:relative;padding:10px 12px 10px 42px;margin-bottom:14px;border-radius:7px;background:#faf3ed;font-size:12px}.flow-mini li:before{content:counter(step);position:absolute;left:14px;top:9px;color:#a2735a}.flow-mini li:not(:last-child):after{content:'↓';position:absolute;left:16px;bottom:-17px;color:#ad8c7a}.flow-mini li b{display:block;font-size:13px}.guard{font-size:12px;background:#f2eef1;color:#74636c;padding:12px;border-radius:9px;margin:17px 0}.module-card .guard{margin:12px 0}#combinations,#catalog{margin-top:36px}.combo-row{display:grid;grid-template-columns:210px minmax(0,1fr) 155px;gap:16px;align-items:center;padding:17px 12px;border-bottom:1px solid #e8dee0}.combo-row.related{background:#fff0ca}.combo-name a{font-size:13px;font-weight:600;text-decoration:none}.combo-name small{display:block;font-size:10px;margin-top:4px}.combo-terms{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.combo-terms>span{font-size:12px;padding:7px 9px;background:#fff;border:1px solid #e7dce0;border-radius:6px;flex:1;min-width:110px}.and{font-size:9px;color:#aa7285}.combo-route{display:flex;gap:15px;align-items:center}.combo-route strong{font-size:17px;color:#924960}.combo-route small{font-size:11px;font-weight:400;display:block}.library{border:1px solid #e5d6dc;background:#fff;border-radius:11px;margin-bottom:13px}.library>summary{font-size:15px;padding:15px 18px;cursor:pointer}.library>summary>span{font-size:12px;color:#83717b;display:inline-block;margin-left:10px}.full-rule{margin-bottom:10px;border:1px solid #e8dfe3;border-radius:7px}.full-rule>summary{padding:12px;font-size:13px}.full-rule>summary>span{float:right}.full-rule.matched{border-color:#c991a7}.full-rule code{font-size:11px}.full-rule .detail-content b{display:block;color:#8b5067}details{scroll-margin:20px}summary{cursor:pointer}summary::marker{color:#a9667f}.observations details,.not-matched{font-size:12px;margin-top:12px}.observations .detail-content,.not-matched .detail-content{padding:10px 0}table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}th,td{text-align:left;vertical-align:top;border-bottom:1px solid #e5dae0;padding:8px 6px;overflow-wrap:anywhere}th{background:#f8edf2}th:first-child,td:first-child{width:45px}th:last-child,td:last-child{width:65px}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}footer{margin:34px auto 0;padding-top:20px;padding-bottom:26px;border-top:1px solid #e7dce0;color:#897781;font-size:11px;overflow-wrap:anywhere}.persistent-note{font-size:12px;color:#8d6274;padding-bottom:10px}.noscript{background:#fff0ca;padding:20px}.print-title{display:none}
+@media(max-width:1080px){header,.shell,footer{padding-left:22px;padding-right:22px}.journey{padding:17px}.journey-grid{gap:18px;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}.lane.destination{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}.destination .lane-title{grid-column:1/-1}.destination .service-status,.destination .safety-note{align-self:start}.conditions:after{display:none}.lane:not(:last-child):after{right:-18px;width:17px;font-size:18px}.responsibility h4{margin-top:5px}.toolbar{align-items:stretch}.tools{max-width:235px}.combo-row{grid-template-columns:160px minmax(0,1fr) 120px}.handoff-lane{gap:16px}.handoff-step:not(:last-child):after{right:-16px}}
+@media(max-width:650px){header,.shell,footer{padding-left:14px;padding-right:14px}header{padding-top:18px}h1{font-size:26px}h2{font-size:20px}.hero-mark{display:none}.brand span{font-size:10px}.toolbar{display:block;padding:12px}.tools{max-width:none;margin-top:10px;gap:6px}.tools button{font-size:12px;padding:8px 11px}.case-picker select{font-size:14px}nav{gap:15px;font-size:12px}.journey{padding:14px;border-radius:14px}.section-heading{display:block}.section-heading>span{display:block;margin:6px 0}.case-tag{display:inline-block!important}.journey-grid{grid-template-columns:1fr;gap:22px}.lane.destination{display:block;grid-column:auto}.lane:not(:last-child):after{content:'↓';right:auto;top:auto;bottom:-23px;left:calc(50% - 11px)}.conditions:after{display:block}.lane{padding:15px}.case-story{font-size:12px}.handoff-lane{flex-direction:column;gap:17px}.handoff-step:not(:last-child):after{content:'↓';top:auto;bottom:-21px;left:18px;right:auto}.handoff-step{padding:12px 12px 12px 47px}.handoff-step>strong{font-size:14px}.module-grid{grid-template-columns:1fr}.metric-top{flex-wrap:wrap;gap:4px}.module-heading b{font-size:17px}.metric>strong{font-size:21px}.module-card>summary{padding:16px}.combo-row{grid-template-columns:1fr;padding:17px 4px;gap:10px}.combo-terms{flex-direction:column;align-items:stretch;gap:5px}.combo-terms .and{text-align:center}.combo-route{padding-left:4px}.combo-route strong{display:flex;gap:10px;align-items:center}.library>summary>span{display:block;margin-left:0;margin-top:4px}.full-rule>summary>span{float:none;margin-left:8px}.full-rule>summary code{display:block}.print-title{display:none}}
+@media print{@page{size:A4;margin:14mm}body{background:#fff;color:#332c30;font-size:10pt}header,.shell,footer{max-width:none;padding:0}header{margin-bottom:10px}.hero-mark,.toolbar,nav,.tools,.persistent-note{display:none}.brand{font-size:10pt}.hero h1{font-size:22pt}.hero p{margin-bottom:6px}.print-title{display:block;font-size:10pt}.journey{box-shadow:none;padding:12px;margin-bottom:24px;break-inside:auto}.journey-grid{display:block}.lane{margin-bottom:13px;break-inside:avoid;display:block!important}.lane:after{display:none!important}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.destination .route-emblem{padding:10px}.route-emblem>span{font-size:21pt}.handoff-lane{display:block}.handoff-step{break-inside:avoid;margin:8px 0}.handoff-step:after{display:none!important}.module-grid{display:block}.module-card{margin-bottom:15px;break-inside:auto}.module-card>summary{padding:12px;break-after:avoid}.metric-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{break-inside:avoid}.metric>strong{font-size:15pt}.module-foot{display:none}.detail-content{font-size:9pt;padding:10px}.flow-mini li{break-inside:avoid}.combo-row{grid-template-columns:150px minmax(0,1fr) 100px;break-inside:avoid}.combo-terms{display:block}.combo-terms>span{display:block;padding:5px}.and{display:block;text-align:center}.full-rule{break-inside:avoid}.full-rule .detail-content{line-height:1.6}.full-rule .detail-content p{margin-bottom:6px}.library{break-inside:auto}h2,h3,h4,summary{break-after:avoid}table{font-size:9pt}tr{break-inside:avoid}thead{display:table-header-group}.case-story,.section-intro{font-size:9pt}footer{font-size:8pt}a{color:#624a56}.sr-only{display:none}}
+
+/* Condition operators and provenance remain legible on normal and highlighted rows. */
+.and{font-size:11px;color:#805061}
+.fact>span{font-size:12px;color:#6f5d67}
+.module-foot{font-size:12px;color:#875069}
+.metric-top em{font-size:11px;color:#785160}
+.metric.disabled .metric-top em{color:#625d5a}
+.score-labels{font-size:11px}
+@media print{
+  html{background:#fff}
+  .lane{break-inside:auto!important}
+  .lane-title{break-after:avoid}
+  .fact,.check,.score-box,.route-emblem,.service-status{break-inside:avoid}
+}
+</style></head><body>
+<header><div class="brand"><b>同频 B2 / 设计说明</b><span>V0.3.1 · 2026.09.09 · 离线版</span></div><div class="hero"><div><h1>从一个指标，看到下一步。</h1><p>当前值与阈值放在一起。看清为什么触发、由谁处理，以及是否真正接收。</p></div><div class="hero-mark" aria-hidden="true">♡</div></div><div class="persistent-note">虚构案例 / 规则设计演示。不是诊断、自动分诊或真实服务；无健康数据输入、录音、保存或上传。</div><div class="toolbar"><label class="case-picker" for="case-select">切换虚构案例 · 整条路径同步更新<select id="case-select" aria-controls="app"></select></label><div class="tools"><button id="expand-all" type="button">展开全部</button><button id="collapse-all" type="button">收起详情</button><button id="print" type="button">打印</button></div></div><nav aria-label="页面目录"><a href="#journey">案例路径</a><a href="#indicators">指标与阈值</a><a href="#combinations">组合触发</a><a href="#catalog">完整规则与量表</a></nav><p class="print-title">虚构案例 / 规则设计演示 · 打印包含当前案例与所有模块、规则说明；不代表真实分诊。</p></header>
+<div id="announcement" class="sr-only" aria-live="polite"></div><main class="shell" id="app"></main><noscript><div class="shell noscript">此离线文件需要浏览器启用 JavaScript 才能切换预设案例。可阅读原配套 Markdown。</div></noscript><footer><b>同频 · 温暖陪伴，清楚交接。</b><p>本页数值仅作说明：参考切点待专业审核；睡眠和步数参数未启用。成人规则不自动用于未成年人，安全与身体急症不等待问卷。原版 HTML、PRD 与 Demo 保持不变。</p><p>沿用规则清单 V0.3 · SHA-256 a4d284bce26eb5e72b854723da149e8be0634d5807e7e0e57fdd84d065392eb0。本轮仅将睡眠“约 2 小时”明确展示为未启用的 ≥2 小时候选，未写回旧稿。</p></footer>
+<script type="application/json" id="registry">{
+  "version": "0.3",
+  "date": "2026-09-09",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "NICE NG225：Self-harm — Risk assessment tools and scales",
+      "url": "https://www.nice.org.uk/guidance/ng225/chapter/recommendations#risk-assessment-tools-and-scales",
+      "scope": "量表不用于预测未来自杀或自伤、不以低中高总体风险标签决定服务资格；评估应聚焦当事人的需要与即时、长期安全。"
+    },
+    {
+      "id": "S2",
+      "title": "The Patient Health Questionnaire-2: validity of a two-item depression screener",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14583691/",
+      "scope": "PHQ-2 为两题筛查工具；原始验证研究支持总分 3 分作为进一步评估的参考切点。"
+    },
+    {
+      "id": "S3",
+      "title": "University of Washington National HIV Curriculum：GAD-2",
+      "url": "https://www.hiv.uw.edu/page/mental-health-screening/gad-2",
+      "scope": "GAD-2 的过去两周时间窗、四档计分、0–6 分范围及 3 分进一步评估参考。"
+    },
+    {
+      "id": "S4",
+      "title": "University of Washington National HIV Curriculum：PHQ-9",
+      "url": "https://www.hiv.uw.edu/page/mental-health-screening/phq-9",
+      "scope": "PHQ-9 的结构、0–27 分范围、10 分参考切点，以及第 9 题阳性须由有能力人员进一步评估。"
+    },
+    {
+      "id": "S5",
+      "title": "NIMH Ask Suicide-Screening Questions (ASQ) Toolkit",
+      "url": "https://www.nimh.nih.gov/research/research-conducted-at-nimh/asq-toolkit-materials",
+      "scope": "ASQ 是医疗场景的简短验证筛查工具；阳性后由受训临床人员开展简短安全评估，使用前须已有处置路径。"
+    },
+    {
+      "id": "S6",
+      "title": "NICE CG185：Bipolar disorder — assessment and management",
+      "url": "https://www.nice.org.uk/guidance/cg185/chapter/recommendations",
+      "scope": "疑似躁狂或对本人、他人存在危险时应紧急转至专科精神健康评估；不以普通问卷自行识别双相障碍。"
+    },
+    {
+      "id": "S7",
+      "title": "NHS：Hallucinations and hearing voices",
+      "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/hallucinations-hearing-voices/",
+      "scope": "异常感知需要医疗帮助；快速加重、突发混乱、言语不连贯或伤害指令等情况需要即时急症处理。"
+    },
+    {
+      "id": "S8",
+      "title": "中华人民共和国个人信息保护法",
+      "url": "https://www.npc.gov.cn/npc/c2/c30834/202108/t20210820_313088.html",
+      "scope": "医疗健康信息及不满十四周岁未成年人信息属于敏感个人信息；处理须满足必要性、保护和适用同意要求。"
+    },
+    {
+      "id": "S9",
+      "title": "WHO：Ethics and governance guidance for large multi-modal models",
+      "url": "https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models",
+      "scope": "健康领域生成式模型存在错误、偏差、自动化依赖和治理风险，需要人类监督、透明度和利益相关方参与。"
+    },
+    {
+      "id": "S10",
+      "title": "上海市政府：心理援助热线嘉定接线点志愿者招募",
+      "url": "https://www.shanghai.gov.cn/nw17239/20260327/a61cef9cffba469b820ee27e561baf17.html",
+      "scope": "核对上海 12356 与原 962525 并轨信息；公开资源不代表与同频建立接口或接收合作。"
+    },
+    {
+      "id": "S11",
+      "title": "University of Washington National HIV Curriculum：GAD-7",
+      "url": "https://www.hiv.uw.edu/page/mental-health-screening/gad-7",
+      "scope": "GAD-7 的过去两周时间窗、四档计分与 0–21 分范围；10 分是研究常用切点，当前页面同时提示 8 分进一步评估建议。"
+    },
+    {
+      "id": "S12",
+      "title": "国家卫生健康委：关于应用 12356 全国统一心理援助热线电话号码的通知",
+      "url": "https://www.nhc.gov.cn/yzygj/c100068/202412/49a1a65386cd4be582d4702fd0926ee8.shtml",
+      "scope": "核对 12356 的全国统一心理援助热线定位；心理援助热线不能替代医疗急救或公共安全渠道。"
+    },
+    {
+      "id": "S13",
+      "title": "American Heart Association：All About Heart Rate",
+      "url": "https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/all-about-heart-rate-pulse",
+      "scope": "心率会受运动、情绪、体位、温度和药物等影响；单次心率只是健康信息之一，伴胸痛、呼吸困难、头晕或晕厥时优先急症处理。"
+    },
+    {
+      "id": "S14",
+      "title": "NHS：Heart palpitations",
+      "url": "https://www.nhs.uk/symptoms/heart-palpitations/",
+      "scope": "心悸可有多种原因；当前心悸不缓解，或伴胸痛、呼吸困难、将要晕厥或已晕厥时需要立即急症求助。"
+    },
+    {
+      "id": "S15",
+      "title": "NHS：Chest pain",
+      "url": "https://www.nhs.uk/symptoms/chest-pain/",
+      "scope": "突发胸部疼痛或不适持续不退、疼痛向手臂、颈、颌、腹或背部放射，或胸痛伴出汗、恶心、头晕或气短时需要立即急症求助。"
+    }
+  ],
+  "modules": [
+    {
+      "id": "EMO",
+      "name": "情绪体验",
+      "summary": "记录本人当前和近期的主要感受、困扰程度、兴趣变化及希望获得的支持，不把标签相加成诊断或风险总分。",
+      "sources": ["晨间或晚间由本人点选、文字输入（本人确认后有效）", "本轮获授权的语音转写（原文可纠正，确认后有效）", "本人主动分享且仍在授权范围内的日记片段（未分享或撤回则不可见）", "正式量表中由本人逐题确认的结果（未确认、拒答或缺题保留为缺失）"],
+      "sourceIds": ["S1", "S2", "S4"],
+      "fields": ["本人情绪标签", "困扰程度 0–10", "所指时间窗", "兴趣或愉悦变化", "是否希望找人", "确认状态"],
+      "quality": ["区分现在、过去两周和更早历史", "区分本人、第三方、引用与假设", "缺失不等于没有", "量表答案须由本人针对正式题目确认"],
+      "keywords": ["低落", "难过", "焦虑", "绝望", "提不起兴趣", "想找人聊聊"],
+      "scaleIds": ["DAILY", "PHQ2", "PHQ9", "GAD2", "GAD7"],
+      "questions": ["现在最明显的感受是什么？", "这份感受影响日常事情了吗？", "你希望我陪你聊聊、记下来，还是帮你找真人支持？"],
+      "boundary": "日常情绪记录不是正式量表；总分不能预测未来自伤，也不能拦截本人主动求助。"
+    },
+    {
+      "id": "SLP",
+      "name": "睡眠与节律",
+      "summary": "分别记录本人感受、睡眠事件和设备估计，关注睡少后是否困倦或感觉不需要睡。",
+      "sources": ["晨间由本人点选、文字输入或获授权语音自述", "本人手填并确认的入睡、醒来和估计时长", "获授权设备的睡眠估计（须附设备来源、佩戴与质量；未授权、未佩戴或离线则为缺失）", "本人主动分享且仍在授权范围内的日记片段"],
+      "sourceIds": ["S6"],
+      "fields": ["入睡与醒来时间", "本人估计睡眠时长", "设备估计与来源", "夜醒或早醒", "恢复感", "睡少后困倦或不需要睡"],
+      "quality": ["跨午夜按一次睡眠事件", "卧床时长不等于睡眠", "设备值不覆盖自述", "昨晚线索不扩展为过去两周量表答案"],
+      "keywords": ["睡不着", "早醒", "整夜没睡", "睡得少也不困", "不需要睡", "昼夜颠倒"],
+      "scaleIds": ["DAILY", "PHQ9"],
+      "questions": ["昨晚休息得怎么样？", "睡少之后是困倦，还是觉得自己不需要睡？", "这和你平常的作息相比有什么变化？"],
+      "boundary": "不新增睡眠专项量表；单晚睡眠或设备静止不能诊断失眠、抑郁或躁狂。"
+    },
+    {
+      "id": "ACT",
+      "name": "精力与活动",
+      "summary": "记录本人精力、活动情境和经授权设备趋势，用于发起低压力关怀。",
+      "sources": ["晨间或晚间由本人点选、文字输入或获授权语音自述的精力与活动情境", "本人手填并确认的活动记录", "获授权设备的步数或活动分钟（须附来源、单位、时间、佩戴与质量；未授权、未佩戴或离线则为缺失）", "本人主动分享且仍在授权范围内的日记片段"],
+      "sourceIds": ["S9"],
+      "fields": ["精力 0–10", "步数或活动分钟", "采集时间与单位", "佩戴与清醒状态", "个人参考值", "本人活动意愿"],
+      "quality": ["缺失与零值分开", "未佩戴不等于不活动", "参考值按同类日且需足够有效数据", "行动障碍、轮班、休息和恢复情境必须澄清"],
+      "keywords": ["没力气", "不想动", "一直坐着", "今天走得少", "在休息", "没戴手表"],
+      "scaleIds": ["DAILY", "PHQ9"],
+      "questions": ["今天的精力大约是多少？", "这段时间活动少，是休息、学习工作、身体不适，还是提不起劲？", "如果你愿意，现在更想聊聊还是暂缓提醒？"],
+      "boundary": "活动趋势只触发情境确认，不判精神疾病发作，不强推运动，也不降低无设备用户的求助资格。"
+    },
+    {
+      "id": "COG",
+      "name": "对话与认知",
+      "summary": "从获授权对话中标注对象、否定、引用、时间和突发认知变化，保留原句与不确定性。",
+      "sources": ["当前对话中由本人输入并允许处理的原句", "本轮获授权的语音转写（听不清片段保持不确定，确认后才成为有效记录）", "本人主动分享且仍在授权范围内的日记片段", "具备权限的人工核实记录（须标明核实人、时间与依据）"],
+      "sourceIds": ["S7", "S9"],
+      "fields": ["本人原句", "说话对象", "否定或引用标记", "事件时间", "转写置信与听不清片段", "定向和表达变化"],
+      "quality": ["电视声和旁人声不当作本人回答", "引用、假设和现实陈述分开", "转写不清不补写", "突发混乱不归因于情绪"],
+      "keywords": ["听到别人听不到的声音", "看到不存在的东西", "突然糊涂", "说不清在哪里", "电影里说", "如果有人"],
+      "scaleIds": ["DAILY"],
+      "questions": ["这句话说的是你现在的情况、过去的事，还是引用别人的话？", "你现在知道自己在哪里、正在做什么吗？", "这些体验是新出现的，还是以前也有？"],
+      "boundary": "语气、语速、哭声、口音或模型置信度不直接生成疾病标签或量表答案。"
+    },
+    {
+      "id": "SOC",
+      "name": "社交与功能",
+      "summary": "分项记录学习工作、自理、社交影响以及本人明确提出的支持需要。",
+      "sources": ["晚间或当前由本人点选、文字输入或获授权语音自述的功能分项", "本人主动提出的陪伴、换人或专业支持请求", "本人主动分享且仍在授权范围内的日记片段", "获授权服务工单与人工交接记录（未接收时明确显示待接收）"],
+      "sourceIds": ["S1"],
+      "fields": ["学习或工作影响 0–3", "自理影响 0–3", "社交影响 0–3", "回避变化", "本人支持偏好", "当前责任人"],
+      "quality": ["功能分项是产品自评而非验证量表", "本人希望获得专业帮助可独立触发", "沉默或迟回不等于社交退缩", "服务结束不等于需要消失"],
+      "keywords": ["不想见人", "上不了班", "没法上课", "照顾不了自己", "需要帮助", "想换个人聊"],
+      "scaleIds": ["DAILY"],
+      "questions": ["今天学习或工作、自理、与人相处分别受到多大影响？", "你希望获得陪伴、专业评估还是其他现实帮助？", "现在是否已经有人负责跟进？"],
+      "boundary": "功能困难和求助意愿影响服务安排，但不等于诊断或未来风险等级。"
+    },
+    {
+      "id": "BOD",
+      "name": "身体与生活",
+      "summary": "记录身体不适、心率测量情境、用药或饮酒变化，优先识别需现实医疗帮助的警示症状。",
+      "sources": ["本人点选、文字输入或获授权语音自述的身体与生活变化", "本人手填并确认的测量值、时间和情境", "获授权设备的心率或 HRV 记录（须附设备来源、单位、时间、佩戴与质量；未授权、未佩戴或离线则为缺失）", "本人主动分享且仍在授权范围内的日记片段", "血压、血氧、体温为未启用扩展，本版不采集、不推断"],
+      "sourceIds": ["S13", "S14", "S15"],
+      "fields": ["心率与单位", "HRV 及单位（仅记录，不设精神疾病阈值）", "测量时间和活动背景", "心悸是否持续", "胸痛、呼吸困难、头晕或晕厥", "食欲变化（本人自述）", "体重、来源与测量时间（可选）", "疼痛部位与感受（本人自述）", "用药与饮酒变化（本人自述）", "咖啡因变化（本人自述）", "血压、血氧、体温（未启用扩展）"],
+      "quality": ["人体数值注明为虚构演示、本人手填或真实设备来源", "运动后读数与静息读数分开", "单次心率或 HRV 不解释精神状态", "食欲、体重、疼痛、用药和饮酒以本人自述及明确来源呈现，不自动拟诊或调药", "血压、血氧、体温当前未启用，不用其他数据补造", "不因焦虑表述排除身体急症"],
+      "keywords": ["心慌", "心悸", "胸痛", "喘不上气", "快晕了", "咖啡", "漏药", "喝酒变多"],
+      "scaleIds": ["DAILY"],
+      "questions": ["这个读数是在休息时还是活动后测到的？", "心悸现在还在吗，是否同时胸痛、呼吸困难、头晕或将要晕厥？", "最近用药、咖啡因或饮酒有没有变化？"],
+      "boundary": "不建立 HRV 精神疾病阈值，不根据心率正常排除急症，不提供自动调药建议；血压、血氧、体温仅为未启用扩展，不在本版规则或案例中使用。"
+    },
+    {
+      "id": "SAF",
+      "name": "风险信息",
+      "summary": "独立处理本人或第三方的当前伤害与自杀线索，明确当前肯定表达直接进入安全响应。",
+      "sources": ["当前对话中由本人明确输入的安全相关原句（明确当前肯定表达不等待后续确认）", "本轮获授权语音中待核实的安全片段（保留原文、对象、时点和转写不确定性）", "正式 PHQ-9 第 9 题由本人确认的有效回答", "现实第三方安全线索（与本人量表分开记录）", "安全响应启动后，由获授权专业人员核实的计划有无、相关手段或工具可及性、近期行为和当前支持（不作为进入 R0 的前置门槛，不索取操作细节）", "具备权限的人工核实、已采取动作与真实接收记录（未接收不得写已接管）"],
+      "sourceIds": ["S1", "S4", "S5", "S7", "S12", "S14"],
+      "fields": ["本人或第三方", "当前、近期或历史", "明确肯定、否定或不确定", "本人当前报告的伤害命令声音", "已发生或近期相关行为", "安全响应启动后的计划有无（不索取操作细节）", "安全响应启动后的相关手段或工具可及性（不索取操作细节）", "当前现实支持与是否有人可协助", "是否有即时身体急症", "人工核实和接收状态"],
+      "quality": ["明确当前肯定不等待确认或量表", "第 9 题非零单独核查", "低分和正常设备不能抵消", "新否定不静默删除既有事件", "未回复不判安全"],
+      "keywords": ["现在想死", "想结束生命", "正在伤害自己", "不想活了", "想伤害别人", "只是台词", "以前想过"],
+      "scaleIds": ["PHQ9", "ASQ"],
+      "questions": ["这说的是你本人还是其他人？", "这是现在正在发生、近期发生，还是更早的历史？", "是否存在正在发生的伤害或需要立即医疗帮助的情况？", "安全响应启动后，由获授权专业人员核实：现在是否存在相关计划？仅确认有无，不询问操作细节。", "安全响应启动后，由获授权专业人员核实：现在是否可接触到相关手段或工具？仅确认可及性，不索取操作细节。", "安全响应启动后，由获授权专业人员核实：近期是否已有相关行为，以及当前是否有现实支持可协助？"],
+      "boundary": "本模块不是预测引擎；模型不自动报警、定位或通知家属，现实联络须由适用协议、权限与合法依据支持。"
+    }
+  ],
+  "scales": [
+    {
+      "id": "PHQ2",
+      "name": "PHQ-2 成人抑郁症状短筛候选",
+      "window": "过去两周",
+      "purpose": "在本人自愿且使用核验版本时，提示是否需要进一步抑郁症状评估。",
+      "age": "成人候选；未成年人不自动套用",
+      "version": "两题结构说明；中文正式题干、施测等价性与版本尚待专业核验",
+      "items": ["第 1 题主题：兴趣或愉悦减少", "第 2 题主题：情绪低落或无望"],
+      "options": ["完全没有（0，正式措辞待核验）", "有几天（1，正式措辞待核验）", "超过一半天数（2，正式措辞待核验）", "几乎每天（3，正式措辞待核验）"],
+      "maxScore": 6,
+      "threshold": "完整且本人确认的总分 ≥3：建议进一步评估，可继续 PHQ-9 或专业访谈；不是诊断、急诊标准或服务门槛。",
+      "licence": "此清单不转载正式题干；正式中文版本、翻译权利和使用条件须上线前核验。",
+      "sourceIds": ["S2"]
+    },
+    {
+      "id": "PHQ9",
+      "name": "PHQ-9 成人抑郁症状评估候选",
+      "window": "过去两周",
+      "purpose": "在进一步评估中记录九个症状主题；固定程序计分，结合功能、变化和本人需要安排专业接续。",
+      "age": "成人候选；未成年人版本与路径另行批准",
+      "version": "九题结构说明；中文正式题干和版本尚待专业核验",
+      "items": ["第 1 题主题：兴趣或愉悦", "第 2 题主题：低落或无望", "第 3 题主题：睡眠", "第 4 题主题：疲倦或精力", "第 5 题主题：食欲", "第 6 题主题：自我评价", "第 7 题主题：注意力", "第 8 题主题：动作或坐立变化", "第 9 题主题：死亡或自伤想法"],
+      "options": ["完全没有（0，正式措辞待核验）", "有几天（1，正式措辞待核验）", "超过一半天数（2，正式措辞待核验）", "几乎每天（3，正式措辞待核验）"],
+      "maxScore": 27,
+      "threshold": "完整且本人确认的总分 ≥10：R2 进一步专业评估候选；第 9 题任何非零有效回答独立进入 R1 当次安全核查，若明确当前紧急则 R0。",
+      "licence": "此清单仅列题号主题，不构成施测表；正式中文版本、授权和施测流程须上线前核验。",
+      "sourceIds": ["S4", "S1"]
+    },
+    {
+      "id": "GAD2",
+      "name": "GAD-2 成人焦虑症状短筛候选",
+      "window": "过去两周",
+      "purpose": "在本人自愿且使用核验版本时，提示是否需要进一步焦虑评估。",
+      "age": "成人候选；未成年人不自动套用",
+      "version": "两题结构说明；中文正式题干、施测等价性与版本尚待专业核验",
+      "items": ["第 1 题主题：紧张、焦虑或不安", "第 2 题主题：难以停止或控制担忧"],
+      "options": ["完全没有（0，正式措辞待核验）", "有几天（1，正式措辞待核验）", "超过一半天数（2，正式措辞待核验）", "几乎每天（3，正式措辞待核验）"],
+      "maxScore": 6,
+      "threshold": "完整且本人确认的总分 ≥3：建议进一步焦虑评估，可继续 GAD-7 或专业访谈；不是诊断或急症标准。",
+      "licence": "UW 页面说明 GAD-2 可公开使用；正式中文翻译、呈现和本地使用仍须核验。",
+      "sourceIds": ["S3"]
+    },
+    {
+      "id": "GAD7",
+      "name": "GAD-7 成人焦虑症状评估候选",
+      "window": "过去两周",
+      "purpose": "进一步记录七个焦虑症状主题并由固定程序计分，结果与本人需要和功能信息共同交专业评估。",
+      "age": "成人候选；未成年人版本与路径另行批准",
+      "version": "七题结构说明；中文正式题干和版本尚待专业核验",
+      "items": ["第 1 题主题：紧张、焦虑或不安", "第 2 题主题：难以停止或控制担忧", "第 3 题主题：对多种事情过度担忧", "第 4 题主题：难以放松", "第 5 题主题：坐立不安", "第 6 题主题：易烦躁", "第 7 题主题：害怕不好的事情发生"],
+      "options": ["完全没有（0，正式措辞待核验）", "有几天（1，正式措辞待核验）", "超过一半天数（2，正式措辞待核验）", "几乎每天（3，正式措辞待核验）"],
+      "maxScore": 21,
+      "threshold": "总分 10 是研究常用切点并作为本演示的可审查候选；UW 当前页面也建议从 8 分考虑完整诊断评估。不得把任一分数作为唯一服务门槛或急症标准。",
+      "licence": "此清单仅列题号主题，不构成施测表；正式中文版本、授权和本地阈值须上线前核验。",
+      "sourceIds": ["S11", "S1"]
+    },
+    {
+      "id": "ASQ",
+      "name": "ASQ 专业安全筛查候选",
+      "window": "按所选 NIMH 版本与场景执行；本清单不定义时间窗",
+      "purpose": "仅供已建立安全处置路径的专业场景评审，不作为普通聊天后台评分。",
+      "age": "NIMH 工具覆盖医疗场景 8 岁及以上；本产品的实际年龄、场景和版本须由专业团队批准",
+      "version": "专业候选；不构造或转载完整筛查题",
+      "items": ["主题 A：近期希望死亡", "主题 B：认为他人可能更好", "主题 C：近期自杀想法", "主题 D：既往自杀行为", "追问主题：此刻是否存在自杀想法"],
+      "options": ["不是自助施测入口", "由受训人员使用核验版本", "阳性后进入简短安全评估", "当前明确紧急线索直接走 R0"],
+      "maxScore": null,
+      "threshold": "非总分工具；专业人员按核验版本处理阳性和当前急性线索，本清单不定义自动评分。",
+      "licence": "NIMH 页面说明工具免费并提供多语言材料；正式使用须保留版本要求、培训和既定接续路径。",
+      "sourceIds": ["S5"]
+    },
+    {
+      "id": "DAILY",
+      "name": "同频日常观察",
+      "window": "当前、今天或昨晚，逐条注明",
+      "purpose": "低压力记录感受、睡眠、精力、功能、身体情境和支持需要，为陪伴与信息补充提供依据。",
+      "age": "按年龄提供适配表达；不是成人量表",
+      "version": "产品日常观察 V0.3，不是验证量表",
+      "items": ["观察 1：当前感受", "观察 2：昨晚睡眠与恢复", "观察 3：精力与活动情境", "观察 4：学习工作、自理和社交影响", "观察 5：身体不适与生活变化", "观察 6：希望获得的支持"],
+      "options": ["可点选、说或输入", "可以稍后或跳过", "来源和时间窗逐项确认", "不合成疾病或安全总分"],
+      "maxScore": null,
+      "threshold": "无临床阈值；持续困扰、功能影响、本人求助或安全线索分别进入相应规则。",
+      "licence": "同频产品自定义观察结构；不得标成已验证量表。",
+      "sourceIds": ["S1", "S9"]
+    }
+  ],
+  "rules": [
+    {
+      "id": "TRG-EMO-K01",
+      "moduleIds": ["EMO"],
+      "type": "K",
+      "name": "普通情绪陪伴",
+      "condition": "本人描述当前短暂低落、紧张、疲惫或轻微烦躁 AND 未报告明显功能影响 AND 未提出专业帮助 AND 无当前安全或身体急症线索。",
+      "exclude": "排除第三方、引用、历史事件；排除任何当前伤害表达、胸痛、呼吸困难、晕厥或突发混乱。",
+      "clarify": "确认是本人当前感受，以及希望聊聊、记录、练习还是休息。",
+      "response": "R3",
+      "owner": "用户端发起；小频提供可跳过的日常陪伴，用户可随时改选真人支持。",
+      "status": "可用于演示",
+      "sourceIds": ["S1"],
+      "example": "今天有点烦，工作还能做，想和小频说两句。",
+      "counterexample": "我现在想结束生命。"
+    },
+    {
+      "id": "TRG-EMO-K02",
+      "moduleIds": ["EMO", "SOC"],
+      "type": "K",
+      "name": "持续困扰伴功能影响",
+      "condition": "本人报告情绪困扰持续或反复 AND 学习工作、自理或社交至少一项受到明确影响 AND 无更紧急安全或身体急症线索。",
+      "exclude": "单日轻微波动且功能未受影响；未回复；只说第三方。",
+      "clarify": "分别核对持续时间、功能分项和本人希望的支持，不用“严重”作为执行条件。",
+      "response": "R2",
+      "owner": "志愿者可协助整理；专业人员评估支持计划，接收前保留当前责任。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S1"],
+      "example": "这两周一直低落，已经多次没法去上班，希望找专业人员。",
+      "counterexample": "今天有点难过，但日常事情都能做。"
+    },
+    {
+      "id": "TRG-EMO-Q01",
+      "moduleIds": ["EMO"],
+      "type": "Q",
+      "name": "成人短筛需进一步评估",
+      "condition": "年龄为成人 AND PHQ-2 或 GAD-2 全部题目有效且本人确认 AND 任一总分 ≥3 AND 无更高优先级线索。",
+      "exclude": "未成年人；缺题；未确认；由闲聊推算；当前安全或身体急症。",
+      "clarify": "展示量表、版本、过去两周时间窗、逐题答案和固定计分结果。",
+      "response": "R2",
+      "owner": "用户确认，固定程序计分；专业人员决定是否补长表或访谈。",
+      "status": "候选规则，中文版本待核验",
+      "sourceIds": ["S2", "S3", "S1"],
+      "example": "成人本人确认 GAD-2 两题总分为 3，当前无安全线索。",
+      "counterexample": "根据昨晚聊天猜测 GAD-2 为 3。"
+    },
+    {
+      "id": "TRG-EMO-Q02",
+      "moduleIds": ["EMO"],
+      "type": "Q",
+      "name": "成人长表候选切点",
+      "condition": "年龄为成人 AND（（PHQ-9 全部九题有效且本人确认 AND PHQ-9 总分 ≥10）OR（GAD-7 全部七题有效且本人确认 AND GAD-7 演示候选总分 ≥10））AND 无更高优先级线索。",
+      "exclude": "PHQ-9 第 9 题非零；缺题或未确认；未成年人；明确当前安全或身体急症。",
+      "clarify": "记录分项、功能和本人意愿；提示 GAD-7 的 10 分仅为演示候选且存在其他参考切点。",
+      "response": "R2",
+      "owner": "固定程序计分；专业人员结合功能、变化和本人意愿评估。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S4", "S11", "S1"],
+      "example": "成人本人确认 PHQ-9 九题总分 11，第 9 题为 0。",
+      "counterexample": "PHQ-9 只答了八题，系统按缺题补零得到 11。"
+    },
+    {
+      "id": "TRG-SLP-K01",
+      "moduleIds": ["SLP"],
+      "type": "K",
+      "name": "单晚睡眠线索",
+      "condition": "本人仅描述昨晚入睡困难、夜醒、早醒或恢复感差 AND 尚未说明过去两周频率和功能影响 AND 无安全或急症线索。",
+      "exclude": "不得直接写入 PHQ-9；排除睡少且不困伴异常兴奋冲动。",
+      "clarify": "记录为昨晚的日常观察，并询问是否希望说明原因、身体不适或近期趋势。",
+      "response": "CHECK",
+      "owner": "用户端确认；小频只补充情境，不自动开启正式量表。",
+      "status": "可用于演示",
+      "sourceIds": [],
+      "example": "昨晚一直没睡好。",
+      "counterexample": "过去两周几乎每天都睡不好，并已针对正式题目确认选项。"
+    },
+    {
+      "id": "TRG-SLP-K02",
+      "moduleIds": ["SLP", "ACT"],
+      "type": "K",
+      "name": "睡少但不困需澄清",
+      "condition": "本人报告睡眠明显少于自己的平常水平 AND 同时表示不困或不需要睡 AND 尚未确认异常兴奋、冲动或失控行为。",
+      "exclude": "仅一晚因工作少睡且次日困倦；设备估计但本人否认。",
+      "clarify": "询问持续时间、是否异常兴奋或冲动、功能变化及用药或物质变化。",
+      "response": "CHECK",
+      "owner": "小频补充信息；出现组合证据后由专业人员接续。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S6"],
+      "example": "这两晚只睡三四小时但一点不困，还没说明其他变化。",
+      "counterexample": "这两晚不需要睡、异常兴奋并冲动消费。"
+    },
+    {
+      "id": "TRG-SLP-D01",
+      "moduleIds": ["SLP"],
+      "type": "D",
+      "name": "睡眠设备趋势问候",
+      "condition": "演示配置 未启用：已授权 AND 设备质量通过 AND 前 14 天至少 7 个有效日形成同类日参考 AND 连续 2 晚睡眠估计比个人参考少约 2 小时。",
+      "exclude": "未佩戴、来源混杂、设备更换、基线不足、轮班情境未分组或用户关闭提醒。",
+      "clarify": "先说明设备来源，再询问本人感受、轮班或其他情境；设备不覆盖自述。",
+      "response": "CHECK",
+      "owner": "用户端确认；管理端仅维护配置和审计，不据此调整支持标签。",
+      "status": "演示配置 未启用，未经临床分诊验证",
+      "sourceIds": ["S9"],
+      "example": "满足有效数据要求的两晚趋势仅生成一次‘和你的感觉接近吗’。",
+      "counterexample": "手表一晚缺失就判定睡眠异常。"
+    },
+    {
+      "id": "TRG-ACT-K01",
+      "moduleIds": ["ACT"],
+      "type": "K",
+      "name": "低精力日常支持",
+      "condition": "本人报告今天精力低或提不起劲 AND 未报告明确功能中断、身体警示或安全线索 AND 愿意接受普通陪伴。",
+      "exclude": "仅设备步数低；未回复；胸痛、晕厥、突发混乱或当前伤害表达。",
+      "clarify": "询问身体是否不适，以及更想休息、聊聊、记录还是找人。",
+      "response": "R3",
+      "owner": "用户端选择；小频不强推活动，志愿者按需陪伴。",
+      "status": "可用于演示",
+      "sourceIds": [],
+      "example": "今天没什么精神，想先坐着聊一会儿。",
+      "counterexample": "今天没精神并且胸痛、快晕了。"
+    },
+    {
+      "id": "TRG-ACT-D01",
+      "moduleIds": ["ACT"],
+      "type": "D",
+      "name": "步数趋势关怀",
+      "condition": "演示配置 未启用：已授权 AND 设备质量通过 AND 前 14 天至少 7 个有效日形成同类日参考 AND 连续 3 个有效日步数低于个人参考值 50%。",
+      "exclude": "未佩戴、缺失、设备更换、基线为零、行动障碍、轮班或用户关闭提醒。",
+      "clarify": "先问学习工作、休息、恢复、行动能力、身体不适或提不起劲，不默认原因。",
+      "response": "CHECK",
+      "owner": "用户端确认；管理端维护配置和数据质量，不能据此自动转诊。",
+      "status": "演示配置 未启用，未经临床分诊验证",
+      "sourceIds": ["S9"],
+      "example": "连续三天有效数据满足演示条件，仅邀请说明近况。",
+      "counterexample": "一天显示 0 步就进入专业紧急响应。"
+    },
+    {
+      "id": "TRG-ACT-D02",
+      "moduleIds": ["ACT"],
+      "type": "D",
+      "name": "活动数据不可用",
+      "condition": "步数或活动分钟缺失、过期、来源不明 OR 用户明确未佩戴设备。",
+      "exclude": "本人同时明确提出专业帮助或当前安全问题时不得停在信息补充。",
+      "clarify": "标记不可用而不是零；可询问本人感受，但不反复要求设备权限。",
+      "response": "CHECK",
+      "owner": "小频标注质量；用户仍保留全部主动求助入口。",
+      "status": "可用于演示",
+      "sourceIds": ["S9"],
+      "example": "手表没戴，今天步数显示缺失。",
+      "counterexample": "手表已确认全天佩戴且数据质量通过。"
+    },
+    {
+      "id": "TRG-COG-K01",
+      "moduleIds": ["COG", "SAF"],
+      "type": "K",
+      "name": "突发混乱或言语不连贯",
+      "condition": "本人或现实在场者报告突发的现实症状 AND（症状当前正在持续 OR 尚未确认已经恢复）AND（出现混乱、不能辨认地点或人物、对话突然不合逻辑 OR 说话明显无法表达连贯意思）。",
+      "exclude": "仅有既往历史且已确认恢复；稳定的口音、输入法错误、普通语音转写失败；不能仅凭模型输出、风格或自动推断判断症状存在。",
+      "clarify": "只做简短现实核实；当前持续或尚未确认恢复时不延迟现实急症求助，不让用户独自驾车就医。历史发作虽已恢复，也提示尽快寻求现实医疗评估，不自动标成平稳。",
+      "response": "R0",
+      "owner": "用户端突出 120 等现实医疗急救；专业人员按机构流程协同，普通志愿者不独立判断病因。",
+      "status": "安全候选规则，须本地协议确认",
+      "sourceIds": ["S7"],
+      "example": "现实在场家人说他刚刚突然认不出家里，也说不成完整句子，目前仍在持续。",
+      "counterexample": "本人说去年曾短暂混乱但已恢复；不套当前 R0，仍提示尽快寻求现实医疗评估。"
+    },
+    {
+      "id": "TRG-COG-K02",
+      "moduleIds": ["COG"],
+      "type": "K",
+      "name": "新发异常感知",
+      "condition": "本人确认新近出现听到、看到、闻到、尝到或感觉到他人未感知内容 AND 无突发混乱、快速加重、伤害指令或即时危险。",
+      "exclude": "入睡或将醒时短暂体验尚待澄清；电影、梦境、比喻或第三方转述。",
+      "clarify": "核对是否新发、是否快速变化、药物或物质情境和当前安全；不诊断原因。",
+      "response": "R1",
+      "owner": "当次协调专业评估；未接收时保留当前责任并展示备用现实路径。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S7"],
+      "example": "最近第一次听到别人听不到的声音，目前没有伤害指令，也没有突然糊涂。",
+      "counterexample": "电影里演员说自己听到声音。"
+    },
+    {
+      "id": "TRG-COG-K03",
+      "moduleIds": ["COG", "SAF"],
+      "type": "K",
+      "name": "引用或虚构语境",
+      "condition": "文本明确标记为电影、书籍、歌曲、转述练习或假设中的台词 AND 没有证据表明是本人当前想法或真实第三方当前事件。",
+      "exclude": "‘朋友现在想死’是现实第三方线索，不属于引用；引用后又说‘我也是’须按本人表达处理。",
+      "clarify": "仅在语境仍不清时问一句对象与现实性；不填写本人量表。",
+      "response": "CHECK",
+      "owner": "小频保留语境标记；用户可纠正，志愿者看到的摘要不得改写为本人安全阳性。",
+      "status": "可用于演示",
+      "sourceIds": ["S9"],
+      "example": "刚才那句‘不想活了’是电影台词，我在讨论剧情。",
+      "counterexample": "我朋友现在说他不想活了，我不知道怎么办。"
+    },
+    {
+      "id": "TRG-SOC-K01",
+      "moduleIds": ["SOC"],
+      "type": "K",
+      "name": "社交回避伴功能影响",
+      "condition": "本人报告相较平常持续回避联系或见人 AND 学习工作、自理或社交功能至少一项明确受影响 AND 无更紧急线索。",
+      "exclude": "主动独处休息且功能未受影响；迟回消息或关闭通知。",
+      "clarify": "确认变化时长、功能分项及希望获得何种支持。",
+      "response": "R2",
+      "owner": "志愿者可陪伴并整理需求；专业人员评估后续计划。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S1"],
+      "example": "这两周一直躲着同事，已经无法到岗。",
+      "counterexample": "周末想独处半天，工作和自理没有受影响。"
+    },
+    {
+      "id": "TRG-SOC-K02",
+      "moduleIds": ["SOC"],
+      "type": "K",
+      "name": "本人主动请求专业帮助",
+      "condition": "本人明确提出希望专业人员评估、希望就诊建议或希望联系已有治疗团队 AND 无当前 R0 或 R1 线索。",
+      "exclude": "仅询问产品功能；第三方泛泛咨询。",
+      "clarify": "询问希望的支持类型、地区和已有团队；量表低分或无设备不作为拒绝理由。",
+      "response": "R2",
+      "owner": "志愿者或小频协助发起；专业接收前原责任不释放，公开资源不等于预约。",
+      "status": "可用于演示",
+      "sourceIds": ["S1"],
+      "example": "即使分数不高，我也想找专业人员谈谈。",
+      "counterexample": "我想知道哪里能设置提醒。"
+    },
+    {
+      "id": "TRG-SOC-K03",
+      "moduleIds": ["SOC"],
+      "type": "K",
+      "name": "普通陪伴或换人需要",
+      "condition": "本人希望找真人倾听或更换当前陪伴者 AND 未提出专业评估 AND 无紧急安全或身体急症线索。",
+      "exclude": "普通队列满额不能拦截 R0/R1；不能把找人聊天自动解释为临床转诊。",
+      "clarify": "确认普通陪伴、换人或专业帮助的区别，并显示当前等待与责任状态。",
+      "response": "R3",
+      "owner": "志愿者端按资格和容量承接；管理端只协调，不默认查看全文。",
+      "status": "可用于演示",
+      "sourceIds": [],
+      "example": "我想换一位志愿者继续聊。",
+      "counterexample": "我现在正在伤害自己，需要马上帮助。"
+    },
+    {
+      "id": "TRG-BOD-K01",
+      "moduleIds": ["BOD"],
+      "type": "K",
+      "name": "心率或心悸情境补充",
+      "condition": "本人报告活动后心率上升或短暂心悸 AND 当前已经缓解 AND 明确没有胸痛、呼吸困难、将要晕厥或已晕厥。",
+      "exclude": "任何当前警示症状；不能因本人说焦虑就默认是惊恐。",
+      "clarify": "记录测量来源、活动背景、是否持续，以及咖啡因、饮酒和用药变化；反复或担心时建议现实医疗咨询。",
+      "response": "CHECK",
+      "owner": "用户端补充；小频不诊断，必要时提示联系现实医疗人员。",
+      "status": "候选规则，须医学评审",
+      "sourceIds": ["S13", "S14"],
+      "example": "爬楼后手表显示心率上升，喝过咖啡，现在已缓解且无胸痛、气短或晕厥感。",
+      "counterexample": "现在心悸不缓解并伴胸痛和快要晕倒。"
+    },
+    {
+      "id": "TRG-BOD-K02",
+      "moduleIds": ["BOD", "SAF"],
+      "type": "K",
+      "name": "心悸伴身体警示症状",
+      "condition": "本人当前有心悸 AND（心悸持续不退 OR 同时存在胸痛、呼吸困难、将要晕厥或已经晕厥中的任一项）。",
+      "exclude": "不要求心悸持续与警示症状同时满足；不等待心理量表、心率复测或焦虑解释；不能仅靠正常设备读数排除。",
+      "clarify": "只核对是否当前存在警示症状和所在地区可用的急救方式，不延迟求助。",
+      "response": "R0",
+      "owner": "用户端突出 120 等现实医疗急救；专业人员按本地协议协同，普通志愿者不单独处置。",
+      "status": "安全候选规则，须本地协议确认",
+      "sourceIds": ["S13", "S14"],
+      "example": "现在心悸没有停，还胸痛并觉得要晕过去。",
+      "counterexample": "运动后短暂心跳快，已经缓解且没有警示症状。"
+    },
+    {
+      "id": "TRG-BOD-K03",
+      "moduleIds": ["BOD", "SAF"],
+      "type": "K",
+      "name": "胸部疼痛或不适的独立急症入口",
+      "condition": "（本人或现实在场者报告当前正在发生的胸部症状）AND（突发胸部疼痛或不适持续不退 OR 胸痛向左臂或右臂、颈部、下颌、腹部或背部放射 OR 胸痛同时伴出汗、恶心、头晕或呼吸困难中的任一项）。",
+      "exclude": "仅有去年或更早历史且已确认恢复，不按当前 R0 命中；不以存在心悸、设备读数异常、焦虑表述或量表结果为前提；不得用正常心率排除。",
+      "clarify": "只核对症状是否当前存在和所在地区可用的急救方式，不延迟现实医疗急救，不引导自行诊断。近期发作虽已缓解但当时出现上述警示时，仍提示现实医疗紧急咨询，不自动标成平稳。",
+      "response": "R0",
+      "owner": "用户端突出 120 等现实医疗急救；专业人员按本地协议协同，普通志愿者不单独判断原因。",
+      "status": "安全候选规则，须本地协议确认",
+      "sourceIds": ["S15"],
+      "example": "胸口突然出现压迫样不适且一直不退，即使没有心悸或设备读数也立即进入 R0。",
+      "counterexample": "去年曾有胸痛并向手臂放射、目前早已恢复，不套当前 R0；近期已缓解但曾出现警示症状时仍需现实医疗紧急咨询，不能自动标成平稳。"
+    },
+    {
+      "id": "TRG-BOD-D01",
+      "moduleIds": ["BOD"],
+      "type": "D",
+      "name": "孤立心率读数不作精神分诊",
+      "condition": "仅有一次设备心率数值或与个人参考的变化 AND 缺少可靠测量背景或本人症状信息。",
+      "exclude": "本人已报告胸痛、呼吸困难、将要晕厥、已晕厥或突发混乱时必须进入更高优先级路径。",
+      "clarify": "询问设备来源、时间、静息或活动背景及当前症状；不建立 HRV 或心率精神疾病阈值。",
+      "response": "CHECK",
+      "owner": "小频标注信息不足；用户可联系现实医疗人员，管理端不得用读数自动改支持标签。",
+      "status": "可用于演示",
+      "sourceIds": ["S13", "S14"],
+      "example": "手表单次显示 105 次/分，但不知道是否刚运动，也没有症状记录。",
+      "counterexample": "心悸持续并伴胸痛和晕厥感。"
+    },
+    {
+      "id": "TRG-SAF-K01",
+      "moduleIds": ["SAF"],
+      "type": "K",
+      "name": "明确当前本人安全线索",
+      "condition": "本人明确肯定现在有自杀或结束生命想法 OR 本人现在正在伤害自己 OR 本人明确现在要伤害他人 OR 本人明确报告当前听到命令自己伤害自己或他人的声音。",
+      "exclude": "电影、书籍、梦境、练习台词或转述且非本人当前现实体验不命中；不要求同时具备计划、工具和时间；不等待转写确认、量表完成、复测或普通志愿者名额。",
+      "clarify": "立即启动安全响应；随后由获授权专业人员核实计划有无、相关手段或工具可及性、近期行为和当前现实支持，这些核实不是进入 R0 的前置门槛，且不索取操作细节。",
+      "response": "R0",
+      "owner": "用户端停止非必要流程并突出现实渠道；专业人员接续，接收前原责任与备用路径保持可见。",
+      "status": "安全候选规则，须本地机构审批",
+      "sourceIds": ["S1", "S5", "S7", "S12"],
+      "example": "我现在听到声音命令我伤害自己。",
+      "counterexample": "电影角色说‘我不想活了’，我在讨论剧情。"
+    },
+    {
+      "id": "TRG-SAF-Q01",
+      "moduleIds": ["SAF", "EMO"],
+      "type": "Q",
+      "name": "PHQ-9 第 9 题独立核查",
+      "condition": "成人本人针对核验版 PHQ-9 第 9 题给出任何非零有效回答 AND 已确认该答案 AND 当前是否紧急尚未确定。",
+      "exclude": "第 9 题为 0；缺失或未确认；由闲聊、第三方或引用推算；明确当前想法直接走 R0。",
+      "clarify": "当次由有能力人员核实当前性和安全需要，总分低也不取消。",
+      "response": "R1",
+      "owner": "固定程序识别单题；专业人员当次核查，普通志愿者可协助连接但不独立评估。",
+      "status": "候选规则，中文版本待核验",
+      "sourceIds": ["S4", "S1"],
+      "example": "PHQ-9 总分 1，但第 9 题本人确认选择了非零选项。",
+      "counterexample": "第 9 题未回答，系统补成 1。"
+    },
+    {
+      "id": "TRG-SAF-K02",
+      "moduleIds": ["SAF", "SOC"],
+      "type": "K",
+      "name": "现实第三方安全线索",
+      "condition": "用户报告一个可识别情境中的朋友、家人或其他第三方当前表达想死、自伤或伤人 AND 不是虚构、引用或假设。",
+      "exclude": "不得填入用户本人的 PHQ 或 GAD；电影、书籍或练习台词不命中。",
+      "clarify": "核对第三方是否正处于即时危险、用户是否与其在一起，以及可用的当地现实求助；不要求用户承担专业处置。",
+      "response": "R1",
+      "owner": "专业人员为用户提供针对第三方的安全指导；即时危险时提示联系当地急救或公共安全渠道。",
+      "status": "安全候选规则，须本地机构审批",
+      "sourceIds": ["S5", "S12"],
+      "example": "我朋友现在发消息说他不想活了，我联系不上他。",
+      "counterexample": "电影里的朋友角色说不想活了。"
+    },
+    {
+      "id": "TRG-SAF-K03",
+      "moduleIds": ["SAF"],
+      "type": "K",
+      "name": "否定、历史或含糊安全语义",
+      "condition": "表达包含死亡或伤害相关词 AND（明确为过去历史 OR 明确否认本人当前相关想法或行为 OR 对象与时间不清）AND 没有明确当前肯定证据。",
+      "exclude": "‘不想活了’本身是死亡意愿表达，不是安全否认；既有安全事件不能被一句新否定静默清除或自动结案；明确当前本人或现实第三方表达走更高路径。",
+      "clarify": "中性核对对象、当前或历史、否定范围；允许不确定和拒答，未回复不判安全。",
+      "response": "CHECK",
+      "owner": "小频或志愿者补充信息；必要时交专业人员，不自动写量表答案。",
+      "status": "候选规则，须专业评审",
+      "sourceIds": ["S1", "S5", "S9"],
+      "example": "我不是想死，只是太累；此前没有既有安全事件。",
+      "counterexample": "我现在不想活了。"
+    },
+    {
+      "id": "TRG-SAF-K04",
+      "moduleIds": ["SAF", "BOD"],
+      "type": "K",
+      "name": "已发生伤害或过量",
+      "condition": "本人或在场者报告正在发生的自伤、服药过量、中毒或其他已发生身体伤害。",
+      "exclude": "不等待量表、症状积分、聊天总结或远程志愿者接单。",
+      "clarify": "只获取现实急救所需的最少信息，不提供自行催吐、调药或替代急救的建议。",
+      "response": "R0",
+      "owner": "用户端突出 120；具备权限的专业人员按协议协同，信息披露须有适用依据和审计。",
+      "status": "安全候选规则，须本地机构审批",
+      "sourceIds": ["S5", "S12"],
+      "example": "我刚刚吞了很多药。",
+      "counterexample": "医生按计划调整了药物，当前没有不适。"
+    },
+    {
+      "id": "TRG-X01",
+      "moduleIds": ["EMO", "SLP", "SOC"],
+      "type": "X",
+      "name": "情绪低落、睡眠变化与功能影响",
+      "condition": "本人当前或近期反复情绪低落或兴趣减少 AND 睡眠相较平常发生变化 AND 学习工作、自理或社交至少一项明确受影响 AND 无当前安全或身体急症。",
+      "exclude": "只有一项线索；单晚设备估计；第三方或引用。",
+      "clarify": "分别保留三项证据、各自时间窗和本人希望，不把日常记录换算成 PHQ 分数。",
+      "response": "R2",
+      "owner": "志愿者可整理事实；专业人员结合本人意愿评估支持计划。",
+      "status": "候选组合，须专业评审",
+      "sourceIds": ["S1", "S4"],
+      "example": "近两周心情低落、入睡明显变差，并多次无法上班。",
+      "counterexample": "昨晚睡差，但今天情绪和功能都与平常一致。"
+    },
+    {
+      "id": "TRG-X02",
+      "moduleIds": ["ACT", "SOC"],
+      "type": "X",
+      "name": "活动下降、社交回避且主动求助",
+      "condition": "本人确认活动相较平常下降 AND 同期回避社交或现实联系 AND 明确表示需要真人或专业帮助 AND 无更紧急线索。",
+      "exclude": "仅设备低值、未佩戴、计划性休息或没有求助意愿。",
+      "clarify": "核对活动来源、社交变化、功能和希望的支持类型。",
+      "response": "R2",
+      "owner": "志愿者协助连接；专业人员或适配服务确认接收前保留当前责任。",
+      "status": "候选组合，须专业评审",
+      "sourceIds": ["S1"],
+      "example": "最近几乎不出门也躲着朋友，我想找专业人员谈谈。",
+      "counterexample": "手表没戴所以没有步数。"
+    },
+    {
+      "id": "TRG-X03",
+      "moduleIds": ["SLP", "ACT", "COG"],
+      "type": "X",
+      "name": "睡眠需要减少伴异常兴奋冲动",
+      "condition": "本人报告睡眠需要明显少于自己的平常水平 AND 不困或精力异常高 AND 同期出现异常兴奋、明显失控或冲动行为中的至少一项。",
+      "exclude": "普通熬夜后困倦；单纯开心；只由设备推断；未成年人须走单独专业路径而非成人规则。",
+      "clarify": "核对持续时间、行为变化、用药或物质、当前安全和功能；不通过问卷自行诊断躁狂。",
+      "response": "R1",
+      "owner": "当次协调专业评估；如有即时危险升级 R0，未接收时保留原责任和备援。",
+      "status": "候选组合，须专业评审",
+      "sourceIds": ["S6"],
+      "example": "连续几晚只睡三小时却不困，异常兴奋并冲动消费。",
+      "counterexample": "赶项目少睡一晚，第二天很困且没有行为变化。"
+    },
+    {
+      "id": "TRG-X04",
+      "moduleIds": ["EMO", "BOD", "SAF"],
+      "type": "X",
+      "name": "焦虑表述合并心率警示时身体优先",
+      "condition": "本人同时报告焦虑或恐慌感 AND 当前心悸或心率异常感 AND 胸痛、呼吸困难、将要晕厥或已晕厥中的任一警示症状。",
+      "exclude": "不得先按惊恐发作解释；不得以设备读数正常或量表低分排除急症。",
+      "clarify": "只核对警示症状是否当前存在和现实急救方式，不延迟求助。",
+      "response": "R0",
+      "owner": "用户端突出 120 等医疗急救；专业人员按本地协议接续。",
+      "status": "安全候选组合，须本地协议确认",
+      "sourceIds": ["S13", "S14"],
+      "example": "我很焦虑、现在心慌，还胸痛并觉得快晕了。",
+      "counterexample": "喝咖啡后短暂心跳快，已缓解且没有警示症状。"
+    },
+    {
+      "id": "TRG-X05",
+      "moduleIds": ["BOD", "COG"],
+      "type": "X",
+      "name": "用药或饮酒变化伴新身体不适",
+      "condition": "本人报告近期自行停药、漏服、改变处方用药或饮酒明显增加 AND 同期出现新的或加重的身体不适 AND 当前无 R0 警示症状。",
+      "exclude": "仅按医嘱调整且无不适；心悸持续不退按 TRG-BOD-K02 进入 R0，即使没有胸痛也不能忽略；胸痛、呼吸困难、晕厥、过量、突发混乱或意识变化直接走 R0。",
+      "clarify": "记录药物或饮酒变化和症状，不建议自行加减药；由现实医疗或专业人员评估。",
+      "response": "R1",
+      "owner": "当次协调专业或现实医疗评估；普通志愿者不提供药物建议。",
+      "status": "候选组合，须医学评审",
+      "sourceIds": ["S7", "S13", "S14"],
+      "example": "这周自行漏服几次药，又明显增加饮酒，现在只出现新的持续恶心，当前无 R0 警示症状。",
+      "counterexample": "按医嘱服药，今天没有任何不适。"
+    },
+    {
+      "id": "TRG-X06",
+      "moduleIds": ["COG", "SAF"],
+      "type": "X",
+      "name": "对话认知突变伴异常感知或混乱",
+      "condition": "对话中出现相较本人基线的突发定向或表达改变 AND 同时出现新发异常感知、突发混乱或快速恶化中的至少一项。",
+      "exclude": "普通转写错误、口音、玩笑、引用、梦境；不能仅凭模型风格命中。",
+      "clarify": "简短核实当前现实环境与警示事实，优先现实医疗评估。",
+      "response": "R0",
+      "owner": "用户端突出现实急救；专业人员按机构路径接续，未接收前不显示成功。",
+      "status": "安全候选组合，须本地协议确认",
+      "sourceIds": ["S7"],
+      "example": "对话中突然不认识地点、说话不连贯，并称刚开始看到不存在的人。",
+      "counterexample": "语音转写有错字，但本人表达连贯且明确是电影情节。"
+    },
+    {
+      "id": "TRG-X07",
+      "moduleIds": ["EMO", "ACT", "BOD", "SAF"],
+      "type": "X",
+      "name": "低分或正常设备不能抵消当前安全表达",
+      "condition": "任一量表总分低、设备读数处于个人常见范围或活动正常 AND 本人同时明确肯定当前有自杀、伤害自己或即时伤人想法。",
+      "exclude": "不得平均、抵消、降级或等待复测；明确当前表达优先。",
+      "clarify": "不再确认低分；直接启动安全响应后由专业人员核实当前事实。",
+      "response": "R0",
+      "owner": "用户端立即安全旁路；专业人员接续，普通资源容量不阻断。",
+      "status": "安全候选组合，须本地机构审批",
+      "sourceIds": ["S1", "S4", "S5", "S13"],
+      "example": "手表数据看起来正常、PHQ 总分低，但本人说‘我现在想结束生命’。",
+      "counterexample": "量表低分且没有任何当前安全表达。"
+    },
+    {
+      "id": "TRG-X08",
+      "moduleIds": ["ACT"],
+      "type": "X",
+      "name": "低活动合并未佩戴或缺失",
+      "condition": "界面出现低活动或零步数 AND 同期佩戴状态为未佩戴、未知或数据缺失。",
+      "exclude": "不得执行步数趋势条件，不得自动进入 R2、R1 或 R0；本人另有明确求助或安全线索时按其证据处理。",
+      "clarify": "把数值标成不可用，不反复索权；如本人愿意，可询问当前感受和活动情境。",
+      "response": "CHECK",
+      "owner": "小频与用户端处理数据质量；管理端不可将缺失改成零或疾病标签。",
+      "status": "可用于演示",
+      "sourceIds": ["S9"],
+      "example": "步数显示很低，但用户确认今天没有佩戴手表。",
+      "counterexample": "连续三天设备均确认有效佩戴且满足演示趋势条件。"
+    },
+    {
+      "id": "TRG-G01",
+      "moduleIds": ["EMO", "SLP", "ACT", "COG", "SOC", "BOD", "SAF"],
+      "type": "G",
+      "name": "缺失、不确定与年龄权限守则",
+      "condition": "非紧急流程中存在缺题、未确认、转写不清、来源不明、授权不足、年龄不适用或普通问候未回复中的任一项。",
+      "exclude": "明确当前本人安全表达、已发生伤害、身体警示或突发混乱不能停在 CHECK；成年人候选量表不得套给未成年人。",
+      "clarify": "只补必要信息；保持缺失或不适用，不补零、不推断平稳、不反复索取权限。",
+      "response": "CHECK",
+      "owner": "用户端确认数据；志愿者只看获授权摘要；管理端不得越权；专业需要不因缺失被拒绝。",
+      "status": "可用于演示",
+      "sourceIds": ["S8", "S9"],
+      "example": "量表有一题未确认，因此显示不完整且没有总分。",
+      "counterexample": "本人明确说现在想结束生命。"
+    },
+    {
+      "id": "TRG-G02",
+      "moduleIds": ["SOC", "SAF"],
+      "type": "G",
+      "name": "专业求助未接收守则",
+      "condition": "已发起 R2 专业求助或计划性转介 AND 尚无具名专业人员或机构的可核验接收确认。",
+      "exclude": "发送申请、管理端收件、点击电话或展示资源链接均不等于已接管或已预约；出现新的 R0/R1 事实时立即升级。",
+      "clarify": "展示当前责任人、已采取动作、未接收状态、备用路径和下一次人工跟进；不承诺未建立的时限。",
+      "response": "R2",
+      "owner": "原责任人继续负责已承诺范围；管理端协调备援；专业人员或机构确认后才更新接收状态。",
+      "status": "可用于演示；真实 SLA 与合作待建立",
+      "sourceIds": ["S1", "S5"],
+      "example": "专业求助已提交但无人确认，页面仍显示原负责人和备用联系。",
+      "counterexample": "具名专业人员已确认接收并记录时间和依据。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "C01",
+      "title": "普通关怀与日常陪伴",
+      "story": "虚构教学案例：一位成人在晨间自述昨夜约睡 7 小时、恢复感尚可，仅作为日常观察；晚间说工作后有点轻微烦躁，日常事情仍能完成，只希望普通陪伴，没有身体警示或当前安全表达。",
+      "modules": ["EMO", "SLP"],
+      "observations": [
+        {"label": "晨间睡眠", "value": "昨夜约 7 小时，恢复感尚可", "source": "晨间本人自述", "quality": "已确认、仅日常观察，不是正式量表答案"},
+        {"label": "晚间当前感受", "value": "工作后轻微烦躁", "source": "晚间本人自述", "quality": "已确认、当前"},
+        {"label": "功能", "value": "日常事情仍可完成", "source": "晚间本人自述", "quality": "已确认"},
+        {"label": "支持偏好", "value": "只希望普通陪伴", "source": "本人点选", "quality": "已确认"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-EMO-K01"],
+      "notMatched": [
+        {"id": "TRG-EMO-Q01", "reason": "未开展正式量表，也不需要用量表才能获得陪伴。"},
+        {"id": "TRG-SLP-K01", "reason": "晨间自述睡眠约 7 小时且恢复感尚可，没有单晚睡眠困扰线索。"},
+        {"id": "TRG-SAF-K01", "reason": "没有当前伤害或自杀表达。"}
+      ],
+      "responseId": "R3",
+      "reason": "符合普通情绪陪伴条件；R3 不表示无风险或排除疾病。",
+      "serviceStatus": "日常陪伴可用，用户可随时改选真人或专业支持",
+      "safetyOpen": false
+    },
+    {
+      "id": "C02",
+      "title": "PHQ-9 确认 11 分且安全题为零",
+      "story": "虚构教学案例：成人在核验流程演示中逐题确认 PHQ-9，九题答案合计 11 分，第 9 题为 0，没有当前安全或身体急症线索。",
+      "modules": ["EMO", "SLP", "ACT", "SOC", "SAF"],
+      "observations": [
+        {"label": "量表时间窗", "value": "过去两周", "source": "正式量表流程演示", "quality": "本人确认"},
+        {"label": "功能", "value": "学习工作有些困难", "source": "本人自述", "quality": "已确认"},
+        {"label": "当前安全", "value": "未发现当前肯定线索", "source": "本次已确认内容", "quality": "不等于未来风险预测"}
+      ],
+      "assessment": {"scaleId": "PHQ9", "answers": [2, 2, 2, 1, 1, 1, 1, 1, 0], "confirmed": true},
+      "matchedRuleIds": ["TRG-EMO-Q02"],
+      "notMatched": [
+        {"id": "TRG-SAF-Q01", "reason": "第 9 题为 0。"},
+        {"id": "TRG-SAF-K01", "reason": "没有明确当前安全表达。"}
+      ],
+      "responseId": "R2",
+      "reason": "手算 2+2+2+1+1+1+1+1+0=11，达到 PHQ-9 的 R2 候选切点；结果不构成诊断。",
+      "serviceStatus": "建议专业评估，尚未代表已预约或已接收",
+      "safetyOpen": false
+    },
+    {
+      "id": "C03",
+      "title": "PHQ-9 总分低但第 9 题非零",
+      "story": "虚构教学案例：成人完整确认 PHQ-9，总分仅 1 分，但第 9 题为 1；当前是否仍有安全需要尚未核实。",
+      "modules": ["EMO", "SAF"],
+      "observations": [
+        {"label": "量表时间窗", "value": "过去两周", "source": "正式量表流程演示", "quality": "本人确认"},
+        {"label": "第 9 题", "value": "非零", "source": "本人量表回答", "quality": "已确认、需独立核查"},
+        {"label": "当前性", "value": "待核实", "source": "尚未完成人工核查", "quality": "不得判安全"}
+      ],
+      "assessment": {"scaleId": "PHQ9", "answers": [0, 0, 0, 0, 0, 0, 0, 0, 1], "confirmed": true},
+      "matchedRuleIds": ["TRG-SAF-Q01"],
+      "notMatched": [
+        {"id": "TRG-EMO-Q02", "reason": "总分 1，且安全题需优先独立核查。"},
+        {"id": "TRG-SAF-K01", "reason": "尚未获得明确当前肯定表达，因此先走 R1 核查。"}
+      ],
+      "responseId": "R1",
+      "reason": "手算总分 1；第 9 题非零不能被低总分抵消，应在本次互动中由有能力人员核查。",
+      "serviceStatus": "当次专业安全核查待接收，原责任和备用现实路径保持可见",
+      "safetyOpen": true
+    },
+    {
+      "id": "C04",
+      "title": "未完成量表时明确当前想结束生命",
+      "story": "虚构教学案例：成人只回答了 PHQ-9 第一题，随后明确说“我现在想结束生命”。其余题目不再继续，不能产生总分。",
+      "modules": ["EMO", "SAF"],
+      "observations": [
+        {"label": "本人原话", "value": "我现在想结束生命", "source": "本人当前输入", "quality": "明确肯定、当前"},
+        {"label": "量表完整性", "value": "仅第 1 题有答案", "source": "量表记录", "quality": "不完整、不计总分"}
+      ],
+      "assessment": {"scaleId": "PHQ9", "answers": [1, null, null, null, null, null, null, null, null], "confirmed": false},
+      "matchedRuleIds": ["TRG-SAF-K01"],
+      "notMatched": [
+        {"id": "TRG-G01", "reason": "虽然数据不完整，但明确当前安全表达被 G01 的排除条件旁路。"},
+        {"id": "TRG-EMO-Q02", "reason": "量表不完整且未确认，不得计算总分。"}
+      ],
+      "responseId": "R0",
+      "reason": "明确、当前、本人安全表达优先，不等待量表、确认、复测或普通队列。",
+      "serviceStatus": "即时安全响应已启动；只有真实接收确认后才能标记专业已接手",
+      "safetyOpen": true
+    },
+    {
+      "id": "C05",
+      "title": "低步数但设备未佩戴",
+      "story": "虚构教学案例：页面显示当天步数很低，用户确认手表放在桌上没有佩戴；本人没有额外困扰、求助或安全表达。",
+      "modules": ["ACT"],
+      "observations": [
+        {"label": "步数", "value": "显示很低", "source": "虚构设备数据", "quality": "不可用于活动判断"},
+        {"label": "佩戴状态", "value": "未佩戴", "source": "本人确认", "quality": "已确认"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-X08"],
+      "notMatched": [
+        {"id": "TRG-ACT-D01", "reason": "未佩戴使数据无效，不能命中演示趋势配置。"},
+        {"id": "TRG-X02", "reason": "没有本人确认的活动下降、社交回避和求助组合。"}
+      ],
+      "responseId": "CHECK",
+      "reason": "数据缺失或未佩戴不能升级；应标成不可用而不是零。",
+      "serviceStatus": "仅补充设备情境，主动求助入口保持可用",
+      "safetyOpen": false
+    },
+    {
+      "id": "C06",
+      "title": "睡少不困并异常兴奋冲动",
+      "story": "虚构教学案例：成人说连续几晚比平常睡得明显少却完全不困，异常兴奋并冲动消费；未报告当前自伤、伤人或身体急症。",
+      "modules": ["SLP", "ACT", "COG", "SAF"],
+      "observations": [
+        {"label": "睡眠变化", "value": "连续几晚明显少于平常", "source": "本人自述", "quality": "已确认"},
+        {"label": "睡眠需要", "value": "不困、觉得不需要睡", "source": "本人自述", "quality": "已确认"},
+        {"label": "行为变化", "value": "异常兴奋并冲动消费", "source": "本人自述", "quality": "已确认、非诊断"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-X03"],
+      "notMatched": [
+        {"id": "TRG-SLP-K02", "reason": "已经有异常兴奋和冲动组合证据，不再停在一般澄清。"},
+        {"id": "TRG-SAF-K01", "reason": "没有明确当前自伤、自杀或伤人表达。"}
+      ],
+      "responseId": "R1",
+      "reason": "符合需当次专业评估的组合线索，但不由规则诊断躁狂；若出现即时危险再升级 R0。",
+      "serviceStatus": "当次专业评估待接收，未接收前保留原责任和备援",
+      "safetyOpen": true
+    },
+    {
+      "id": "C07",
+      "title": "活动后心率变化与咖啡因情境",
+      "story": "虚构教学案例：成人爬楼并喝咖啡后，手表短暂显示心率 118 次/分；现在已缓解，明确没有胸痛、呼吸困难、头晕、将要晕厥或晕厥。数值仅为虚构演示，不用于拟诊。",
+      "modules": ["BOD", "ACT"],
+      "observations": [
+        {"label": "心率", "value": "118 次/分", "source": "虚构手表数据", "quality": "活动后单次演示值"},
+        {"label": "活动背景", "value": "刚爬楼", "source": "本人自述", "quality": "已确认"},
+        {"label": "生活因素", "value": "喝过咖啡", "source": "本人自述", "quality": "已确认"},
+        {"label": "身体警示", "value": "无胸痛、气短、晕厥感或晕厥", "source": "本人当前回答", "quality": "已确认但不预测后续"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-BOD-K01"],
+      "notMatched": [
+        {"id": "TRG-BOD-K02", "reason": "当前已缓解且无所列身体警示症状。"},
+        {"id": "TRG-X04", "reason": "没有焦虑加身体警示的组合。"}
+      ],
+      "responseId": "CHECK",
+      "reason": "活动和咖啡因是需要记录的情境；单次数值不作精神分诊，反复或担心时联系现实医疗人员。",
+      "serviceStatus": "信息补充完成；如症状复现或出现警示需重新进入相应路径",
+      "safetyOpen": false
+    },
+    {
+      "id": "C08",
+      "title": "当前心悸伴胸痛和将要晕厥",
+      "story": "虚构教学案例：成人当前心悸持续，虚构设备显示心率 126 次/分，同时胸痛并觉得快要晕倒；不先解释为焦虑。",
+      "modules": ["BOD", "SAF"],
+      "observations": [
+        {"label": "心悸", "value": "当前持续", "source": "本人自述", "quality": "明确当前"},
+        {"label": "心率", "value": "126 次/分", "source": "虚构设备数据", "quality": "仅作演示、不拟诊"},
+        {"label": "胸痛", "value": "有", "source": "本人自述", "quality": "明确当前"},
+        {"label": "晕厥警示", "value": "觉得快要晕倒", "source": "本人自述", "quality": "明确当前"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-BOD-K02"],
+      "notMatched": [
+        {"id": "TRG-BOD-K01", "reason": "存在胸痛和将要晕厥，落入该规则排除条件。"},
+        {"id": "TRG-BOD-D01", "reason": "不只是孤立读数，已有当前警示症状。"}
+      ],
+      "responseId": "R0",
+      "reason": "当前心悸伴胸痛和将要晕厥需要现实医疗急症响应，不能等待量表或心率复测。",
+      "serviceStatus": "医疗急症现实求助已突出；不得因 App 人工未接单而延迟",
+      "safetyOpen": true
+    },
+    {
+      "id": "C09",
+      "title": "引用电影台词而非本人想法",
+      "story": "虚构教学案例：用户在讨论电影时引用角色台词“我不想活了”，随后明确说明这是电影对白，不代表本人想法，也不是现实第三方事件。",
+      "modules": ["COG", "SAF"],
+      "observations": [
+        {"label": "原句语境", "value": "电影角色台词", "source": "本人说明", "quality": "已确认引用"},
+        {"label": "对象", "value": "虚构角色，不是本人或现实第三方", "source": "本人说明", "quality": "已确认"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-COG-K03"],
+      "notMatched": [
+        {"id": "TRG-SAF-K01", "reason": "明确为引用，不是本人当前肯定表达。"},
+        {"id": "TRG-SAF-K02", "reason": "不是现实第三方当前事件。"}
+      ],
+      "responseId": "CHECK",
+      "reason": "应保留引用语境且不填写本人量表；真实第三方安全事件不能借此规则降级。",
+      "serviceStatus": "语境已澄清，无量表写入；用户可继续原话题",
+      "safetyOpen": false
+    },
+    {
+      "id": "C10",
+      "title": "专业求助已发起但无人接收",
+      "story": "虚构教学案例：用户因持续困扰和功能影响已同意发起 R2 专业求助，申请已提交，但尚无具名专业人员或机构确认接收。",
+      "modules": ["SOC", "EMO", "SAF"],
+      "observations": [
+        {"label": "求助动作", "value": "R2 申请已提交", "source": "虚构服务工单", "quality": "只代表已发起"},
+        {"label": "接收状态", "value": "无人确认接收", "source": "虚构服务工单", "quality": "未接管"},
+        {"label": "当前责任", "value": "原志愿者仍在职责范围内跟进", "source": "虚构交接记录", "quality": "责任未释放"},
+        {"label": "备用路径", "value": "公开资源与管理协调入口可见", "source": "产品演示", "quality": "不代表已预约"}
+      ],
+      "assessment": null,
+      "matchedRuleIds": ["TRG-G02"],
+      "notMatched": [
+        {"id": "TRG-SAF-K01", "reason": "本案例未提供新的明确当前伤害或自杀表达。"},
+        {"id": "TRG-SOC-K03", "reason": "请求的是专业评估，不是普通陪伴或换人。"}
+      ],
+      "responseId": "R2",
+      "reason": "发送申请不等于接收；保留 R2、原责任人和备援，不显示已接管，也不承诺未建立的 SLA。",
+      "serviceStatus": "专业求助待接收；原责任人保留，管理端协调备援",
+      "safetyOpen": false
+    }
+  ],
+  "responses": [
+    {
+      "id": "CHECK",
+      "label": "信息补充",
+      "action": "核对对象、当前或历史、来源、授权、数据质量和必要症状；保持缺失或不确定，不补零、不诊断、不把未回复当安全。",
+      "owner": "用户端负责确认或跳过；志愿者端只看获授权摘要并可协助澄清；管理端只维护队列、权限和数据质量；需要临床判断时交专业人员。",
+      "handoff": "这不是疾病或安全分层。尚未获得接收确认时不得写已接管；任何明确当前安全或身体急症线索立即旁路到 R0/R1。"
+    },
+    {
+      "id": "R3",
+      "label": "日常陪伴",
+      "action": "提供可跳过的倾听、日记、休息或自愿练习；保留‘找人帮助’入口，不写无风险或已排除疾病。",
+      "owner": "用户端选择需要；小频提供边界清楚的陪伴；志愿者端按资格与容量承接普通请求；管理端不默认查看全文。",
+      "handoff": "本人可随时请求 R2；出现 R0/R1 事实立即升级。普通请求尚未被真人接收时显示等待，不承诺持续值守。"
+    },
+    {
+      "id": "R2",
+      "label": "进一步专业评估与计划性支持",
+      "action": "基于筛查结果、持续困扰、功能影响或本人意愿，提供专业评估、就诊建议或已有治疗团队接续；分数不独立决定去向。",
+      "owner": "用户确认意愿；志愿者可整理必要摘要并继续已承诺支持；管理端协调资源；专业人员决定评估与后续计划。",
+      "handoff": "发送申请、点击电话或管理端收件都不是已接收。具名人员或机构记录确认和时间后才更新；无人接收时保留原责任与备用路径，不承诺未建立的 SLA。"
+    },
+    {
+      "id": "R1",
+      "label": "当次紧急专业评估",
+      "action": "在当前互动中启动专业安全或紧急评估，核实当前性、已发生事实和所需支持；有即时危险或身体急症则进入 R0。",
+      "owner": "用户端显示当前状态与现实求助；普通志愿者可倾听和连接但不独立作临床评估；管理端协调备援；受训专业人员完成核查。",
+      "handoff": "未有真实接收确认时继续显示待接收、原责任人、备用专业路径和现实渠道；不以固定秒数承诺响应。"
+    },
+    {
+      "id": "R0",
+      "label": "即时安全响应",
+      "action": "停止非必要问卷、跟练和运动提醒；突出适用的现实医疗急救 120、迫近公共安全危险 110、专业协同及在安全情况下联系可信支持者。",
+      "owner": "用户端立即展示现实选择；在场人员按现实情况求助；专业人员依本地机构协议接续；模型不自动报警、定位、通知家属或决定住院。",
+      "handoff": "不等待量表、确认、复测、普通名额或 App 人工接单。只有具名接收及可核验依据后才显示已接手；热线不能替代急救，也不承诺同频具备真实救援能力。"
+    }
+  ]
+}
+</script><script type="application/json" id="module-data">{
+  "EMO": {
+    "icon": "01", "headline": "分数达到多少，需要进一步评估？",
+    "metrics": [
+      ["PHQ-2 / GAD-2", "≥3 分", "对应两题完整、本人确认 → 长表或专业评估", "reference"],
+      ["PHQ-9", "≥10 分", "9 题完整、本人确认；安全路径优先 → R2 候选", "reference"],
+      ["GAD-7", "≥10 分", "本页候选；也有 ≥8 分评估建议，不能作为唯一求助门槛", "reference"],
+      ["日常困扰", "0–10 分", "仅记录；没有已验证的自动转诊切点", "observation"]
+    ],
+    "path": "量表完整且本人确认 → 比较相应切点 → 核实功能影响与需要 → 建议专业评估",
+    "guard": "成人筛查候选，回顾过去两周；中文版和机构审批待完成。不得由闲聊推算正式答案；总分低也可主动求助。",
+    "ruleIds": ["TRG-EMO-Q01", "TRG-EMO-Q02", "TRG-EMO-K02"], "sourceIds": ["S2", "S3", "S4", "S11"]
+  },
+  "SLP": {
+    "icon": "02", "headline": "睡多久不够，还是睡少却不困？",
+    "metrics": [
+      ["睡眠观察", "小时 / 每晚", "同时看夜醒、恢复感和是否需要睡", "observation"],
+      ["趋势提醒候选", "少 ≥2 小时 ×2 晚", "相对个人参考；只用于澄清，不用于诊断或自动转诊", "disabled"],
+      ["组合信号", "3 类同时满足", "睡眠需要减少 ＋ 不困/异常高精力 ＋ 异常兴奋或冲动 → R1", "combination"]
+    ],
+    "path": "设备趋势 → 核查数据/情境；本人报告组合线索 → 当次专业评估，不等待凑够设备天数",
+    "guard": "睡眠数值候选未启用：前 14 天至少 7 个有效同类日作参考，授权和质量通过。本页将旧稿“约 2 小时”具体展示为 ≥2 小时，仅为本轮未批准参数展示，不变更旧稿规则。参考算法、有效日标准与临床验证仍待审批。",
+    "ruleIds": ["TRG-SLP-D01", "TRG-SLP-K02", "TRG-X03"], "sourceIds": ["S6", "S9"]
+  },
+  "ACT": {
+    "icon": "03", "headline": "步数下降，不等于病情发作",
+    "metrics": [
+      ["精力自评", "0–10 分", "不与步数相加成风险总分", "observation"],
+      ["步数趋势候选", "\u003c50% ×3 个有效日", "每天低于个人参考的一半；满足也只发起关怀", "disabled"],
+      ["算术示例", "8,000 → 4,000 步", "界线为 4,000；3,000、2,800、3,500 均在界线下", "disabled"]
+    ],
+    "path": "先查佩戴/质量 → 再比个人参考 → 连续变化才问候 → 本人确认功能和求助需要",
+    "guard": "步数参数未启用：前 14 天至少 7 个有效同类日；基线为零、未佩戴、缺失、换设备、行动障碍或轮班未澄清时不比较。上方算术是独立参数说明，不属于所选案例，也不执行提醒。",
+    "ruleIds": ["TRG-ACT-D01", "TRG-ACT-D02", "TRG-X08", "TRG-X02"], "sourceIds": ["S9"]
+  },
+  "COG": {
+    "icon": "04", "headline": "看真实语境，不数关键词次数",
+    "metrics": [
+      ["语境识别", "本人 / 当前 / 肯定", "逐项区分引用、第三方、历史和转写不清", "observation"],
+      ["突发变化", "当前症状确认", "突发混乱或不能辨认地点等 → 即时医疗支持", "symptom"],
+      ["声音/语速", "不设百分比切点", "口音、语速和模型置信度不能单独填表或定病", "observation"]
+    ],
+    "path": "原句/转写 → 核对语境 → 真实突发症状优先；引用或不清晰则澄清",
+    "guard": "不要求关键词出现 3 次才响应。新发异常感知需专业评估；突发混乱、伤害命令或即时危险优先处理。不能只凭模型文本风格判定。",
+    "ruleIds": ["TRG-COG-K01", "TRG-COG-K02", "TRG-COG-K03", "TRG-X06"], "sourceIds": ["S7", "S9"]
+  },
+  "SOC": {
+    "icon": "05", "headline": "功能影响与本人求助，也是入口",
+    "metrics": [
+      ["功能分项", "各 0–3 分", "学习工作、自理、社交分别记录；无已验证总分切点", "observation"],
+      ["持续困扰组合", "≥1 个领域明确受影响", "持续/反复困扰 ＋ 明确功能影响 → 专业评估候选", "combination"],
+      ["本人意愿", "明确请求专业帮助", "不要求先达到量表分数，需排查更紧急路径", "symptom"]
+    ],
+    "path": "本人报告 → 核实受影响的具体事情 → 明确支持意愿 → 专业或普通陪伴接续",
+    "guard": "0–3 是产品分项记录，不设置“≥2 分自动转诊”。普通迟回、不说话、计划独处并不自动代表功能恶化；持续性尚无经批准的统一天数门槛。",
+    "ruleIds": ["TRG-SOC-K01", "TRG-SOC-K02", "TRG-SOC-K03", "TRG-X01"], "sourceIds": ["S1"]
+  },
+  "BOD": {
+    "icon": "06", "headline": "身体警示优先于心率数字",
+    "metrics": [
+      ["心率 / HRV", "次/分 / ms（依指标）", "附设备、测量情境与个人参考；不设精神科转诊数字线", "observation"],
+      ["心悸分支", "当前 AND（A OR B）", "A 持续不退；B 胸痛/气短/将晕厥/晕厥任一 → R0", "symptom"],
+      ["扩展数据", "血压 / 血氧 / 体温", "未启用，不纳入本轮分诊条件", "disabled"]
+    ],
+    "path": "有当前身体警示 → 现实医疗急症；仅孤立读数 → 核实情境；不先归因焦虑",
+    "guard": "118 或 126 次/分是案例读数，不是触发阈值。胸痛还有独立急症入口，不需要先有心悸或异常设备数值。药物变化伴身体不适需现实专业评估，不提供自行加减药建议。",
+    "ruleIds": ["TRG-BOD-K01", "TRG-BOD-K02", "TRG-BOD-K03", "TRG-BOD-D01", "TRG-X04", "TRG-X05"], "sourceIds": ["S13", "S14", "S15"]
+  },
+  "SAF": {
+    "icon": "07", "headline": "安全单题，不被低总分抵消",
+    "metrics": [
+      ["PHQ-9 第 9 题", "≥1 分", "本人确认有效回答 → 当次专业安全核查；不等总表完成", "reference"],
+      ["当前本人表达", "明确肯定即可启动", "不累计次数，不等计划/工具齐全，不等量表 → R0 支持", "symptom"],
+      ["已发生伤害", "当前事实优先", "伤害、过量或中毒 → 现实医疗急症路径", "symptom"]
+    ],
+    "path": "安全线索 → 当次核查或即时响应 → 专业接续；普通队列和问卷不能阻断",
+    "guard": "R0 是即时安全响应，不是自动报警、诊断或决定住院。未成年人走单独审批的保护与专业路径。正常设备、低分或普通未回复不能解除既有安全事件。",
+    "ruleIds": ["TRG-SAF-Q01", "TRG-SAF-K01", "TRG-SAF-K04", "TRG-X07"], "sourceIds": ["S1", "S4", "S5"]
+  }
+}
+</script><script>(function(root){
+  'use strict';
+  function assessmentView(assessment, scale) {
+    if (!assessment) return {state:'not_asked',score:null,answered:0,total:0,rows:[]};
+    if (!scale || scale.maxScore === null) return {state:'not_scored',score:null,answered:0,total:0,rows:[]};
+    const answers=assessment.answers;
+    const total=scale.items.length;
+    if (!Array.isArray(answers) || answers.length!==total || answers.some(a=>a!==null && (!Number.isInteger(a)||a<0||a>3))) {
+      return {state:'invalid',score:null,answered:0,total,rows:[]};
+    }
+    const rows=scale.items.map((topic,i)=>({number:i+1,topic,answer:answers[i]}));
+    const answered=answers.filter(a=>a!==null).length;
+    const state=answered!==total?'incomplete':assessment.confirmed!==true?'pending':'complete';
+    return {state,score:state==='complete'?answers.reduce((a,b)=>a+b,0):null,answered,total,rows};
+  }
+  function caseView(registry,id) {
+    const item=registry.cases.find(c=>c.id===id);
+    if (!item) throw new Error('Unknown case: '+id);
+    const response=registry.responses.find(r=>r.id===item.responseId);
+    if (!response) throw new Error('Unknown response: '+item.responseId);
+    const matches=[...new Set(item.matchedRuleIds)].map(key=>{
+      const rule=registry.rules.find(r=>r.id===key);
+      if(!rule) throw new Error('Unknown rule: '+key);
+      return rule;
+    });
+    const scale=registry.scales.find(s=>s.id===item.assessment?.scaleId);
+    return {case:item,response,matches,scale,assessment:assessmentView(item.assessment,scale)};
+  }
+  const api={assessmentView,caseView};
+  if(typeof module!=='undefined' && module.exports) module.exports=api;
+  else root.RuleDemo=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+(function(root){
+  'use strict';
+  const base=typeof module!=='undefined'&&module.exports?require('../制作记录V0.3/model.js'):root.RuleDemo;
+  // Presentation arithmetic only. No input, risk inference or clinical rule execution.
+  function compare(value,operator,threshold,eligible=true){
+    if(!eligible)return {text:'不适用，不比较',state:'blocked'};
+    if(typeof value!=='number'||!Number.isFinite(value)||typeof threshold!=='number'||!Number.isFinite(threshold))return {text:'缺失，不比较',state:'unknown'};
+    if(!['≥','<'].includes(operator))throw new Error('Unsupported comparison');
+    const yes=operator==='≥'?value>=threshold:value<threshold;
+    return {text:`${value} ${yes?operator:operator==='≥'?'<':'≥'} ${threshold}`,state:yes?'yes':'no'};
+  }
+  const row=(id,label,value,note='',state='yes',group='')=>({id,label,value,note,state,group});
+  function view(registry,id){
+    const v=base.caseView(registry,id);
+    const score=compare(v.assessment.score,'≥',10);
+    const item9=compare(v.case.assessment?.answers?.[8],'≥',1,v.case.assessment?.confirmed===true);
+    const scenarios={
+      C01:{logic:'短暂困扰 AND 日常功能保持 AND 希望普通陪伴',checks:[row('emotion','当前感受','轻微烦躁','短暂的本人感受，不是量表分数'),row('function','日常功能','仍可完成','未报告明显功能影响'),row('wish','支持意愿','普通陪伴','未要求专业评估'),row('override','优先路径','本案无明确安全或身体警示','不等于无风险或已排除疾病')],note:'不需要凑够某个分数才获得陪伴。',handoffState:'not_needed'},
+      C02:{logic:'完整且确认 AND 总分 ≥10 AND 无更高优先级线索',checks:[row('age','适用前提','成人 · 核验流程示例','现实使用的中文版及机构规则尚待审批'),row('complete','有效答案',`${v.assessment.answered} / 9 题`,'过去两周；本人逐题确认'),row('score','PHQ-9 总分',score.text,'候选切点 10 分；不是确诊线',score.state),row('safe9','第 9 题','0 分','未进入“第 9 题 ≥1”独立核查路径'),row('override','更高优先级线索','本案未报告','当前安全表达或身体急症出现时优先处理')],note:'满足的是“建议专业评估”条件，不代表已预约、已接收或已确诊。',handoffState:'not_started'},
+      C03:{logic:'第 9 题 ≥1 AND 本人确认；不要求总分 ≥10',checks:[row('age','适用前提','成人 · 核验流程示例','现实使用版本待审批'),row('item9','第 9 题',item9.text,'1、2、3 分均需独立核查；0 分也不排除其他安全信号',item9.state),row('confirmed','答案来源','本人已确认','不能从聊天、第三方或引用推算'),row('current','是否当前紧急','尚待核实','由有能力的人员在当次互动中核查','unknown')],note:'总分只有 1 分，仍走安全单题路径；若已有明确当前安全表达，直接即时响应，不再等待核查队列。',handoffState:'pending'},
+      C04:{logic:'本人 AND 当前 AND 明确肯定安全表达 → 不等量表',checks:[row('self','表达对象','本人','不是虚构角色或转述'),row('now','所指时间','现在','不是更早历史'),row('positive','表达性质','明确肯定','“我现在想结束生命”'),row('bypass','量表进度','1 / 9 题 · 停止非必要施测','不补零、不产生总分，不阻挡即时支持','bypass')],note:'不要求再同时具备计划、工具、重复次数或量表总分；即时安全响应不等于自动报警或自动决定住院。',handoffState:'urgent'},
+      C05:{logic:'低活动显示 AND 未佩戴 → 数据不可用；停止趋势比较',checks:[row('raw','界面读数','显示很低','原案例没有具体步数，不编造数字'),row('wear','佩戴前提','未佩戴 → 不通过','即使数值看起来低，也不是有效活动记录','blocked'),row('trend','连续 3 个有效日','无法比较','不能把未佩戴的一天算进趋势','blocked'),row('other','独立求助或安全线索','本案未报告','若另外出现，按其证据响应，不受设备缺失阻挡')],note:'“数据不可用”与“真实低活动”必须分开；不把缺失补成 0。',handoffState:'not_needed'},
+      C06:{logic:'睡眠需要减少 AND 不困/精力异常高 AND 异常兴奋或冲动',checks:[row('sleep','相对平常','连续几晚睡得明显少','没有提供具体小时数，不伪造；不以统一少于几小时判断'),row('need','睡少后的感受','不困 · 感觉不需要睡','不同于普通熬夜后困倦'),row('behavior','同期行为变化','异常兴奋并冲动消费','异常兴奋、明显失控、冲动行为至少一项'),row('override','即时危险或身体急症','本案未报告','若出现则优先进入 R0')],note:'三类线索组合已需专业核实，不等待凑满设备趋势的 2 晚或 3 天，也不由页面诊断躁狂。',handoffState:'pending'},
+      C07:{logic:'活动后变化 AND 已缓解 AND 无所列身体警示',checks:[row('context','测量情境','爬楼后 · 喝过咖啡','记录影响因素，不能据此确定病因'),row('relief','当前症状','已经缓解','并非仍在持续的心悸'),row('warning','身体警示','本案明确没有','胸痛、呼吸困难、将要晕厥或已晕厥'),row('number','心率读数','118 次/分，仅作情境数据','不是精神分诊阈值','info')],note:'先说明情境；反复出现或担心时联系现实医疗人员。症状复现需重新判断，不能沿用“已缓解”。',handoffState:'not_needed'},
+      C08:{logic:'当前心悸 AND（持续不退 OR 任一身体警示）',checks:[row('palpitations','必要条件','当前有心悸','必须是真实当前症状'),row('persistent','分支 A','持续不退','满足 A 或 B 任一分支即可','yes','OR'),row('warning','分支 B','胸痛 · 觉得快要晕倒','胸痛、气短、将要晕厥、晕厥中任一项','yes','OR')],note:'126 次/分只是案例读数，不是触发线。此处由症状触发；即使设备读数正常也不能排除急症。',handoffState:'urgent'},
+      C09:{logic:'明确虚构引用 AND 非本人想法 AND 非现实第三方事件',checks:[row('quote','语句来源','电影角色台词','保留原句及上下文'),row('self','是否本人当前想法','本人已明确否认','不是仅靠自动语义猜测'),row('third','现实第三方事件','不是','现实朋友当前处境不能按电影引用处理'),row('scale','写入本人量表','不写入','没有真实量表回答','blocked')],note:'同样出现相关词，引用不等于本人当前表达。“不想活了”也不能仅因有“不”字就判为安全否定。',handoffState:'not_needed'},
+      C10:{logic:'已提交专业求助 AND 尚无可核验具名接收',checks:[row('request','申请进度','R2 申请已提交','用户已同意专业求助'),row('receipt','专业接收回执','尚无','发送、管理端收件或打开电话均不等于专业接收','unknown'),row('owner','当前责任','原责任人保留','在已承诺职责范围内继续跟进'),row('backup','备用路径','管理协调与现实资源保持可见','不承诺尚未建立的接收时限')],note:'“待接收”是流程状态，不是风险分数。出现新的急症或安全事实，立即走优先路径。',handoffState:'pending'}
+    };
+    if(!scenarios[id])throw new Error('Unknown presentation case');
+    return {...v,...scenarios[id],decision:v.case.responseId};
+  }
+  const api={compare,view};
+  if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.DetailedFlow=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+
+(function(){
+  'use strict';
+  const registry=JSON.parse(document.getElementById('registry').textContent);
+  const cards=JSON.parse(document.getElementById('module-data').textContent);
+  const app=document.getElementById('app');
+  const select=document.getElementById('case-select');
+  const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const list=xs=>`<ul>${xs.map(s=>`<li>${E(s)}</li>`).join('')}</ul>`;
+  const response=id=>registry.responses.find(r=>r.id===id);
+  const short={CHECK:'补充确认',R3:'日常陪伴',R2:'进一步专业评估',R1:'当次紧急专业评估',R0:'即时安全响应'};
+  const status={yes:'✓',no:'×',unknown:'?',blocked:'—',info:'i',bypass:'↗'};
+  const source=ids=>ids.length?ids.map(id=>`<a href="#source-${E(id)}">[${E(id)}]</a>`).join(' '):'产品守则，无临床阈值依据';
+  const ruleLinks=ids=>ids.map(id=>`<a href="#rule-${E(id)}">${E(id)}</a>`).join(' · ');
+  const line=(name,value)=>`<p><b>${E(name)}</b> ${E(value)}</p>`;
+  function scalePanel(v){
+    const a=v.assessment;
+    const label=a.score===null?({not_asked:'未施测',not_scored:'不计总分',invalid:'无效，不计分',incomplete:'不完整，不计总分',pending:'待确认，不计分'}[a.state]):`${a.score} / ${v.scale.maxScore} 分`;
+    const scorebar=a.score!==null?`<div class="score-track" aria-label="PHQ-9 ${a.score} 分；演示候选切点 10 分"><div style="width:${a.score/27*100}%"></div><span class="threshold-mark" style="left:${10/27*100}%"></span></div><div class="score-labels"><span>0</span><span>10：候选评估切点</span><span>27</span></div>`:'';
+    return `<div class="score-box"><span>${v.scale?E(v.scale.name.split(' ')[0]):'正式量表'}</span><strong id="scale-score">${E(label)}</strong>${scorebar}<small>${a.state==='complete'?'仅本案例已确认的分项求和；总分不是诊断。':'缺题、未确认与未施测不能补成 0 分。'}</small></div>${v.scale?`<details id="scale-answers"><summary>查看 ${a.answered} / ${a.total} 项示例答案</summary><div class="detail-content"><p>过去两周；题号与主题不是正式中文版题干。</p><table><thead><tr><th>题号</th><th>主题</th><th>答案</th></tr></thead><tbody>${a.rows.map(r=>`<tr><td>${r.number}</td><td>${E(r.topic)}</td><td>${r.answer===null?'未回答':E(r.answer+' 分')}</td></tr>`).join('')}</tbody></table>${line('版本',v.scale.version)}${source(v.scale.sourceIds)}</div></details>`:''}`;
+  }
+  function handoff(v){
+    let steps;
+    if(v.decision==='R0')steps=[['即时','突出现实求助','不等问卷或 App 接单','active'],['并行','专业协同','在场人员按现实情况求助','pending'],['核验','具名确认接收','只有可核验回执才算接手','future']];
+    else if(v.decision==='R1')steps=[['当次','启动专业核查','普通志愿者协助连接，不独立作临床评估','active'],['当前','待接收','原责任范围与备用路径保持可见','pending'],['接收后','专业评估与记录','未收到确认前不显示已接管','future']];
+    else if(v.decision==='R2')steps=v.handoffState==='pending'?[['已完成','本人同意','仅固定案例状态','done'],['已发起','转介申请','提交不等于接收','done'],['当前','待具名专业接收','原责任人保留，管理端协调备援','pending'],['接收后','专业评估/后续安排','此步骤尚未发生','future']]:[['下一步','确认本人意愿','不是自动转诊','active'],['随后','发起转介','整理必要授权摘要','future'],['核验','具名专业接收','未接收时保留原责任和备用路径','future'],['接收后','专业评估/后续安排','不能提前标记为已接管','future']];
+    else steps=[['当前',short[v.decision],v.decision==='CHECK'?'只补必要信息，允许跳过':'自愿陪伴，不设量表门槛','active'],['始终','保留找人入口','设备缺失、低分都不阻止主动求助','future'],['有新线索','重新进入相应路径','不能用旧的正常记录抵消新情况','future']];
+    return `<section id="handoff" class="handoff"><div class="section-heading"><h3>接下来，谁接手？</h3><span>示例状态 · 不发送真实请求</span></div><div class="handoff-lane">${steps.map(([stage,title,body,state],i)=>`<div class="handoff-step" data-state="${state}"><span class="step-dot">${i+1}</span><small>${E(stage)}</small><strong>${E(title)}</strong><p>${E(body)}</p></div>`).join('')}</div>${v.decision==='R1'||v.decision==='R2'?'<div class="backup"><b>无人接收的分支</b> → 保留已承诺范围内的原责任人 → 管理端协调备援 → 保持现实专业资源可见。若新出现即时危险，不继续等普通队列。</div>':''}${v.decision==='R0'?'<div class="backup urgent"><b>现实路径不等 App：</b>按实际情况选择医疗急救 120、迫近公共安全危险 110 或专业安全支持；本页不拨号、不报警、不通知家属，也不决定住院。</div>':''}</section>`;
+  }
+  function journey(v){
+    return `<section id="journey" class="journey" data-flow="overview" data-case="${v.case.id}"><div class="section-heading"><div><span class="eyebrow">01 / 看一条完整路径</span><h2 id="journey-title">${E(v.case.title)}</h2></div><span class="case-tag">虚构案例 ${v.case.id}</span></div><p class="case-story">${E(v.case.story.replace('虚构教学案例：',''))}</p><div class="journey-grid"><section class="lane observations"><div class="lane-title"><span>1</span><h3>看到了什么</h3></div><div class="facts">${v.case.observations.map(o=>`<div class="fact"><small>${E(o.label)}</small><strong>${E(o.value)}</strong><span>${E(o.source)} · ${E(o.quality)}</span></div>`).join('')}</div>${scalePanel(v)}</section><section class="lane conditions"><div class="lane-title"><span>2</span><h3>逐项对照条件</h3></div><div class="logic" id="case-logic">${E(v.logic)}</div><div id="checks">${v.checks.map(c=>`<div class="check ${c.state}" data-state="${c.state}" data-check="${c.id}"><span class="check-icon" aria-hidden="true">${status[c.state]}</span><div><small>${c.group?'<b class="or">OR 任一分支</b> ':''}${E(c.label)}</small><strong>${E(c.value)}</strong><p>${E(c.note)}</p></div></div>`).join('')}</div><p class="check-note">${E(v.note)}</p><p class="rule-link">本案主路径：${ruleLinks(v.case.matchedRuleIds)}</p><details class="not-matched"><summary>为什么没有走其他路径？</summary><div class="detail-content">${v.case.notMatched.map(n=>`<p>${ruleLinks([n.id])}<br>${E(n.reason)}</p>`).join('')}</div></details></section><section class="lane destination" id="destination" data-response="${v.decision}"><div class="lane-title"><span>3</span><h3>因此，下一步</h3></div><div class="route-emblem ${v.decision}"><span>${v.decision}</span><h3>${short[v.decision]}</h3><p>${E(v.response.action)}</p></div><div class="responsibility"><h4>负责角色</h4><p>${E(v.response.owner)}</p></div><div class="service-status"><small>当前接续状态</small><strong>${E(v.case.serviceStatus)}</strong></div>${v.case.safetyOpen?'<p class="safety-note">已有安全/紧急事件未结案，不能因低分、正常设备或普通未回复自动解除。</p>':''}</section></div>${handoff(v)}</section>`;
+  }
+  const kindLabels={reference:'参考切点 · 待审批',disabled:'候选参数 · 未启用',symptom:'症状/事实条件',combination:'组合条件',observation:'日常观察 · 非诊断'};
+  function modules(v){
+    return `<section id="indicators"><div class="section-heading"><div><span class="eyebrow">02 / 七模块指标总览</span><h2>达到多少？还要满足什么？</h2></div><span>点击模块，查看来源与完整流程</span></div><p class="section-intro">数值切点、未启用提醒参数与症状条件分开显示。下面是固定规则说明，不是所选案例的新数据，也不执行真实判定。</p><div class="module-grid">${registry.modules.map(m=>{const c=cards[m.id];return `<details class="module-card ${v.case.modules.includes(m.id)?'related':''}" id="module-${m.id}" data-module="${m.id}"><summary><span class="module-heading"><span class="module-no">${c.icon}</span><span><b>${E(m.name)}</b><small>${E(c.headline)}</small></span><span class="expand-mark" aria-hidden="true">＋</span></span><span class="metric-list">${c.metrics.map(([name,value,description,kind])=>`<span class="metric ${kind}"><span class="metric-top"><span>${E(name)}</span><em>${kindLabels[kind]}</em></span><strong>${E(value)}</strong><span>${E(description)}</span></span>`).join('')}</span><span class="module-foot">${v.case.modules.includes(m.id)?'● 关联当前案例':'查看指标详情'}<span>展开 ↓</span></span></summary><div class="detail-content"><div class="flow-mini" data-flow="module-${m.id}"><h4>信息如何流向响应</h4><ol><li><b>采集</b>${E(m.sources[0])}</li><li><b>确认</b>${E(m.quality.join('；'))}</li><li><b>对照</b>${E(c.path)}</li><li><b>接续</b>根据对应规则选择出口，专业判断由有能力人员完成；具名接收前保留当前责任和备用路径。</li></ol></div><p class="guard">${E(c.guard)}</p><h4>采集入口</h4>${list(m.sources)}<h4>记录字段</h4>${list(m.fields)}<h4>核实问题</h4>${list(m.questions)}<p>${ruleLinks(c.ruleIds)}</p><p>参考：${source(c.sourceIds)}${c.metrics.some(x=>x[3]==='disabled')?'；来源不为本页睡眠/步数数值背书。':''}</p></div></details>`;}).join('')}</div></section>`;
+  }
+  function combinations(v){
+    const descriptions={
+      'TRG-X01':['情绪反复低落/兴趣减少','睡眠较平常变化','至少 1 个功能领域明确受影响'],
+      'TRG-X02':['本人确认活动下降','同期社交回避','明确希望真人或专业帮助'],
+      'TRG-X03':['睡眠需要明显减少','不困或异常高精力','异常兴奋/失控/冲动至少一项'],
+      'TRG-X04':['焦虑或恐慌感','当前心悸/心率异常感','胸痛/气短/将晕厥/晕厥任一'],
+      'TRG-X05':['近期用药/饮酒变化','同期新发或加重身体不适','无 R0 警示；持续心悸也须排除'],
+      'TRG-X06':['突发定向或表达改变','新发异常感知/混乱/快速恶化任一'],
+      'TRG-X07':['低分/设备正常/活动正常任一','本人明确当前安全表达'],
+      'TRG-X08':['显示低活动或零步数','未佩戴/佩戴未知/缺失任一']
+    };
+    return `<section id="combinations" data-flow="combinations"><div class="section-heading"><div><span class="eyebrow">03 / 组合触发</span><h2>不是把指标相加，而是核对组合</h2></div></div><p class="section-intro">同一行的条件用 AND 相连，框内“任一”代表 OR；安全与急症优先。不用“命中条数”计算风险总分。</p><div class="combination-list">${registry.rules.filter(r=>r.type==='X').map(r=>`<div class="combo-row ${v.case.matchedRuleIds.includes(r.id)?'related':''}"><div class="combo-name"><a href="#rule-${r.id}">${E(r.name)}</a><small>${r.id}</small></div><div class="combo-terms">${descriptions[r.id].map((d,i)=>(i?'<b class="and">AND</b>':'')+`<span>${E(d)}</span>`).join('')}</div><div class="combo-route"><span aria-hidden="true">→</span><strong>${r.response}<small>${short[r.response]}</small></strong></div></div>`).join('')}</div><p class="guard">上述是专业评审用候选。R2 组合须排除更紧急线索；R1 若出现即时危险升级 R0。急症不得等待持续天数、量表或普通名额。未成年人不直接套用成人流程。</p></section>`;
+  }
+  function catalog(v){
+    const types={K:'关键词与语义',Q:'量表',D:'身体与活动数据',X:'跨模块组合',G:'公共守则'};
+    return `<section id="catalog"><div class="section-heading"><div><span class="eyebrow">04 / 可追溯的完整依据</span><h2>完整规则与量表，按需展开</h2></div></div><details class="library" id="rule-library"><summary>35 条规则原文 <span>保留编号、排除项、责任人和启用状态</span></summary><div class="detail-content">${Object.entries(types).map(([type,title])=>`<h3>${title}</h3>${registry.rules.filter(r=>r.type===type).map(r=>`<details class="full-rule ${v.case.matchedRuleIds.includes(r.id)?'matched':''}" id="rule-${r.id}"><summary><code>${r.id}</code> ${E(r.name)} <span>${r.response}</span></summary><div class="detail-content">${line('完整条件',r.condition)}${line('排除条件',r.exclude)}${line('需要核实',r.clarify)}${line('下一步',r.response+' · '+response(r.response).label)}${line('负责角色',r.owner)}${line('状态',r.status)}${line('示例',r.example)}${line('反例',r.counterexample)}<p>依据：${source(r.sourceIds)}</p>${r.id==='TRG-SLP-D01'?'<p class="guard">原 V0.3 文本保持“约 2 小时”。本轮参数展示采用 ≥2 小时的明确边界，仍未启用，不写回原 PRD。</p>':''}</div></details>`).join('')}`).join('')}</div></details><details class="library" id="scales"><summary>量表工具、选项与版本 <span>题号主题，不伪造标准中文版</span></summary><div class="detail-content">${registry.scales.map(s=>`<details><summary>${E(s.name)}</summary><div class="detail-content">${line('用途',s.purpose)}${line('版本',s.version)}${line('适用人群',s.age)}${line('回顾时间',s.window)}${line('计分和切点',s.threshold)}${line('许可与适用',s.licence)}<h4>分项主题（不是正式题干）</h4>${list(s.items)}<h4>选项与计分结构</h4>${list(s.options)}<p>${source(s.sourceIds)}</p></div></details>`).join('')}</div></details><details class="library" id="sources"><summary>参考来源与演示边界 <span>原文链接需联网，页面内容离线可读</span></summary><div class="detail-content"><p>医学内容沿用 V0.3 已核对来源；数值、组合与 R0–R3 映射仍须本地专业审核。R0–R3 是响应出口，不是疾病严重度或未来自伤预测等级。</p><p>成人规则不得自动套用未成年人。聊天候选须本人确认；缺失不补零；安全信号不等待量表。原规则清单与 PRD 未修改，本页只重排说明并显式标出未启用参数。</p><ol>${registry.sources.map(s=>`<li id="source-${s.id}"><a href="${E(s.url)}" target="_blank" rel="noopener noreferrer">[${s.id}] ${E(s.title)}</a><p>${E(s.scope)}</p></li>`).join('')}</ol><p>数值引用存在人群与切点差异，例如 GAD-7 10 分常用切点与 8 分进一步评估建议并存；不能选择一个数字后拒绝其他求助。</p></div></details></section>`;
+  }
+  function render(){
+    const v=DetailedFlow.view(registry,select.value);
+    app.innerHTML=journey(v)+modules(v)+combinations(v)+catalog(v);
+    document.getElementById('announcement').textContent=`已切换 ${v.case.id}，${v.case.title}；示例响应 ${short[v.decision]}。先前案例数据和高亮已替换。`;
+  }
+  select.innerHTML=registry.cases.map(c=>`<option value="${c.id}">${c.id} · ${E(c.title)}</option>`).join('');
+  select.value='C02';select.addEventListener('change',render);
+  document.getElementById('expand-all').addEventListener('click',()=>app.querySelectorAll('details').forEach(d=>d.open=true));
+  document.getElementById('collapse-all').addEventListener('click',()=>app.querySelectorAll('details').forEach(d=>d.open=false));
+  document.getElementById('print').addEventListener('click',()=>window.print());
+  document.addEventListener('click',e=>{const link=e.target.closest('a[href^="#"]');if(!link)return;let target=document.getElementById(link.getAttribute('href').slice(1));if(!target)return;while(target){if(target.tagName==='DETAILS')target.open=true;target=target.parentElement;}});
+  let printState=null;
+  window.addEventListener('beforeprint',()=>{if(printState===null)printState=[...app.querySelectorAll('details')].map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true);});
+  window.addEventListener('afterprint',()=>{if(printState){printState.forEach(([d,o])=>d.open=o);printState=null;}});
+  render();
+})();
+</script></body></html>

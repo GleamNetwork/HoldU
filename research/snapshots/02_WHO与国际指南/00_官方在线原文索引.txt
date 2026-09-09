@@ -1,0 +1,24 @@
+# WHO 与国际指南：官方在线原文
+
+- [WHO：Mental health crisis services（2021）](https://www.who.int/publications/i/item/9789240025721)
+- [WHO：Peer support mental health services（2021）](https://www.who.int/publications/i/item/9789240025783)
+- [WHO：LIVE LIFE 自杀预防实施指南（2021）](https://www.who.int/publications/i/item/9789240026629)
+- [WHO：自伤与自杀数字干预证据页面](https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme/evidence-centre/self-harm-and-suicide/digital-interventions)
+- [NICE NG225：Self-harm—recommendations（2022，2024复核）](https://www.nice.org.uk/guidance/ng225/chapter/recommendations)
+- [NICE NG225 PDF](https://www.nice.org.uk/guidance/ng225/resources/selfharm-assessment-management-and-preventingrecurrence-pdf-66143837346757)
+- [SAMHSA：National Behavioral Health Crisis Care Guidance](https://www.samhsa.gov/mental-health/national-behavioral-health-crisis-care)
+- [SAMHSA：2025 National Guidelines PDF](https://library.samhsa.gov/sites/default/files/national-guidelines-crisis-care-pep24-01-037.pdf)
+
+## NICE 对 B2 的关键约束
+
+- 不用风险工具或量表预测未来自杀或自伤复发。
+- 不用风险工具决定是否提供治疗或是否结束服务。
+- 不使用笼统的低/中/高风险分层预测结局或决定服务资格。
+- 评估应聚焦个体需要，以及即时和长期的心理、身体安全；专业人员在心理社会评估中形成风险表述。
+- 与当事人共同制定安全计划，并在适当情况下征得同意后联络照护者。
+
+## SAMHSA 对系统架构的启发
+
+以三类能力构成连续危机服务：someone to contact（可联系的人/热线）、someone to respond（可响应的流动危机团队）、a safe place for help（可获得帮助的安全场所）。B2 原型至少应展示从数字陪伴到这三类线下资源的闭环。
+
+注：NICE 与 SAMHSA 官网对自动下载返回 403，因此本包保留官方在线入口，没有保存错误响应文件。

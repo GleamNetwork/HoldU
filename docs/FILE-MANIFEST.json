@@ -1,0 +1,312 @@
+{
+  "date": "2026-09-09",
+  "description": "原样复制文件来源与 SHA-256；不包含用户名绝对路径",
+  "files": [
+    {
+      "source": "同频B2_PRD/outputs/01a076dc-5c96-7b61-816e-31f1800c5948/同频B2_模块数据流与触发依据_2026-09-09.xlsx",
+      "file": "docs/rules/data-flow-and-triggers-2026-09-09.xlsx",
+      "category": "当前 Excel 原件",
+      "source_sha256": "8ca0dc4daf30b1a570dcbb06a01b2e67537eb1b8caefa3bd59575b2a9f7da57e",
+      "sha256": "8ca0dc4daf30b1a570dcbb06a01b2e67537eb1b8caefa3bd59575b2a9f7da57e",
+      "bytes": 53282,
+      "mode": "原样复制"
+    },
+    {
+      "source": "宠物设计稿/小频毛茸茸版/fluffy-wave.png",
+      "file": "assets/xiaopin/wave.png",
+      "category": "当前小频",
+      "source_sha256": "9fb2f3b850f156a84bb1ea53238486b59f632a3a650163411e39c7c4826baef9",
+      "sha256": "9fb2f3b850f156a84bb1ea53238486b59f632a3a650163411e39c7c4826baef9",
+      "bytes": 1259624,
+      "mode": "原样复制"
+    },
+    {
+      "source": "宠物设计稿/小频毛茸茸版/fluffy-calm.png",
+      "file": "assets/xiaopin/calm.png",
+      "category": "当前小频",
+      "source_sha256": "53da40ec3a94703c8a35521436804bbf0f2d751f6e3beae69c3a750f15cbb8f8",
+      "sha256": "53da40ec3a94703c8a35521436804bbf0f2d751f6e3beae69c3a750f15cbb8f8",
+      "bytes": 1065557,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_HTML原型/同频_demo原型_补充管理端.html",
+      "file": "prototypes/tongpin-demo.html",
+      "category": "既有离线 Demo",
+      "source_sha256": "62f2d76d40ed84fa80dda7bd29d6ba3a6bee4fd0faa8b5f8b1c1e6ba2adffe6c",
+      "sha256": "62f2d76d40ed84fa80dda7bd29d6ba3a6bee4fd0faa8b5f8b1c1e6ba2adffe6c",
+      "bytes": 3843959,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_PRD补充稿V0.2_主动关怀与量表分诊_2026-09-09.docx",
+      "file": "archive/prd/同频B2_PRD补充稿V0.2_主动关怀与量表分诊_2026-09-09.docx",
+      "category": "历史 PRD/流程",
+      "source_sha256": "b3e6251189517422f70a4e373f5773fac92e2cee62537459e69c5ac11822f484",
+      "sha256": "b3e6251189517422f70a4e373f5773fac92e2cee62537459e69c5ac11822f484",
+      "bytes": 1511524,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_PRD补充稿V0.2_主动关怀与量表分诊_2026-09-09.md",
+      "file": "archive/prd/同频B2_PRD补充稿V0.2_主动关怀与量表分诊_2026-09-09.md",
+      "category": "历史 PRD/流程",
+      "source_sha256": "8a8b40d126ec047fdbd1ac56b8dd711ebd4ba9a7c31f8febc94967e678e9fc31",
+      "sha256": "8a8b40d126ec047fdbd1ac56b8dd711ebd4ba9a7c31f8febc94967e678e9fc31",
+      "bytes": 33232,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_七模块互动流程图_V0.3_2026-09-09.html",
+      "file": "archive/prd/同频B2_七模块互动流程图_V0.3_2026-09-09.html",
+      "category": "历史 PRD/流程",
+      "source_sha256": "3906901d98753513947d85cc85c386035d7a6a48fe2f76f542c5abee9a1b7f4f",
+      "sha256": "3906901d98753513947d85cc85c386035d7a6a48fe2f76f542c5abee9a1b7f4f",
+      "bytes": 97448,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_七模块流程图_V0.3_2026-09-09.md",
+      "file": "archive/prd/同频B2_七模块流程图_V0.3_2026-09-09.md",
+      "category": "历史 PRD/流程",
+      "source_sha256": "65d2444b6d21f9913daf9c2b4c1aea9b7b1c303fa790580fd75d853a5f6bc8c0",
+      "sha256": "65d2444b6d21f9913daf9c2b4c1aea9b7b1c303fa790580fd75d853a5f6bc8c0",
+      "bytes": 79554,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_产品需求文档_V0.3_2026-09-09.docx",
+      "file": "archive/prd/同频B2_产品需求文档_V0.3_2026-09-09.docx",
+      "category": "历史 PRD/流程",
+      "source_sha256": "1ab49608a2711dd5a23dbc6c90710669875d2a8b28b4048bcf1ebfccc4ed43d8",
+      "sha256": "1ab49608a2711dd5a23dbc6c90710669875d2a8b28b4048bcf1ebfccc4ed43d8",
+      "bytes": 1563154,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_产品需求文档_V0.3_2026-09-09.md",
+      "file": "archive/prd/同频B2_产品需求文档_V0.3_2026-09-09.md",
+      "category": "历史 PRD/流程",
+      "source_sha256": "bf05aceb4099c6a3900647da33ebeb3b0da443028545640f818c350fdd0065d2",
+      "sha256": "bf05aceb4099c6a3900647da33ebeb3b0da443028545640f818c350fdd0065d2",
+      "bytes": 120125,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_产品需求文档_初稿V0.1_2026-09-08.docx",
+      "file": "archive/prd/同频B2_产品需求文档_初稿V0.1_2026-09-08.docx",
+      "category": "历史 PRD/流程",
+      "source_sha256": "820d24fc9134297115c5d2123f0703a545cd120c2c83501d23e078f91b9f224c",
+      "sha256": "820d24fc9134297115c5d2123f0703a545cd120c2c83501d23e078f91b9f224c",
+      "bytes": 1517823,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_产品需求文档_初稿V0.1_2026-09-08.md",
+      "file": "archive/prd/同频B2_产品需求文档_初稿V0.1_2026-09-08.md",
+      "category": "历史 PRD/流程",
+      "source_sha256": "049ce928bda058ea71d84fa6c27aa03f963967076b23c91ff92785e5263728bb",
+      "sha256": "049ce928bda058ea71d84fa6c27aa03f963967076b23c91ff92785e5263728bb",
+      "bytes": 38739,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_指标与分诊流程_直观版_V0.3.1_2026-09-09.html",
+      "file": "archive/prd/同频B2_指标与分诊流程_直观版_V0.3.1_2026-09-09.html",
+      "category": "历史 PRD/流程",
+      "source_sha256": "11bb2df4caaa5573e3f527ab7347e2fe218b407e483d996a1d78230f16027077",
+      "sha256": "11bb2df4caaa5573e3f527ab7347e2fe218b407e483d996a1d78230f16027077",
+      "bytes": 124903,
+      "mode": "原样复制"
+    },
+    {
+      "source": "同频B2_PRD/同频B2_自然对话与观察记录_互动版_V0.3.2_2026-09-09.html",
+      "file": "archive/prd/同频B2_自然对话与观察记录_互动版_V0.3.2_2026-09-09.html",
+      "category": "历史 PRD/流程",
+      "source_sha256": "d848e2958325225925a8afc6d57a6980f8c98fca8753df2711f0aecb19096556",
+      "sha256": "d848e2958325225925a8afc6d57a6980f8c98fca8753df2711f0aecb19096556",
+      "bytes": 177685,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/三端职责拆分.md",
+      "file": "archive/implementation/三端职责拆分.txt",
+      "category": "历史实现说明",
+      "source_sha256": "094c91cd7abdcdca8dea67bccd3328daadb50851020cd85eadd19dc46db73cff",
+      "sha256": "094c91cd7abdcdca8dea67bccd3328daadb50851020cd85eadd19dc46db73cff",
+      "bytes": 937,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/小频跟练与HTML说明.md",
+      "file": "archive/implementation/小频跟练与HTML说明.txt",
+      "category": "历史实现说明",
+      "source_sha256": "d7d5815dae17cb0b4d19793b378df21c552ca3dc7dc534dc41fe6006d7515695",
+      "sha256": "d7d5815dae17cb0b4d19793b378df21c552ca3dc7dc534dc41fe6006d7515695",
+      "bytes": 4247,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/志愿者辖区看板说明.md",
+      "file": "archive/implementation/志愿者辖区看板说明.txt",
+      "category": "历史实现说明",
+      "source_sha256": "cdd53add4e2e179ec07f708f8af15f79b2f9d7b18e3e094017aee8735e4d3ca3",
+      "sha256": "cdd53add4e2e179ec07f708f8af15f79b2f9d7b18e3e094017aee8735e4d3ca3",
+      "bytes": 6193,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/新版页面逻辑.md",
+      "file": "archive/implementation/新版页面逻辑.txt",
+      "category": "历史实现说明",
+      "source_sha256": "a59e8a7173be74f1b8f7cc56e32640e888e277f496e74bde89f2fcea76eb37e9",
+      "sha256": "a59e8a7173be74f1b8f7cc56e32640e888e277f496e74bde89f2fcea76eb37e9",
+      "bytes": 2431,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/硬件接入与演示指南.md",
+      "file": "archive/implementation/硬件接入与演示指南.txt",
+      "category": "历史实现说明",
+      "source_sha256": "401895588076ad3b2f0574b0e657a172e334db33d56157d8d7ff2d07fbfa593d",
+      "sha256": "401895588076ad3b2f0574b0e657a172e334db33d56157d8d7ff2d07fbfa593d",
+      "bytes": 5977,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/设计与实现说明.md",
+      "file": "archive/implementation/设计与实现说明.txt",
+      "category": "历史实现说明",
+      "source_sha256": "e7592b63a2b54857e5681349fcb6199a731cd9d9e177446f931d0aa211aa7679",
+      "sha256": "e7592b63a2b54857e5681349fcb6199a731cd9d9e177446f931d0aa211aa7679",
+      "bytes": 3372,
+      "mode": "原样复制"
+    },
+    {
+      "source": "b2-demo/docs/验证记录.md",
+      "file": "archive/implementation/验证记录.txt",
+      "category": "历史实现说明",
+      "source_sha256": "e4849641490eb221f4779810a03fc16fd1531455229691262a14259196680123",
+      "sha256": "e4849641490eb221f4779810a03fc16fd1531455229691262a14259196680123",
+      "bytes": 2404,
+      "mode": "原样复制"
+    },
+    {
+      "source": "宠物设计稿/同频_宠物与陪伴日记_设计说明.md",
+      "file": "archive/design/同频_宠物与陪伴日记_设计说明.txt",
+      "category": "历史设计说明",
+      "source_sha256": "1de8c3f7773ed0927099bcc2f18261ad02007fd870450aea5b6869a10c983ba3",
+      "sha256": "918ded521eaf824520fc6db3cf99301d614aa5769ac1347a9404d77ddd52c45f",
+      "bytes": 6900,
+      "mode": "仅将本机绝对路径替换为原资料目录占位；正文不变"
+    },
+    {
+      "source": "宠物设计稿/小频暖色版/小频暖色UI_未成年版与活动关怀设计.md",
+      "file": "archive/design/小频暖色UI_未成年版与活动关怀设计.txt",
+      "category": "历史设计说明",
+      "source_sha256": "ebe0b9ef2f148ca25daf883fb9df09fcb86514e5a12297b045470759fdb3012b",
+      "sha256": "3af1b9ac609348e0f20b26ebbf157b0b9802251758f85f30ebb2d2e11d19ddad",
+      "bytes": 11091,
+      "mode": "仅将本机绝对路径替换为原资料目录占位；正文不变"
+    },
+    {
+      "source": "B2政策指南资料包/01_中国政策与规范/00_官方在线原文索引.md",
+      "file": "research/snapshots/01_中国政策与规范/00_官方在线原文索引.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "5fa0be2ae86b28c60ad595b2d3f1da61bf2e735834e8ffc39787c07c81915bf1",
+      "sha256": "5fa0be2ae86b28c60ad595b2d3f1da61bf2e735834e8ffc39787c07c81915bf1",
+      "bytes": 1712,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/01_中国政策与规范/01_心理援助热线技术指南_试行_2021_官方要点.md",
+      "file": "research/snapshots/01_中国政策与规范/01_心理援助热线技术指南_试行_2021_官方要点.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "494678456663c813ca27cf41fcc6542c62cb77c20cad51cf6c3a31a1283772f3",
+      "sha256": "494678456663c813ca27cf41fcc6542c62cb77c20cad51cf6c3a31a1283772f3",
+      "bytes": 1600,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/01_中国政策与规范/02_12356全国统一心理援助热线通知_2024_官方要点.md",
+      "file": "research/snapshots/01_中国政策与规范/02_12356全国统一心理援助热线通知_2024_官方要点.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "5a3cd7faae2d532ce836076c8a8b24ca5d7b2a366084e31dd184cf8781852f42",
+      "sha256": "5a3cd7faae2d532ce836076c8a8b24ca5d7b2a366084e31dd184cf8781852f42",
+      "bytes": 969,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/01_中国政策与规范/04_精神卫生法_B2条款索引.md",
+      "file": "research/snapshots/01_中国政策与规范/04_精神卫生法_B2条款索引.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "bafa82592bece764a4051f5d559b68c133dcda7944c87bf4aa57575e3e3f8990",
+      "sha256": "bafa82592bece764a4051f5d559b68c133dcda7944c87bf4aa57575e3e3f8990",
+      "bytes": 898,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/02_WHO与国际指南/00_官方在线原文索引.md",
+      "file": "research/snapshots/02_WHO与国际指南/00_官方在线原文索引.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "0290bc0e661560def58b92d383721c0a24a44a4d7d9393e46f0a17b9e17f98bc",
+      "sha256": "0290bc0e661560def58b92d383721c0a24a44a4d7d9393e46f0a17b9e17f98bc",
+      "bytes": 2075,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/03_AI与数字健康治理/00_官方在线原文索引.md",
+      "file": "research/snapshots/03_AI与数字健康治理/00_官方在线原文索引.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "8bb69434e9ce400fe64d5bfdc53a557257100e1542bf4b54d1265f68894cf4ac",
+      "sha256": "8bb69434e9ce400fe64d5bfdc53a557257100e1542bf4b54d1265f68894cf4ac",
+      "bytes": 1044,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/04_上海特色补充/README_上海特色.md",
+      "file": "research/snapshots/04_上海特色补充/README_上海特色.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "8b817a7f85a90818535b74c95c63560c4f56594115bf33bd1d3819f191dd035f",
+      "sha256": "8b817a7f85a90818535b74c95c63560c4f56594115bf33bd1d3819f191dd035f",
+      "bytes": 5834,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/05_量表与分诊设计/B2_成人量表选型与转诊分诊流程.md",
+      "file": "research/snapshots/05_量表与分诊设计/B2_成人量表选型与转诊分诊流程.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "4f1441e5231caf7ddf2ad56cd4194934d1d917927525f4a0937be0aa0823a518",
+      "sha256": "4f1441e5231caf7ddf2ad56cd4194934d1d917927525f4a0937be0aa0823a518",
+      "bytes": 18714,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/B2_产品合规与安全设计清单.md",
+      "file": "research/snapshots/B2_产品合规与安全设计清单.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "c77eefef32ea904fb0381c5300712eba654b961e1dfdc38fb46a424e8fad06a4",
+      "sha256": "c77eefef32ea904fb0381c5300712eba654b961e1dfdc38fb46a424e8fad06a4",
+      "bytes": 3298,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2政策指南资料包/README.md",
+      "file": "research/snapshots/README.txt",
+      "category": "历史原创研究笔记（文本快照）",
+      "source_sha256": "c0b3cf3affa5b986ee63ef1c2693801f88f44aac5eea0468ffaff86c39bbdc24",
+      "sha256": "c0b3cf3affa5b986ee63ef1c2693801f88f44aac5eea0468ffaff86c39bbdc24",
+      "bytes": 7556,
+      "mode": "原样复制"
+    },
+    {
+      "source": "B2_GitHub项目调研/B2_GitHub开源项目清单.html",
+      "file": "research/github-projects-2026-09-06.html",
+      "category": "历史开源项目检索",
+      "source_sha256": "b08ace8e3ca354f8370be52f8ea1a25879c37bbde41bfa34887dcc2affca7829",
+      "sha256": "b08ace8e3ca354f8370be52f8ea1a25879c37bbde41bfa34887dcc2affca7829",
+      "bytes": 21246,
+      "mode": "原样复制"
+    }
+  ]
+}

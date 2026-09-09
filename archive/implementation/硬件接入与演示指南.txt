@@ -1,0 +1,62 @@
+# 同频：硬件接入与演示指南
+
+更新：2026-09-07。本项目为成人 B2 黑客松概念原型，不是诊断、急救或真实志愿者服务。
+
+## 先演示，再接设备
+
+当前没有实体手表，推荐先用内置模拟器完成答辩，不必先购买硬件。三端在同一浏览器内联动；不是三台设备跨网络同步。
+
+1. 选择「连续睡不好」。展示活动步数、当前心率、昨夜睡眠及一周趋势；说明数据变化仅用于温和提醒，不能推断抑郁、焦虑或自杀风险。
+2. 用户端「聊一聊」→ 当前安全核查 → 可选两题状态问卷或跳过。
+3. 「找人陪我」→ 志愿者端接单 → 两端输入消息。共享设备趋势默认关闭，可在设置中显式打开。
+4. 「转介与交接」→ 人工核对去向、同意或专业人员紧急协议依据 → 生成模拟回执 → 约定回访。
+5. 切换「主动紧急求助」。即便设备读数普通，本人表示当前不安全仍跳过问卷，普通志愿者不能独立接管，需模拟专业值班接手。
+6. 切换「设备离线」。显示缺失而非零；聊天和主动求助不受影响。
+
+「运动之后」额外展示当前心率的运动背景；不能因为刚运动就排除身体急症。「日常状态」也保留主动求助入口。
+
+## 已实现与未实现
+
+| 项目 | 当前范围 |
+|---|---|
+| 用户、志愿者、手表 UI | 可切换单端和联动视图；响应式布局 |
+| 运动/步数、心率、睡眠 | 五组合成场景及趋势，不连接后台 |
+| AI问答/摘要 | 固定脚本与模板，非实时大模型、非RAG；不保证识别任意自由输入里的危险含义 |
+| 量表 | PHQ-2中文展示样稿，显式作答后显示总分，不诊断、不换算自杀风险；正式使用先核对授权及验证版本 |
+| 人工接单、转介、随访 | 单浏览器内状态模拟；不拨号、不发送真实工单、不联系机构 |
+| BLE标准心率 | 提供实际连接代码与用户主动授权入口；有数据、等待、取消、不可用、断连状态；尚未真机测试 |
+| Apple/Android/华为手表 | 接入路径与官方资料；尚无原生App、SDK授权或插件安装 |
+| 隐私 | 会话和读数只保存在本页内存中；刷新丢失；不应输入真实个案资料 |
+
+## 三类数据怎么接
+
+| 路线 | 可覆盖的数据 | 必要条件与边界 |
+|---|---|---|
+| Apple Watch + iPhone | HealthKit中经用户授权可读取的活动、心率、睡眠记录 | 需原生iOS/watchOS开发及分项权限；网页不能直接读取HealthKit；并非所有记录都实时产生 |
+| Wear OS + Android | Health Services支持的手表运动/心率；手机Health Connect已有的活动、睡眠、心率记录 | Wear OS Health Services须兼容设备；后台被动数据可能批量送达；Health Connect不是手表实时数据管道，需确认Android版本、Google Play及来源App写入支持 |
+| 华为运动健康 | 获准开放且设备支持的运动/心率/睡眠数据 | 需开发者接入、应用服务申请、用户授权；可用数据和同步延迟依具体API、地区、账号及设备，不保证任意华为手表实时接入 |
+| BLE标准心率设备 | 当前心率通知 | 设备必须开放标准 Heart Rate Service；许多消费手表不开放。蓝牙配对成功不等于能读健康数据。标准服务不提供通用睡眠/步数 |
+
+本页「连接标准心率设备」只读取 Bluetooth SIG 标准心率服务的通知。要在支持 Web Bluetooth 的浏览器和安全上下文中，由本人点击后选设备。macOS/iPhone/iOS浏览器能力不同，不能保证可用。关闭接入面板会断开连接；读数仅在独立“真实设备”区域展示，不混入合成个案或自动触发分诊。
+
+数据适配采用 `source / metric / value / unit / timestamp / quality`。后续应保留来源、采样时间、单位、测量场景、佩戴质量及缺失状态；静息心率、即时心率和运动心率不能混用。睡眠是设备算法估计，不替代医学检查；不要把不同厂商的睡眠阶段直接当作同一精度的指标。
+
+## 可复用项目（单独列出）
+
+1. [android/health-samples](https://github.com/android/health-samples)：Google官方Android健康示例，含Health Connect及Wear OS相关工程。适合后续原生接入，Apache-2.0；需按实际示例核对权限与设备支持。
+2. [capacitor-community/bluetooth-le](https://github.com/capacitor-community/bluetooth-le)：Capacitor社区BLE插件，支持Android/iOS及Web实现。它连接的是BLE服务，不是现成“读取任意手表全部健康数据”的插件；本原型未安装此插件，网页直接使用Web Bluetooth。
+
+## 官方资料
+
+- [Apple HealthKit](https://developer.apple.com/documentation/healthkit)
+- [HealthKit授权](https://developer.apple.com/documentation/HealthKit/authorizing-access-to-health-data)
+- [Wear OS Health Services](https://developer.android.com/health-and-fitness/health-services)
+- [Wear OS后台监测](https://developer.android.com/health-and-fitness/health-services/monitor-background)
+- [Health Connect可用性与设备要求](https://developer.android.com/health-and-fitness/health-connect/availability)
+- [华为运动健康服务](https://developer.huawei.com/consumer/en/hms/huaweihealth/)
+- [华为服务接入申请](https://developer.huawei.com/consumer/en/doc/HMSCore-Guides/harmonyos-apply-kitservice-0000001194699502)
+- [Web Bluetooth限制与安全要求](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API)
+
+## 真正落地前还需要
+
+专业机构确定值班、超时兜底、紧急协议及具体转介合作；经验证的量表和正式分诊规范；健康数据合规评估、最小授权、撤回与删除；真正后端身份权限、审计、跨端消息与值班可用性；大模型/知识库接入后的临床安全测试；所选手表真机测试。原型不能直接投入真实危机干预。

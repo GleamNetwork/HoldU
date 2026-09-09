@@ -1,0 +1,10 @@
+# AI 与数字健康治理：官方在线原文
+
+- [WHO：Ethics and governance of AI for health（2021）](https://www.who.int/publications/i/item/9789240029200)
+- [WHO：Guidance on large multi-modal models（2024）](https://www.who.int/publications-detail-redirect/9789240084759)
+- [WHO：Regulatory considerations on AI for health（2023）](https://www.who.int/publications/i/item/9789240078871)
+- [UNESCO：Recommendation on the Ethics of Artificial Intelligence（2021）](https://www.unesco.org/en/articles/recommendation-ethics-artificial-intelligence?hub=66973)
+- [中国：《生成式人工智能服务管理暂行办法》](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)
+- [中国：《人工智能生成合成内容标识办法》](https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm)
+
+对 B2 的共同要求可归纳为：人类监督、明确责任、隐私和数据治理、透明说明能力边界、部署前风险评估、部署后监测、对弱势群体的公平性验证、事件报告和可追溯性。
