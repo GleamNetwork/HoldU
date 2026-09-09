@@ -25,6 +25,7 @@
 | 小频、暖色、未成年体验与跟练 | [小频设计](docs/design/xiaopin.md) |
 | 手表情绪陪伴版与运动健康版概念原图 | [手表设计](assets/watch/README.md) |
 | 双击打开原型 / 手表接入现状 | [原型指南](docs/prototypes/README.md) |
+| iPhone 比例的 PWA 陪伴前端 | [移动端 PWA](frontend/mobile-pwa/README.md) |
 | 国家、国际、上海政策和 GitHub 项目 | [研究索引](research/README.md) |
 | 后端服务、安装、测试与子模块说明 | [backend-service](backend-service/README.md) |
 | 旧版 PRD、Word 和历史 HTML | [历史档案](archive/README.md) |
@@ -33,6 +34,8 @@
 ## 原型与真实能力
 
 下载完整仓库后可打开 [离线原型](prototypes/tongpin-demo.html)。既有 [在线 Demo](https://tongpin-b2-companion.ruomengbi.chatgpt.site/)本轮未改动。演示中固定脚本、设备数据、人员与接单状态均不代表真实服务，V0.4 文档也不等于功能已上线。
+
+另有 [移动端 PWA 前端](frontend/mobile-pwa/README.md)，用于展示小频陪伴入口、记录和隐私说明。请通过本地服务器或 HTTPS 打开，才能启用离线缓存和 iPhone“添加到主屏幕”体验。
 
 ## 规则使用
 

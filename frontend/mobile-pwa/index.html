@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="同频">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <title>同频 · 小频陪伴</title>
+  <style>
+    :root {
+      --canvas: #fff8f5;
+      --ink: #4a2f39;
+      --muted: #836d75;
+      --petal: #f4c4c1;
+      --apricot: #f1bb7b;
+      --butter: #f2dda1;
+      --lilac: #d9cbe1;
+      --sage: #c7d6c3;
+      --line: rgba(105, 73, 83, .12);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-width: 320px; min-height: 100%; margin: 0; }
+    body { color: var(--ink); background: #f2e6df; }
+    button, input { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, input:focus-visible { outline: 3px solid rgba(224, 137, 116, .58); outline-offset: 3px; }
+
+    .app {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      max-width: 430px;
+      min-height: 100dvh;
+      margin: 0 auto;
+      overflow: hidden;
+      background: var(--canvas);
+    }
+    .app::before {
+      content: "";
+      position: absolute;
+      z-index: -3;
+      inset: 0;
+      background: url("./assets/home-morning-room.png") center top / cover no-repeat;
+      transform: scale(1.025);
+      animation: room-drift 18s ease-in-out infinite alternate;
+    }
+    .app::after {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,249,245,.02) 0%, rgba(255,248,245,.08) 28%, rgba(255,248,245,.7) 53%, rgba(255,248,245,.96) 70%, var(--canvas) 100%),
+        radial-gradient(circle at 53% 32%, transparent 0%, rgba(255,247,241,.18) 48%, rgba(255,248,245,.45) 100%);
+    }
+    .grain {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      opacity: .2;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(122,84,86,.2) .45px, transparent .55px);
+      background-size: 5px 5px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.3), transparent 42%);
+    }
+
+    .home { min-height: 100dvh; padding: calc(12px + env(safe-area-inset-top)) 22px calc(104px + env(safe-area-inset-bottom)); }
+    .topbar { display: flex; align-items: flex-start; justify-content: space-between; min-height: 76px; }
+    .brand { display: flex; flex-direction: column; gap: 5px; }
+    .brand-name {
+      position: relative;
+      width: max-content;
+      color: #5b3544;
+      font-family: "STKaiti", "KaiTi", "Kaiti SC", serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: .96;
+      letter-spacing: .04em;
+    }
+    .brand-name::after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      right: -16px;
+      width: 13px;
+      height: 20px;
+      border-radius: 13px 3px 13px 3px;
+      background: var(--sage);
+      transform: rotate(34deg);
+      box-shadow: -5px 9px 0 -3px rgba(199,214,195,.75);
+    }
+    .brand-copy { color: var(--muted); font-size: 13px; line-height: 1.38; letter-spacing: .02em; }
+    .round-control {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,.62);
+      border-radius: 50%;
+      background: rgba(255,251,247,.61);
+      box-shadow: 0 8px 16px rgba(114,77,83,.07), inset 0 1px 0 rgba(255,255,255,.86);
+      color: #9f7e8b;
+      cursor: pointer;
+      font-size: 18px;
+      transition: transform .22s ease, background .22s ease;
+    }
+    .round-control:active { transform: scale(.92); }.round-control:hover { background: rgba(255,253,250,.9); }
+
+    .mascot-stage { position: relative; height: clamp(286px, 40dvh, 366px); margin: 2px -22px 0; overflow: visible; }
+    .mascot-halo {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      width: min(77vw, 330px);
+      aspect-ratio: 1;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,251,248,.65) 0%, rgba(246,205,195,.2) 43%, transparent 70%);
+      filter: blur(2px);
+    }
+    .mascot-halo::before, .mascot-halo::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,251,248,.64);
+      animation: mote 4.8s ease-in-out infinite;
+    }
+    .mascot-halo::before { width: 12px; height: 12px; top: 16%; left: 10%; }.mascot-halo::after { width: 8px; height: 8px; right: 4%; bottom: 21%; animation-delay: -2.2s; }
+    .mascot {
+      position: absolute;
+      z-index: 1;
+      bottom: -17px;
+      left: 50%;
+      width: min(84vw, 360px);
+      aspect-ratio: 1;
+      transform: translateX(-50%);
+      filter: drop-shadow(0 17px 16px rgba(125,85,89,.17));
+    }
+    .mascot-core { position: absolute; inset: 0; transform-origin: center 72%; animation: breathe 4.8s ease-in-out infinite; }
+    .mascot-sprite {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity .34s ease, transform .45s cubic-bezier(.22,.85,.3,1);
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .mascot-sprite.wave { opacity: 0; transform: translateY(7px) scale(.96); }
+    .mascot.is-responding { animation: mascot-answer .88s cubic-bezier(.2,.85,.24,1) both; }
+    .mascot.is-responding .idle { opacity: 0; transform: translateY(8px) scale(.95); }.mascot.is-responding .wave { opacity: 1; transform: translateY(0) scale(1); }
+    .heart-orbit {
+      position: absolute;
+      z-index: 2;
+      bottom: 19%;
+      left: 50%;
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(247,182,175,.52);
+      border-radius: 50%;
+      background: rgba(255,248,245,.5);
+      box-shadow: 0 0 0 9px rgba(246,201,198,.13);
+      color: #e89087;
+      font-size: 15px;
+      animation: heart-bloom 3.6s ease-in-out infinite;
+    }
+
+    .home-copy { position: relative; z-index: 3; margin-top: -4px; text-align: center; }
+    .home-copy h1 { margin: 0; color: var(--ink); font-family: "STKaiti", "KaiTi", "Kaiti SC", serif; font-size: clamp(36px,9vw,47px); font-weight: 800; line-height: 1.08; letter-spacing: .02em; }
+    .home-copy p { max-width: 310px; margin: 12px auto 0; color: #74555f; font-size: 14px; line-height: 1.7; }
+    .waveform { display: flex; align-items: center; justify-content: center; gap: 4px; height: 37px; margin: 14px 0 10px; color: #ef9b91; }
+    .waveform::before, .waveform::after { content: ""; width: 55px; height: 1px; background: linear-gradient(90deg, transparent, #f2b0a2); }.waveform::after { transform: scaleX(-1); }
+    .waveform i { display: block; width: 3px; border-radius: 99px; background: currentColor; opacity: .84; transform-origin: center; animation: wave 1.8s ease-in-out infinite; }
+    .waveform i:nth-of-type(1) { height: 9px; animation-delay: -.2s; }.waveform i:nth-of-type(2) { height: 18px; animation-delay: -.45s; }.waveform i:nth-of-type(3) { height: 29px; animation-delay: -.75s; }.waveform i:nth-of-type(4) { height: 16px; animation-delay: -.6s; }.waveform i:nth-of-type(5) { height: 9px; animation-delay: -.36s; }
+    .waveform.is-listening i { animation-duration: .7s; }
+    .listen-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: min(100%, 340px);
+      min-height: 62px;
+      margin: 0 auto;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 999px;
+      background: linear-gradient(100deg, rgba(255,221,152,.92), rgba(246,180,114,.94));
+      box-shadow: 0 13px 25px rgba(205,135,99,.21), inset 0 1px 1px rgba(255,255,255,.75);
+      color: #4b3037;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .listen-button:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(205,135,99,.26), inset 0 1px 1px rgba(255,255,255,.75); }.listen-button:active { transform: scale(.98); }
+    .listen-icon { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid currentColor; border-radius: 50%; font-size: 17px; line-height: 1; }.listen-arrow { font-size: 30px; font-weight: 350; line-height: .6; }
+    .local-note { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 16px 0 0; color: #ab9ba8; font-size: 12px; }.lock { position: relative; width: 13px; height: 11px; border: 2px solid #b4a5c8; border-radius: 3px; }.lock::before { content: ""; position: absolute; left: 2px; bottom: 8px; width: 5px; height: 6px; border: 2px solid #b4a5c8; border-bottom: 0; border-radius: 6px 6px 0 0; }
+
+    .tabbar {
+      position: absolute;
+      z-index: 9;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      padding: 10px 17px calc(14px + env(safe-area-inset-bottom));
+      border-top: 1px solid rgba(255,255,255,.72);
+      border-radius: 31px 31px 0 0;
+      background: rgba(255,249,246,.82);
+      box-shadow: 0 -10px 28px rgba(150,111,110,.07), inset 0 1px 0 rgba(255,255,255,.92);
+      backdrop-filter: blur(20px) saturate(1.15);
+      -webkit-backdrop-filter: blur(20px) saturate(1.15);
+    }
+    .tab { display: grid; justify-items: center; gap: 3px; min-height: 49px; padding: 5px 9px; border: 0; border-radius: 20px; background: none; color: #7b6a70; cursor: pointer; font-size: 13px; transition: color .2s ease, background .2s ease, transform .2s ease; }.tab span:first-child { height: 25px; font-size: 23px; line-height: 21px; }.tab.is-active { background: rgba(248,213,213,.6); color: #d9807e; font-weight: 750; }.tab:active { transform: scale(.96); }
+
+    .scrim { position: absolute; z-index: 11; inset: 0; visibility: hidden; opacity: 0; background: rgba(75,45,54,.2); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: opacity .24s ease, visibility .24s ease; }.scrim.is-open { visibility: visible; opacity: 1; }
+    .panel {
+      position: absolute;
+      z-index: 12;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      max-height: min(620px, 76dvh);
+      padding: 10px 21px calc(24px + env(safe-area-inset-bottom));
+      overflow-y: auto;
+      visibility: hidden;
+      transform: translateY(102%);
+      border-radius: 32px 32px 0 0;
+      background: rgba(255,251,248,.97);
+      box-shadow: 0 -18px 45px rgba(92,56,65,.2), inset 0 1px 0 rgba(255,255,255,.9);
+      transition: transform .42s cubic-bezier(.22,.86,.3,1), visibility .42s;
+      scrollbar-width: none;
+    }
+    .panel::-webkit-scrollbar { display: none; }.panel.is-open { visibility: visible; transform: translateY(0); }.panel-handle { width: 36px; height: 4px; margin: 0 auto 18px; border-radius: 99px; background: rgba(101,68,77,.16); }
+    .panel-head { display: flex; align-items: center; gap: 13px; }.panel-head h2 { margin: 0; font-size: 23px; letter-spacing: -.06em; }.panel-head p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }.panel-mascot { width: 54px; height: 54px; object-fit: contain; filter: drop-shadow(0 7px 7px rgba(126,83,89,.12)); }.close { margin-left: auto; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f9edeb; color: var(--muted); cursor: pointer; font-size: 24px; line-height: 1; }
+    .message-list { display: grid; gap: 10px; margin: 22px 0 14px; }.message { width: fit-content; max-width: 86%; padding: 12px 14px; border-radius: 18px 18px 18px 5px; background: #fff; box-shadow: 0 6px 14px rgba(103,65,75,.05); font-size: 14px; line-height: 1.52; }.message.me { justify-self: end; border-radius: 18px 18px 5px 18px; background: var(--petal); }.message small { display: block; margin-bottom: 4px; color: #d98582; font-size: 11px; font-weight: 750; }
+    .prompt-row { display: flex; flex-wrap: wrap; gap: 8px; }.prompt { min-height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.8); color: var(--muted); cursor: pointer; font-size: 12px; transition: transform .2s ease, background .2s ease; }.prompt:hover { background: var(--butter); color: var(--ink); }.prompt:active { transform: scale(.96); }
+    .composer { display: grid; grid-template-columns: 1fr 45px; gap: 9px; margin-top: 17px; }.composer input { height: 47px; min-width: 0; padding: 0 15px; border: 1px solid var(--line); border-radius: 16px; background: #fff; color: var(--ink); outline: none; font-size: 13px; }.composer input::placeholder { color: #af9da2; }.send { border: 0; border-radius: 16px; background: var(--apricot); cursor: pointer; font-size: 20px; }
+    .record-card { margin-top: 21px; padding: 20px; border-radius: 25px; background: linear-gradient(135deg, rgba(242,221,161,.74), rgba(255,255,255,.8)); }.record-card h3 { margin: 0; font-size: 23px; letter-spacing: -.055em; }.record-card p { margin: 8px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }.feelings { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }.feeling { min-height: 72px; padding: 13px; border: 1px solid rgba(104,72,80,.08); border-radius: 18px; background: rgba(255,255,255,.74); cursor: pointer; text-align: left; }.feeling.is-selected { background: var(--petal); }.feeling b { display: block; font-size: 14px; }.feeling span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+    .setting-list { margin-top: 20px; overflow: hidden; border: 1px solid rgba(104,72,80,.08); border-radius: 22px; background: #fff; }.setting { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; width: 100%; min-height: 65px; padding: 13px 15px; border: 0; border-bottom: 1px solid var(--line); background: none; cursor: pointer; text-align: left; }.setting:last-child { border-bottom: 0; }.setting strong { display: block; font-size: 14px; }.setting small { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }.setting b { padding: 6px 9px; border-radius: 999px; background: var(--lilac); color: var(--ink); font-size: 11px; }.setting b.sage { background: var(--sage); }
+    .notice { margin: 18px 0 0; padding: 15px; border-radius: 19px; background: #f9efed; color: var(--muted); font-size: 12px; line-height: 1.58; }.notice strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 13px; }
+    .toast { position: absolute; z-index: 20; top: calc(16px + env(safe-area-inset-top)); left: 50%; display: none; width: max-content; max-width: calc(100% - 42px); padding: 11px 15px; transform: translateX(-50%); border-radius: 14px; background: rgba(74,47,57,.93); box-shadow: 0 12px 22px rgba(74,47,57,.22); color: #fff9f6; font-size: 12px; line-height: 1.35; text-align: center; }.toast.is-showing { display: block; animation: toast-in .25s ease both; }
+
+    @keyframes room-drift { from { transform: scale(1.025) translateY(0); } to { transform: scale(1.055) translateY(-6px); } }
+    @keyframes breathe { 0%,100% { transform: translateY(0) scale(1); } 48% { transform: translateY(-5px) scale(1.018,.987); } }
+    @keyframes mascot-answer { 0% { transform: translateX(-50%) translateY(0) rotate(0); } 35% { transform: translateX(-50%) translateY(-13px) rotate(-2deg); } 68% { transform: translateX(-50%) translateY(0) rotate(1.5deg); } 100% { transform: translateX(-50%) translateY(0) rotate(0); } }
+    @keyframes heart-bloom { 0%,100% { transform: translateX(-50%) scale(.92); box-shadow: 0 0 0 7px rgba(246,201,198,.12); } 50% { transform: translateX(-50%) scale(1.08); box-shadow: 0 0 0 14px rgba(246,201,198,0); } }
+    @keyframes wave { 0%,100% { transform: scaleY(.48); } 50% { transform: scaleY(1); } }
+    @keyframes mote { 0%,100% { transform: translateY(0); opacity: .44; } 50% { transform: translateY(-14px); opacity: .95; } }
+    @keyframes toast-in { from { opacity: 0; transform: translate(-50%,-7px); } to { opacity: 1; transform: translate(-50%,0); } }
+    @media (min-width: 431px) { body { background: radial-gradient(circle at 50% 17%, #fff8f5, #f0e2db 72%); }.app { box-shadow: 0 25px 65px rgba(118,78,85,.13); } }
+    @media (max-height: 720px) { .topbar { min-height: 61px; }.mascot-stage { height: 281px; }.home-copy h1 { font-size: 35px; }.home-copy p { margin-top: 8px; }.waveform { height: 27px; margin: 7px 0; }.listen-button { min-height: 55px; }.local-note { margin-top: 10px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main class="app" id="app" aria-label="同频小频陪伴轻应用">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <section class="home" aria-labelledby="homeTitle">
+      <header class="topbar">
+        <div class="brand"><span class="brand-name">同频</span><span class="brand-copy">在这里，先照顾此刻的你</span></div>
+        <button class="round-control" type="button" data-open="profile" aria-label="查看隐私与设置">⌁</button>
+      </header>
+      <section class="mascot-stage" aria-label="小频安静陪伴着你">
+        <div class="mascot-halo" aria-hidden="true"></div>
+        <div class="mascot" id="mascot">
+          <div class="mascot-core">
+            <img class="mascot-sprite idle" src="./assets/xiaopin-calm.png" alt="小频闭着眼睛，安静地陪伴着你">
+            <img class="mascot-sprite wave" src="./assets/xiaopin-wave.png" alt="小频微笑招手回应">
+          </div>
+          <span class="heart-orbit" aria-hidden="true">♡</span>
+        </div>
+      </section>
+      <section class="home-copy">
+        <h1 id="homeTitle">今天，还好吗？</h1>
+        <p>无论开心、疲惫，还是只是想说说话。<br>小频都在这里，静静陪着你。</p>
+        <div class="waveform" id="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <button class="listen-button" type="button" id="listenButton"><span class="listen-icon" aria-hidden="true">◌</span><span>和小频聊聊</span><span class="listen-arrow" aria-hidden="true">›</span></button>
+        <p class="local-note"><span class="lock" aria-hidden="true"></span>感知只在设备里完成</p>
+      </section>
+    </section>
+
+    <nav class="tabbar" aria-label="主导航">
+      <button class="tab is-active" type="button" data-home aria-current="page"><span aria-hidden="true">⌂</span><span>陪伴</span></button>
+      <button class="tab" type="button" data-open="record"><span aria-hidden="true">▤</span><span>记录</span></button>
+      <button class="tab" type="button" data-open="profile"><span aria-hidden="true">◯</span><span>我的</span></button>
+    </nav>
+
+    <div class="scrim" id="scrim"></div>
+    <section class="panel" id="chatPanel" data-panel="chat" role="dialog" aria-modal="true" aria-labelledby="chatTitle">
+      <div class="panel-handle"></div>
+      <header class="panel-head"><img class="panel-mascot" src="./assets/xiaopin-wave.png" alt="小频"><div><h2 id="chatTitle">我在这里</h2><p>慢一点说，也没关系。</p></div><button class="close" type="button" data-close aria-label="关闭对话">×</button></header>
+      <div class="message-list" id="messages" aria-live="polite"><div class="message"><small>小频</small>此刻，最想让人知道的是什么？</div></div>
+      <div class="prompt-row" aria-label="快捷表达"><button class="prompt" type="button" data-message="我有点乱">我有点乱</button><button class="prompt" type="button" data-message="我不想一个人">我不想一个人</button><button class="prompt" type="button" data-message="我想先安静一下">我想先安静一下</button></div>
+      <form class="composer" id="composer" aria-label="输入一句话"><input id="messageInput" type="text" maxlength="80" placeholder="写下一句就好"><button class="send" type="submit" aria-label="发送">↑</button></form>
+    </section>
+    <section class="panel" id="recordPanel" data-panel="record" role="dialog" aria-modal="true" aria-labelledby="recordTitle">
+      <div class="panel-handle"></div>
+      <header class="panel-head"><div><h2 id="recordTitle">留给此刻的你</h2><p>不必解释得很准确。</p></div><button class="close" type="button" data-close aria-label="关闭记录">×</button></header>
+      <div class="record-card"><h3>现在更像哪一种感受？</h3><p>选择的内容只保存在这次演示中。你随时可以不记录。</p><div class="feelings" id="feelings"><button class="feeling" type="button" data-feeling="平静"><b>平静</b><span>还算能呼吸</span></button><button class="feeling" type="button" data-feeling="紧绷"><b>紧绷</b><span>身体和心都很用力</span></button><button class="feeling" type="button" data-feeling="疲惫"><b>疲惫</b><span>什么都不太想做</span></button><button class="feeling" type="button" data-feeling="说不清"><b>说不清</b><span>先为它留个位置</span></button></div></div>
+      <div class="notice" id="recordNotice"><strong>记录默认留在本机</strong>当你愿意时，才可以把这次的感受带进对话或人工支持连接。</div>
+    </section>
+    <section class="panel" id="profilePanel" data-panel="profile" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+      <div class="panel-handle"></div>
+      <header class="panel-head"><div><h2 id="profileTitle">你的边界，由你决定</h2><p>同频只在被允许时参与陪伴。</p></div><button class="close" type="button" data-close aria-label="关闭我的">×</button></header>
+      <div class="setting-list">
+        <button class="setting" type="button" data-toast="设备摘要默认只留在本机"><span><strong>设备感知</strong><small>睡眠、活动与心率节律</small></span><b class="sage">本机</b></button>
+        <button class="setting" type="button" data-toast="演示中可随时撤回本次共享"><span><strong>匿名连接偏好</strong><small>由你确认后才会进入人工支持网络</small></span><b>可控</b></button>
+        <button class="setting" type="button" data-toast="紧急情况请优先联系当地紧急服务或可信任的人"><span><strong>需要更快的人工支持</strong><small>保留人工接管与转介路径</small></span><b class="sage">查看</b></button>
+      </div>
+      <div class="notice"><strong>添加到 iPhone 主屏幕</strong>请在 Safari 点按“分享”，选择“添加到主屏幕”。添加后会以独立轻应用方式打开，并可离线展示首页。</div>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      const mascot = document.querySelector('#mascot');
+      const waveform = document.querySelector('#waveform');
+      const scrim = document.querySelector('#scrim');
+      const toast = document.querySelector('#toast');
+      const panels = [...document.querySelectorAll('[data-panel]')];
+      const tabs = [...document.querySelectorAll('.tab')];
+      let toastTimer;
+
+      function showToast(text) {
+        toast.textContent = text;
+        toast.classList.add('is-showing');
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.remove('is-showing'), 3100);
+      }
+      function closePanels() {
+        panels.forEach((panel) => panel.classList.remove('is-open'));
+        scrim.classList.remove('is-open');
+        tabs.forEach((tab, index) => {
+          tab.classList.toggle('is-active', index === 0);
+          if (index === 0) tab.setAttribute('aria-current', 'page');
+          else tab.removeAttribute('aria-current');
+        });
+      }
+      function openPanel(name) {
+        panels.forEach((panel) => panel.classList.toggle('is-open', panel.dataset.panel === name));
+        scrim.classList.add('is-open');
+        tabs.forEach((tab) => {
+          const active = (name === 'record' && tab.dataset.open === 'record') || (name === 'profile' && tab.dataset.open === 'profile') || (name === 'chat' && tab.dataset.home !== undefined);
+          tab.classList.toggle('is-active', active);
+          if (active) tab.setAttribute('aria-current', 'page'); else tab.removeAttribute('aria-current');
+        });
+        const panel = document.querySelector(`[data-panel="${name}"]`);
+        const closeButton = panel.querySelector('[data-close]');
+        if (closeButton) closeButton.focus();
+      }
+      function invite() {
+        mascot.classList.add('is-responding');
+        waveform.classList.add('is-listening');
+        window.setTimeout(() => openPanel('chat'), 510);
+        window.setTimeout(() => { mascot.classList.remove('is-responding'); waveform.classList.remove('is-listening'); }, 2600);
+      }
+
+      document.querySelector('#listenButton').addEventListener('click', invite);
+      document.querySelectorAll('[data-open]').forEach((button) => button.addEventListener('click', () => openPanel(button.dataset.open)));
+      document.querySelectorAll('[data-close]').forEach((button) => button.addEventListener('click', closePanels));
+      document.querySelector('[data-home]').addEventListener('click', closePanels);
+      scrim.addEventListener('click', closePanels);
+      document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closePanels(); });
+      document.querySelectorAll('[data-toast]').forEach((button) => button.addEventListener('click', () => showToast(button.dataset.toast)));
+
+      const messages = document.querySelector('#messages');
+      const input = document.querySelector('#messageInput');
+      function appendMessage(value) {
+        const text = value.trim();
+        if (!text) return;
+        const mine = document.createElement('div');
+        mine.className = 'message me';
+        mine.textContent = text;
+        messages.append(mine);
+        input.value = '';
+        window.setTimeout(() => {
+          const reply = document.createElement('div');
+          reply.className = 'message';
+          reply.innerHTML = '<small>小频</small>我听到了。你不用一个人把它撑完。想继续说说，还是先一起安静一会？';
+          messages.append(reply);
+          reply.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 480);
+      }
+      document.querySelectorAll('[data-message]').forEach((button) => button.addEventListener('click', () => appendMessage(button.dataset.message)));
+      document.querySelector('#composer').addEventListener('submit', (event) => { event.preventDefault(); appendMessage(input.value); });
+      document.querySelectorAll('[data-feeling]').forEach((button) => button.addEventListener('click', () => {
+        document.querySelectorAll('[data-feeling]').forEach((item) => item.classList.remove('is-selected'));
+        button.classList.add('is-selected');
+        document.querySelector('#recordNotice').innerHTML = `<strong>“${button.dataset.feeling}” 已留在这里</strong>你不必马上解决它。想继续时，小频会在对话里等你。`;
+      }));
+      if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    })();
+  </script>
+</body>
+</html>
