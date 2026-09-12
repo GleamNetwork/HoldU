@@ -65,6 +65,8 @@ Swagger UI 的 `Servers` 下拉框内置两套环境：
 
 远程环境必须启用 HTTPS 和 CORS。不要将数据库密码、DeepSeek API Key 写入 Swagger 页面、接口文档或前端配置。
 
+当 Swagger、联机工作台或移动端页面由后端自身托管时，前端会自动使用同源 API 地址，例如 `http://localhost:8080/api/v1` 或 `http://8.133.215.80:8080/api/v1`，避免浏览器跨域限制。只有在本地静态预览或跨域访问时，才需要显式指定远程 API 并配置 CORS。
+
 ### 调试步骤
 
 1. 打开 `backend-service/public/index.html`。
@@ -441,6 +443,7 @@ suspended
 | V02 | GET | `/volunteer/cases` | 志愿者端 | 获取本人个案与待分配摘要 | 志愿者 | 本地 / 远程 |
 | V03 | POST | `/volunteer/cases/{case_id}/accept` | 志愿者端 | 承接支援请求 | 志愿者 | 本地 / 远程 |
 | V04 | GET | `/volunteer/cases/{case_id}` | 志愿者端 | 获取个案详情 | 当前承接者 | 本地 / 远程 |
+| V04.1 | GET | `/volunteer/cases/{case_id}/messages` | 志愿者端 | 获取个案消息列表 | 当前承接者 | 本地 / 远程 |
 | V05 | POST | `/volunteer/cases/{case_id}/messages` | 志愿者端 | 发送文字陪伴消息 | 当前承接者 | 本地 / 远程 |
 | V06 | POST | `/volunteer/cases/{case_id}/close` | 志愿者端 | 结束本次陪伴 | 当前承接者 | 本地 / 远程 |
 | V07 | POST | `/volunteer/rest` | 志愿者端 | 申请休息或暂停新接单 | 志愿者 | 本地 / 远程 |
@@ -464,6 +467,7 @@ suspended
 | M12 | POST | `/manager/resources` | 管理端 | 新增或更新资源 | 资源管理员 | 本地 / 远程 |
 | AI01 | POST | `/ai/diary/draft` | AI | 生成日记草稿 | 用户 | 本地 / 远程 |
 | AI02 | POST | `/ai/chat/suggestion` | AI | 生成小频回复候选 | 用户或志愿者 | 本地 / 远程 |
+| AI02.1 | POST | `/ai/chat/stream` | AI | 流式生成小频回复候选 | 用户或志愿者 | 本地 / 远程 |
 | AI03 | POST | `/ai/transfer-summary` | AI | 生成最小交接摘要 | 当前承接者 | 本地 / 远程 |
 | AI04 | POST | `/ai/safety-check` | 服务端内部 | 检查建议是否越界 | 内部 | 本地 / 远程 |
 | AI05 | POST | `/ai/resource-recommendation` | AI | 检索资源候选 | 志愿者或专业督导 | 本地 / 远程 |
@@ -1108,6 +1112,39 @@ shoulder_hand
 
 ---
 
+## 5.10.1 `GET /volunteer/cases/{case_id}/messages`
+
+### 说明
+
+获取当前授权个案的消息列表。仅当前承接者或已接管专业督导可访问。
+
+### 响应
+
+```json
+{
+  "items": [
+    {
+      "id": "msg_01H8YQ",
+      "case_id": "case_01H8YQ",
+      "sender_role": "volunteer",
+      "sender_id": "volunteer_01H8YQ",
+      "content": "谢谢你愿意说出来。",
+      "ai_assisted": false,
+      "visibility_scope": "case_participants",
+      "created_at": "2026-09-09T11:20:00+08:00"
+    }
+  ]
+}
+```
+
+### 规则
+
+- 仅返回当前个案参与方可见的消息。
+- 不返回未授权日记正文或精确位置。
+- 消息列表只用于会话续接，不作为临床评估依据。
+
+---
+
 ## 5.11 `POST /volunteer/transfer-requests`
 
 ### 请求
@@ -1264,6 +1301,42 @@ shoulder_hand
 7. 后端按当前发布的 AI 配置调用 DeepSeek；不得由前端直接传模型参数或提示词覆盖安全规则。
 8. 若模型返回 `tool_calls`，后端只能执行已启用的白名单工具；未授权工具返回 `AI_TOOL_FORBIDDEN`。
 9. 模型输出不是事实来源；工单状态和用户当前情况仍以数据库和人工确认结果为准。
+
+---
+
+## 5.14.1 `POST /ai/chat/stream`
+
+### 说明
+
+以 SSE 流式返回小频回复候选增量。该接口仍需人工确认，不能自动发送给用户。
+
+### 请求
+
+```json
+{
+  "case_id": "case_01H8YQ",
+  "main_request": "希望有人听我说说",
+  "current_safety": "safe",
+  "goal": "empathetic_listening"
+}
+```
+
+### 响应
+
+```text
+event: delta
+data: {"text":"谢谢你愿意说出来。"}
+
+event: done
+data: {"suggestion_id":"ai_01H8YQ","requires_human_confirmation":true}
+```
+
+### 规则
+
+1. 输出仍必须经过安全检查。
+2. 不能自动外呼、报警或通知联系人。
+3. 不能把流式输出直接当作最终临床结论。
+4. 连接断开时，前端应回退到非流式建议或人工流程。
 
 ---
 
